@@ -16,6 +16,11 @@ Template basics:
 [FF][IE8][IE7][SF5] * Test each toolbar button.
 [FF][IE8][IE7][SF5] * Test peoplefinder search and record retrieval in toolbar.
 
+Other areas:
+[FF][IE8][IE7][SF5] * Hash change (built into examples page)
+[FF][SF5] * Video Player
+[FF][SF5] * Splash Page poster and rotation
+ 
 
 WDN Examples:
 [FF][IE8][IE7][SF5] * Carousel (wiki documentation)
