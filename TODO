@@ -1,0 +1,36 @@
+jQuery 1.4.3 upgrade TODO list:
+
+Test all in each browser.
+Add browser note when tested — [FF][IE][WK], and if errors found add to list.
+
+[FF] tested by Brett on Nov 8th, FF 3.6.12 Mac.
+
+Template basics:
+[FF] * Navigation, expand/collapse.
+[FF] * Navigation, stick open.
+[FF] * Navigation, external site nav retrieval.
+[FF] * Footer rating icons and comment box.
+[FF] * Test each toolbar button.
+
+WDN Examples:
+[FF] * Carousel (wiki documentation)
+[FF] * Colorbox (Modal Box)
+[FF] * Events (wiki documentation)
+[FF] * Form Validator (wiki documentation)
+[FF] * Forms (wiki documentation)
+[FF] * Header Styles
+[FF] * Identity Management/Single Sign On
+[FF] * Image Style and Caption
+[FF] * Notice
+[FF] * Page Layouts
+[FF] * Pagination (wiki documentation)
+[FF] * Randomizer (wiki documentation)
+[FF] * Tabs (wiki documentation)
+[FF] * Tooltips
+[FF] * Zenboxes (wiki documentation wiki documentaiton)
+[FF] * Zenforms (wiki documentation)
+[FF] * Zentables
+
+
+BROKEN, TO BE FIXED:
+[FF] * Colorbox-slideshow, CSS and JS fix needed.
