@@ -18,26 +18,26 @@ Template basics:
 
 
 WDN Examples:
-[FF][IE8][IE7] * Carousel (wiki documentation)
-[FF][IE8][IE7] * Colorbox (Modal Box)
-[FF][IE8][IE7] * Events (wiki documentation)
-[FF][IE8][IE7] * Form Validator (wiki documentation)
-[FF][IE8][IE7] * Forms (wiki documentation)
-[FF][IE8][IE7] * Header Styles
-[FF][IE8][IE7] * Identity Management/Single Sign On
-[FF][IE8][IE7] * Image Style and Caption
-[FF][IE8][IE7] * Notice
-[FF][IE8][IE7] * Page Layouts
-[FF][IE8][IE7] * Pagination (wiki documentation)
-[FF][IE8][IE7] * Randomizer (wiki documentation)
-[FF][IE8][IE7] * Tabs (wiki documentation)
-[FF][IE8][IE7] * Tooltips
-[FF][IE8][IE7] * Zenboxes (wiki documentation wiki documentaiton)
-[FF][IE8][IE7] * Zenforms (wiki documentation)
-[FF][IE8][IE7] * Zentables
+[FF][IE8][IE7][SF5] * Carousel (wiki documentation)
+[FF][IE8][IE7][SF5] * Colorbox (Modal Box)
+[FF][IE8][IE7][SF5] * Events (wiki documentation)
+[FF][IE8][IE7][SF5] * Form Validator (wiki documentation)
+[FF][IE8][IE7][SF5] * Forms (wiki documentation)
+[FF][IE8][IE7][SF5] * Header Styles
+[FF][IE8][IE7][SF5] * Identity Management/Single Sign On
+[FF][IE8][IE7][SF5] * Image Style and Caption
+[FF][IE8][IE7][SF5] * Notice
+[FF][IE8][IE7][SF5] * Page Layouts
+[FF][IE8][IE7][SF5] * Pagination (wiki documentation)
+[FF][IE8][IE7][SF5] * Randomizer (wiki documentation)
+[FF][IE8][IE7][SF5] * Tabs (wiki documentation)
+[FF][IE8][IE7][SF5] * Tooltips
+[FF][IE8][IE7][SF5] * Zenboxes (wiki documentation wiki documentaiton)
+[FF][IE8][IE7][SF5] * Zenforms (wiki documentation)
+[FF][IE8][IE7][SF5] * Zentables
 
 
 BROKEN, TO BE FIXED:
-[FF][IE8][IE7] * Colorbox-slideshow, CSS and JS fix needed. Text displayed under "Play" icon.
+[FF][IE8][IE7][SF5] * Colorbox-slideshow, CSS and JS fix needed. Text displayed under "Play" icon.
 [IE8] * Navigation doesn't collapse correctly after selecting "Always show navigation" then "Always hide navigation"
 [IE7] * If nav is pinned open, then closed with the "x", then hovered over it stays open on hover-out.  Appears to be issue with current deployed site too.
