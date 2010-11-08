@@ -6,14 +6,15 @@ Add browser note when tested — [FF][IE8][IE7][IE7][WK], and if errors found ad
 [FF]  tested by Brett on Nov 8th, FF 3.6.12 Mac.
 [IE8] tested by Brett on Nov 8th, IE8 Vista.
 [IE7] tested by Eric on Nov 8th, IE7 XP.
+[SF5] tested by Brett on Nov 8th, Safari 5.0.2 Mac.
 
 Template basics:
-[FF][IE8][IE7] * Navigation, expand/collapse.
-[FF][IE8][IE7] * Navigation, stick open.
-[FF][IE8][IE7] * Navigation, external site nav retrieval.
-[FF][IE8][IE7] * Footer rating icons and comment box.
-[FF][IE8][IE7] * Test each toolbar button.
-[FF][IE8][IE7] * Test peoplefinder search and record retrieval in toolbar.
+[FF][IE8][IE7][SF5] * Navigation, expand/collapse.
+[FF][IE8][IE7][SF5] * Navigation, stick open.
+[FF][IE8][IE7][SF5] * Navigation, external site nav retrieval.
+[FF][IE8][IE7][SF5] * Footer rating icons and comment box.
+[FF][IE8][IE7][SF5] * Test each toolbar button.
+[FF][IE8][IE7][SF5] * Test peoplefinder search and record retrieval in toolbar.
 
 
 WDN Examples:
