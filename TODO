@@ -16,25 +16,25 @@ Template basics:
 
 
 WDN Examples:
-[FF] * Carousel (wiki documentation)
-[FF] * Colorbox (Modal Box)
-[FF] * Events (wiki documentation)
-[FF] * Form Validator (wiki documentation)
-[FF] * Forms (wiki documentation)
-[FF] * Header Styles
-[FF] * Identity Management/Single Sign On
-[FF] * Image Style and Caption
-[FF] * Notice
-[FF] * Page Layouts
-[FF] * Pagination (wiki documentation)
-[FF] * Randomizer (wiki documentation)
-[FF] * Tabs (wiki documentation)
-[FF] * Tooltips
-[FF] * Zenboxes (wiki documentation wiki documentaiton)
-[FF] * Zenforms (wiki documentation)
-[FF] * Zentables
+[FF][IE8] * Carousel (wiki documentation)
+[FF][IE8] * Colorbox (Modal Box)
+[FF][IE8] * Events (wiki documentation)
+[FF][IE8] * Form Validator (wiki documentation)
+[FF][IE8] * Forms (wiki documentation)
+[FF][IE8] * Header Styles
+[FF][IE8] * Identity Management/Single Sign On
+[FF][IE8] * Image Style and Caption
+[FF][IE8] * Notice
+[FF][IE8] * Page Layouts
+[FF][IE8] * Pagination (wiki documentation)
+[FF][IE8] * Randomizer (wiki documentation)
+[FF][IE8] * Tabs (wiki documentation)
+[FF][IE8] * Tooltips
+[FF][IE8] * Zenboxes (wiki documentation wiki documentaiton)
+[FF][IE8] * Zenforms (wiki documentation)
+[FF][IE8] * Zentables
 
 
 BROKEN, TO BE FIXED:
-[FF] * Colorbox-slideshow, CSS and JS fix needed.
+[FF][IE8] * Colorbox-slideshow, CSS and JS fix needed. Text displayed under "Play" icon.
 [IE8] * Navigation doesn't collapse correctly after selecting "Always show navigation" then "Always hide navigation"
