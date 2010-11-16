@@ -5,7 +5,7 @@ WDN.toolbar_peoplefinder = function() {
     var pfrecorddiv = 'pfShowRecord';
     var pfreq_q;
     return {
-    	serviceURL : 'http://peoplefinder.unl.edu/',
+    	serviceURL : 'http://directory.unl.edu/',
     	
         initialize : function() {
         	
