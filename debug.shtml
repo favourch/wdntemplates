@@ -29,10 +29,10 @@ Navigation</a></p>
     <div id="header">
         <a href="http://www.unl.edu/" title="UNL website"><img src="wdn/templates_3.0/images/logo.png" alt="UNL graphic identifier" id="logo" /></a>
         <h1>University of Nebraska&ndash;Lincoln</h1>
-        <!--#include virtual="wdn/templates_3.0/includes/wdnTools.html" -->  
+        <!--#include virtual="wdn/templates_3.0/includes/wdnTools.html" -->
         <div id="wdn_identity_management"></div>
      </div>
-    <div id="wdn_navigation_bar">    
+    <div id="wdn_navigation_bar">
         <div id="breadcrumbs">
             <ul>
                 <!-- WDN: see glossary item 'breadcrumbs' -->
@@ -46,27 +46,85 @@ Navigation</a></p>
         </div>        
         <div id="wdn_navigation_wrapper">
             <div id="navigation">
-                <!--#include virtual="sharedcode/navigation.html" -->                
+                <!--#include virtual="sharedcode/navigation.html" -->
                 <!-- End Navigation Markup -->
             </div>
         </div>
     </div>    
-    <div id="wdn_content_wrapper">    
-        <div id="titlegraphic">
-            <h1>UNL Login</h1>
-        </div>        
+    <div id="wdn_content_wrapper">
+        <div id="titlegraphic"><!-- InstanceBeginEditable name="titlegraphic" -->
+            <h1>Web Developer Network</h1>
+            <!-- InstanceEndEditable --></div>
+        <div id="pagetitle"><!-- InstanceBeginEditable name="pagetitle" --><h2>Template Examples</h2><!-- InstanceEndEditable --></div>
         <div id="maincontent">
-        new:
-        <object type="application/x-shockwave-flash" style="width:700px;height:406px" data="http://www.unl.edu/ucomm/templatedependents/templatesharedcode/scripts/components/mediaplayer/player.swf"<param name="movie" value="http://www.unl.edu/ucomm/templatedependents/templatesharedcode/scripts/components/mediaplayer/player.swf" ></param><param name="allowfullscreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="wmode" value="transparent"></param><param name="flashvars" value="file=http://www.unl.edu/ucomm/ucomm/av/video/podcasts/20080930_nc_hibbing.mp4&amp;image=http://itunes.unl.edu/thumbnails.php?url=http%3A%2F%2Fwww.unl.edu%2Fucomm%2Fucomm%2Fav%2Fvideo%2Fpodcasts%2F20080930_nc_hibbing.mp4&amp;volume=100&amp;autostart=false&amp;skin=http://www.unl.edu/ucomm/templatedependents/templatesharedcode/scripts/components/mediaplayer/UNLVideoSkin.swf" /> </object>
+            <!--THIS IS THE MAIN CONTENT AREA; WDN: see glossary item 'main content area' -->
+            <!-- InstanceBeginEditable name="maincontentarea" -->
+
         
-        old:
-        <object type="application/x-shockwave-flash" style="width:700px;height:406px" data="http://www.unl.edu/ucomm/templatedependents/templatesharedcode/scripts/components/mediaplayer/player.swf">
-        	<param name="movie" value="http://www.unl.edu/ucomm/templatedependents/templatesharedcode/scripts/components/mediaplayer/player.swf" ></param>
-        	<param name="allowfullscreen" value="true"></param>
-        	<param name="allowscriptaccess" value="always"></param>
-        	<param name="wmode" value="transparent"></param>
-        	<param name="FlashVars" value="file=http://www.unl.edu/ucomm/ucomm/av/video/podcasts/20080930_nc_hibbing.mp4&amp;image=http://itunes.unl.edu/thumbnails.php?url=http%3A%2F%2Fwww.unl.edu%2Fucomm%2Fucomm%2Fav%2Fvideo%2Fpodcasts%2F20080930_nc_hibbing.mp4&amp;volume=100&amp;autostart=false&amp;skin=http://www.unl.edu/ucomm/templatedependents/templatesharedcode/scripts/components/mediaplayer/UNLVideoSkin.swf" /> 
-        </object>
+        
+        
+        
+        
+        
+        
+        
+        <video height="529" width="940" src="http://www.unl.edu/ucomm/ucomm/av/video/pyotm/MaherTadrosPYOTM.mp4" 
+            controls
+            autobuffer
+            poster="http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/pyotm/MaherTadrosPYOTM.mp4"
+            style="background:url(http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/pyotm/MaherTadrosPYOTM.mp4) no-repeat;">
+            <track kind="captions" src="http://ucommrasmussen.unl.edu/captions.srt" srclang="en" label="English for the Hard of Hearing">
+	        <object type="application/x-shockwave-flash" style="width:940px;height:577px" data="http://www.unl.edu/ucomm/templatedependents/templatesharedcode/scripts/components/mediaplayer/player.swf">
+		        <param name="movie" value="/wdn/templates_3.0/includes/swf/player4.3" ></param>
+		        <param name="allowfullscreen" value="true"></param>
+		        <param name="allowscriptaccess" value="always"></param>
+		        <param name="wmode" value="transparent"></param>
+		        <param name="flashvars" value="file=http%3A%2F%2Fwww.unl.edu%2Fucomm%2Fucomm%2Fav%2Fvideo%2Fpyotm%2FMaherTadrosPYOTM.mp4&amp;image=http%3A%2F%2Fitunes.unl.edu%2Fthumbnails.php%3Furl%3Dhttp%253A%252F%252Fwww.unl.edu%252Fucomm%252Fucomm%252Fav%252Fvideo%252Fpyotm%252FMaherTadrosPYOTM.mp4&amp;volume=100&amp;autostart=false&amp;skin=/wdn/templates_3.0/includes/swf/player4.3" />
+	        </object>
+        </video>
+        <script type="text/javascript">
+        WDN.initializePlugin("videoPlayer");
+        </script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="two_col left">
+        <video height="253" width="450" src="http://www.unl.edu/ucomm/ucomm/av/video/pyotm/MaherTadrosPYOTM.mp4" 
+            controls
+            autobuffer
+            poster="http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/pyotm/MaherTadrosPYOTM.mp4"
+            style="background:url(http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/pyotm/MaherTadrosPYOTM.mp4) no-repeat;">
+            <object type="application/x-shockwave-flash" style="width:940px;height:577px" data="http://www.unl.edu/ucomm/templatedependents/templatesharedcode/scripts/components/mediaplayer/player.swf">
+                <param name="movie" value="/wdn/templates_3.0/includes/swf/player4.3" ></param>
+                <param name="allowfullscreen" value="true"></param>
+                <param name="allowscriptaccess" value="always"></param>
+                <param name="wmode" value="transparent"></param>
+                <param name="flashvars" value="file=http%3A%2F%2Fwww.unl.edu%2Fucomm%2Fucomm%2Fav%2Fvideo%2Fpyotm%2FMaherTadrosPYOTM.mp4&amp;image=http%3A%2F%2Fitunes.unl.edu%2Fthumbnails.php%3Furl%3Dhttp%253A%252F%252Fwww.unl.edu%252Fucomm%252Fucomm%252Fav%252Fvideo%252Fpyotm%252FMaherTadrosPYOTM.mp4&amp;volume=100&amp;autostart=false&amp;skin=/wdn/templates_3.0/includes/swf/player4.3" />
+            </object>
+        </video>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <div class="two_col left">       
                 <form id="login"> 
                 <!-- Congratulations on bringing CAS online!  The default authentication handler authenticates where usernames equal passwords: go ahead, try it out.  -->

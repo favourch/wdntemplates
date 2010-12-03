@@ -32,6 +32,9 @@ WDN.videoPlayer = function() {
 				WDN.jQuery(audio).siblings('.wdnVideo_controls').children('.progress').hide();
 			});
 			
+			WDN.loadJS('/wdn/templates_3.0/scripts/plugins/videosub/jquery.videosub.js',
+				function(){WDN.jQuery('video').videoSub();}
+			);
 		},
 		
 		supportsVideo: function() {
@@ -263,7 +266,6 @@ WDN.videoPlayer = function() {
 			return {
 				
 				initialize : function(video) { //setup custom HTML5 video player
-
 					video.preload = "auto";
 					video.autobuffer = true;
 					video.controls = false; //remove the standard browser controls
@@ -275,43 +277,41 @@ WDN.videoPlayer = function() {
 						video.isVideo = false; //do not autohide controls for audio player
 						WDN.jQuery(video).after(WDN.videoPlayer.setupControls.wdnAudio_Controls);
 					}
-					
-					
-					
-				}, 
-			
-				//setup the HTML to house the controls
-				wdnVideo_Controls : 
-					  '<div class="wdnVideo_controls">' +
-					  '<button class="play_pause play" value="paused" type="button">' +
-					  '	<span></span>' +
-					  '</button>' +
-					  '<div class="progress">' +
-					  '	<button class="fullscreen" value="no" type="button"></button>'+
-					  '	<ul class="volume">'+
-					  '		<li class="on"></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>'+
-					  '	</ul>'+
-					  '	<span class="time">00:00</span>'+
-					  '	<div class="progressBar"><span></span></div>'+
-					  '</div>',
+				},
 				
-				wdnAudio_Controls : 
-					  '<div class="wdnVideo_controls" style="bottom:5px;">' +
-					  '<button class="play_pause play" value="paused" type="button">' +
-					  '	<span></span>' +
-					  '</button>' +
-					  '<div class="progress">' +
-					  '	<ul class="volume">'+
-					  '		<li class="on"></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>'+
-					  '	</ul>'+
-					  '	<span class="time">00:00</span>'+
-					  '	<div class="progressBar"><span></span></div>'+
-					  '</div>',
+				//setup the HTML to house the controls
+				wdnVideo_Controls :
+					'<div class="wdnVideo_controls">' +
+					'<button class="play_pause play" value="paused" type="button">' +
+					'	<span></span>' +
+					'</button>' +
+					'<div class="progress">' +
+					'	<button class="fullscreen" value="no" type="button"></button>' +
+					'	<button class="captions" value="no" type="button"></button>' +
+					'	<ul class="volume">' +
+					'		<li class="on"></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>' +
+					'	</ul>' +
+					'	<span class="time">00:00</span>' +
+					'	<div class="progressBar"><span></span></div>' +
+					'</div>',
+				
+				wdnAudio_Controls :
+					'<div class="wdnVideo_controls" style="bottom:5px;">' +
+					'<button class="play_pause play" value="paused" type="button">' +
+					'	<span></span>' +
+					'</button>' +
+					'<div class="progress">' +
+					'	<ul class="volume">'+
+					'		<li class="on"></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>'+
+					'	</ul>'+
+					'	<span class="time">00:00</span>'+
+					'	<div class="progressBar"><span></span></div>'+
+					'</div>',
 				
 				positionControls : function(video) { //place the controls relative and over the video (for video only, not audio)
-						progressWidth = WDN.jQuery(video).width() - 110;
-						progressBarWidth = progressWidth - 85 - WDN.jQuery(video).siblings('.wdnVideo_controls').children('.progress').children('.time').outerWidth(true);
-						WDN.jQuery(video).siblings('.wdnVideo_controls').children('.progress').css('width', progressWidth+'px').children('.progressBar').css('width', progressBarWidth+'px');
+					progressWidth = WDN.jQuery(video).width() - 110;
+					progressBarWidth = progressWidth - 105 - WDN.jQuery(video).siblings('.wdnVideo_controls').children('.progress').children('.time').outerWidth(true);
+					WDN.jQuery(video).siblings('.wdnVideo_controls').children('.progress').css('width', progressWidth+'px').children('.progressBar').css('width', progressBarWidth+'px');
 				}
 			};
 		}(),
@@ -322,7 +322,6 @@ WDN.videoPlayer = function() {
 			var videoHasBeenPlayed;
 			
 			return {
-				
 				bindControls : function(video) {
 					//clicking the video
 					WDN.jQuery(video).click(function(){

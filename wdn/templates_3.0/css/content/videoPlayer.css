@@ -42,6 +42,7 @@ video.fullscreen + .wdnVideo_controls {
 	width:60px;
     height:40px;
 	padding:10px 21px;
+	cursor:pointer;
 }
 .wdnVideo_controls .play_pause span {
     background:url('images/videoplayer/controls.png') no-repeat;
@@ -53,8 +54,8 @@ video.fullscreen + .wdnVideo_controls {
 .wdnVideo_controls .play_pause.play span {
     background-position:0px -20px;	
 }
-.wdnVideo_controls .volume, .wdnVideo_controls .fullscreen, .wdnVideo_controls .time, .wdnVideo_controls .progressBar {display:inline-block;}
-.wdnVideo_controls .volume, .wdnVideo_controls .fullscreen {float:right;}
+.wdnVideo_controls .volume, .wdnVideo_controls .captions, .wdnVideo_controls .fullscreen, .wdnVideo_controls .time, .wdnVideo_controls .progressBar {display:inline-block;}
+.wdnVideo_controls .volume, .wdnVideo_controls .captions, .wdnVideo_controls .fullscreen {float:right;}
 .wdnVideo_controls .progress { /*width set by JS based on video width */
     display:inline-block;
     padding:6px 10px;
@@ -80,7 +81,8 @@ video.fullscreen + .wdnVideo_controls {
     margin:0 60px 0 40px;
     position:relative;
     padding-right:3px;
-    display:block
+    display:block;
+    cursor:pointer;
 }
 .wdnVideo_controls .progress .progressBar span {
 	background:#d37676;
@@ -91,11 +93,11 @@ video.fullscreen + .wdnVideo_controls {
 	margin:1px;
 	margin-right:0px;
 }
-#maincontent .wdnVideo_controls .progress .volume, #colorbox .wdnVideo_controls .progress .volume  {
+#maincontent .wdnVideo_controls .progress .volume, #colorbox .wdnVideo_controls .progress .volume {
     padding:0;
-    margin:2px 5px 0 0;
-    position:absolute:
-    right:0px;	
+    margin:1px 0 0 0;
+    right:0px;
+    cursor:pointer;
 }
 .wdnVideo_controls .progress .volume li {
     display:inline-block;
@@ -109,14 +111,26 @@ video.fullscreen + .wdnVideo_controls {
 .wdnVideo_controls .progress .volume li.on {
     opacity:0.9;	
 }
+.wdnVideo_controls .progress .captions,
+.wdnVideo_controls .progress .fullscreen {
+	background-color:transparent;
+	background-repeat:no-repeat;
+    border:none;
+    padding:0;
+    margin:1px 0 0 5px;
+    cursor:pointer;
+}
+.wdnVideo_controls .progress .captions {
+    width:15px;
+    height:12px;
+    background-image:url('images/videoplayer/controls.png');
+    background-position:-1px -58px;
+}
 .wdnVideo_controls .progress .fullscreen {
     width:12px;
     height:12px;
-    margin-top:4px;
-    background:url('images/videoplayer/controls.png') no-repeat;
+    background-image:url('images/videoplayer/controls.png');
     background-position:-3px -44px;
-    border:none;
-    padding:0;
 }
 .audioplayer {
 	height:50px;
