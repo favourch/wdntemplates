@@ -3,9 +3,12 @@
 @import url('colorbox.css');
 
 #wdn_tool_links {
+	float:right;
 	position:absolute;
-    right:10px;
-    top:71px;
+    right:0;
+    top:37px;
+    padding:12px;
+    background:url('images/topRightCorner.png') top right no-repeat;
 }
 ul#wdn_tool_links li {
 	display:inline;
@@ -16,6 +19,9 @@ ul#wdn_tool_links li {
     padding:4px 5px;
     margin:0 2px;
     background-color:#fff;
+}
+ul#wdn_tool_links li:last-child {
+    margin-right:0;	
 }
 #wdn_tool_links a {
 	display:inline-block;
