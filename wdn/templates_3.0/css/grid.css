@@ -1,0 +1,51 @@
+#maincontent, .container {
+    width: 960px;
+    margin: 0 auto;
+    margin-left:0;
+}
+.grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11 {
+    float: left;
+    margin-left: 24px;
+}
+.grid1 {
+    width: 60px;
+}
+.grid2 {
+    width: 144px;
+}
+.grid3 {
+    width: 228px;
+}
+.grid4 {
+    width: 312px;
+}
+.grid5 {
+    width: 396px;
+}
+.grid6 {
+    width: 480px;
+}
+.grid7 {
+    width: 564px;
+}
+.grid8 {
+    width: 648px;
+}
+.grid9 {
+    width: 732px;
+}
+.grid10 {
+    width: 816px;
+}
+.grid11 {
+    width: 900px;
+}
+.first {
+    margin-left: 0;
+    clear: left;
+}
+/*
+
+Since we're not changing HTML class names and ids, we're going to extend the above grid system onto our legacy elements.
+
+*/
