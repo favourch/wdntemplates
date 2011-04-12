@@ -3,53 +3,45 @@
 /*
 All styles for the navigation
 Created: 05/22/2009
-Last edited: 05/26/2009
+Last edited: 04/12/2011
 Author: WDN
 
 */
 #wdn_navigation_bar {
-	z-index:100;
-    margin:0 8px 0 0;
-    padding:0;
-    position:relative;
-    background: url(images/menuBGLeft.png) left bottom no-repeat;
     width:100%;
-	}
+    clear:both;
+}
 
-#wdn_navigation_wrapper{
-    background: url(images/menuBGRight.png) right bottom no-repeat;
-    padding:0 8px;
+#wdn_navigation_wrapper{ /* This background image solution isn't supported in <IE8 */
+    /*
     overflow:hidden;
-    margin-right:10px;
+    background-size:100% 1.688em;
+    -moz-background-size: 100% 1.688em;*/
+    background-repeat:no-repeat;
+    margin-top:10px;
 }
 
 #navigation {
     font-family: sans-serif;
-    overflow: hidden;
-    background: url(images/menuBGCenter.png) 0 bottom repeat-x;
-    max-width: 1830px;
+    /* overflow: hidden; */
     clear: both;
     position:relative;
-    padding-bottom:24px;
 }
 
 #navigation ul ul li:first-child {
 	display: block;
 }
-#navigation ul
+#navigation > ul
 {
-	margin:0 0 0 8px;
-	padding:0 0 0 0;
-    position: relative;
-    width:100%;
-    clear:both;
-    overflow:auto;    
+    background-image: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201));  
+    border-radius:5px 5px 0 0; 
+    display:-webkit-box; 
+    display:-moz-box; 
+    display:box;
+    padding:0 9px;
 }
 
-#navigation ul li ul {
-	background:none;
-	padding:0;
-}
 
 #navigation a
 {
@@ -62,38 +54,76 @@ Author: WDN
     color: #ba0000;
 }
 
-#navigation ul li{
-    width: 15.1%;
-    display: block;
-    float: left;
-    padding: 6px 0.6%;
-    margin-bottom: 10px;
+#navigation > ul > li{
+    width:155px;
+    float:left;
+    text-align:center;
+    position:relative;
+    border-right:1px solid #870d0c;
+    border-left:1px solid #c83a3a;
+    height:auto;
+    vertical-align:sub;
+    display:-webkit-box;
+    -webkit-box-pack: justify;
+    -webkit-box-orient: vertical;
+    display:-moz-box;
+    -moz-box-pack: justify;
+    -moz-box-orient: vertical;
+    display:box;
+    box-pack: justify;
+    box-orient: vertical;
 }
-#navigation ul li{
-	min-height: 0;
+#navigation > ul > li:first-child {
+    clear:left;	
 }
-#navigation > ul > li {
-	/* see script.css */
+#navigation > ul > li:first-child > a:before {
+    border-left:1px solid #870d0c;
+    width:1px;
+    height:20px;
 }
+#navigation > ul > li:last-child {
+}
+#navigation > ul > li > a {
+	display:block;
+    color:#fff;
+    text-shadow: 1px 1px 1px #424242;
+    font-weight:bold;
+    font-size:0.875em;
+    padding:0.47em 0;
+    -webkit-box-flex:1;
+    -webkit-box-pack: end;
+    -moz-box-flex:1;
+    -moz-box-pack: end;
+    box-flex:1;
+    box-pack: end;
+}
+#navigation > ul > li > a:hover {
+    color:#fff !important;
+}
+
 #navigation ul li ul {
+    background:none;
     margin: 0;
+    padding:0 9px;
+    position:absolute;
+    display:block;
+    left:0;
+    -webkit-box-flex:1;
+    -webkit-box-pack: end;
+    -moz-box-flex:1;
+    -moz-box-pack: end;
+    box-flex:1;
+    box-pack: end;
 }
 
 #navigation ul li ul li{
     clear: both;
     padding: 0px;
-    width: 100%;
     margin: 0;
+    text-align:left;
 }
 
 #navigation ul li a{
-    display: block;
-    font-weight: bold;
-    font-size: 0.9em;
-    padding: 3px 0px 6px 0px;
-    background-image: url(images/primaryBorderBottom.gif);
-    background-repeat: repeat-x;
-    background-position: bottom left;
 }
 
 #navigation ul li ul li a{
@@ -105,7 +135,7 @@ Author: WDN
     background-repeat: repeat-x;
     background-position: bottom left;
 }
-#navigation ul li ul li img{display:none;}
+#navigation ul li ul li img{display:none !important;}
 #navigation-close{
 	display:none;
 	position:absolute;

@@ -1,20 +1,8 @@
 #breadcrumbs {
-	height:35px;
-    background:url('images/breadcrumbBarSprite2.png') 0 -36px;
-    margin:0 0 0 5px;
     font-family:arial;
-    font-size:0.85em;
-    position:relative;
-    color:#fff;
-}
-
-#breadcrumbs a, #breadcrumbs a:link, #breadcrumbs a:visited {
-	color:#fff;
-	text-decoration:none;
-	padding:0 20px 0 5px;
-	display:inline-block;
-	margin:0 2px;
-	background:url('images/breadcrumbArrowSprite.png') top right no-repeat;
+    font-size:0.689em;
+    display:inline-block;
+    margin-top:10px;
 }
 #breadcrumbs a acronym {
 	display:inline-block;
@@ -26,56 +14,47 @@
 	background:none;
 }
 #breadcrumbs ul {
-	background:url('images/breadcrumbBarSprite2.png') no-repeat;
-	margin:0 0 0 -5px;
 	list-style:none;
-	position:relative;
-	height:36px;
-	width:100%;
-}
-#breadcrumbs ul:after {
-    content:'';
-    height:35px;
-    width:30px;
-    position:absolute;
-    margin:0 0 0 100%;
-    float:right;
-    display:block;
-    background:url('images/breadcrumbBarSprite2.png') 0 -72px no-repeat;
+	display:inline-block;
+	background:#E0E0E0;
+	padding:3px 6px;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
 }
 #breadcrumbs ul li {
 	float:left;
-	padding-top:10px;
+	padding-right:1.7em;
+    font-weight:bold;
+    color:#686868; /* @TODO need to check contrast */
 }
-#breadcrumbs ul li{
-	margin-left:2px;
-	padding-left:3px;
-	}
 
 #breadcrumbs ul li:first-child{
-	margin-left:5px;
-	}
+	
+}
+#breadcrumbs ul li:last-child{
+    padding-right:0.6em;
+}
 #breadcrumbs ul li.selected{
 	height:44px;
 	background:url('images/tabBGRight.png') top right no-repeat;
 	display:block;
-	margin:-11px 0 0 15px;
 	padding:0px;
 }
 #breadcrumbs ul li.selected{
 	margin-right:-8px;
-	}
+}
+
+#breadcrumbs a, #breadcrumbs a:link, #breadcrumbs a:visited {
+    text-decoration:none;
+    color:#686868; /* @TODO need to check contrast */
+}
 
 #breadcrumbs ul li.selected a,
 #breadcrumbs ul li.selected a:link,
 #breadcrumbs ul li.selected a:visited 
 {
-	height:31px;
-    background:url('images/tabBGLeft.png') 0 0 no-repeat;
-    padding:21px 20px 0 12px;
-    margin:0 10px 0 -15px;
-    position: relative;
-    z-index: 5;
+	
 }
 #breadcrumbs ul li:first-child.selected {
 	margin-left:18px;
@@ -83,14 +62,7 @@
 	}
 
 #breadcrumbs ul li.selected a:after {
-	content:'';
-	margin:8px 0 0 30%;
-	width:20px;
-	height:10px;
-	display:block;
-	text-align:center;
-	background:url('../images/downIndicators.png') no-repeat;
-	padding:0px;
+	
 }
 
 #breadcrumbs ul li div.storednav {

@@ -14,7 +14,6 @@ Author: WDN
 #header {
     margin:-49px -12px 0 -12px;
     position:relative;
-    min-height:115px;
 }
 #header > a {
     background:#fff;
@@ -22,7 +21,7 @@ Author: WDN
     float:left;
     display:inline-block;
     margin-top:12px;
-    padding:12px;	
+    padding:12px 12px 0 12px;	
 }
 #header:after {
 }
