@@ -29,17 +29,16 @@ Author: WDN
 }
 
 #navigation ul ul li:first-child {
-	display: block;
+    display: block;
 }
 #navigation > ul
 {
-    background-image: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201));  
+    float:left;
     border-radius:5px 5px 0 0; 
-    display:-webkit-box; 
-    display:-moz-box; 
-    display:box;
     padding:0 9px;
+    position:relative;
+    background-image: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201));
 }
 
 
@@ -58,69 +57,52 @@ Author: WDN
     width:155px;
     float:left;
     text-align:center;
-    position:relative;
     border-right:1px solid #870d0c;
     border-left:1px solid #c83a3a;
-    height:auto;
-    vertical-align:sub;
-    display:-webkit-box;
-    -webkit-box-pack: justify;
-    -webkit-box-orient: vertical;
-    display:-moz-box;
-    -moz-box-pack: justify;
-    -moz-box-orient: vertical;
-    display:box;
-    box-pack: justify;
-    box-orient: vertical;
 }
-#navigation > ul > li:first-child {
-    clear:left;	
-}
-#navigation > ul > li:first-child > a:before {
-    border-left:1px solid #870d0c;
-    width:1px;
-    height:20px;
-}
+
 #navigation > ul > li:last-child {
 }
 #navigation > ul > li > a {
-	display:block;
+    display:block;
     color:#fff;
     text-shadow: 1px 1px 1px #424242;
     font-weight:bold;
     font-size:0.875em;
     padding:0.47em 0;
-    -webkit-box-flex:1;
-    -webkit-box-pack: end;
-    -moz-box-flex:1;
-    -moz-box-pack: end;
-    box-flex:1;
-    box-pack: end;
 }
 #navigation > ul > li > a:hover {
     color:#fff !important;
 }
 
 #navigation ul li ul {
-    background:none;
-    margin: 0;
-    padding:0 9px;
     position:absolute;
-    display:block;
-    left:0;
-    -webkit-box-flex:1;
-    -webkit-box-pack: end;
-    -moz-box-flex:1;
-    -moz-box-pack: end;
-    box-flex:1;
-    box-pack: end;
+    top:100%;
+    width:157px;
+    margin-left:-1px;
+    border-bottom:1px solid #c9c9c9;
+    background-image: -moz-linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,0.95)), color-stop(100%,rgba(215,215,215,0.95)));
 }
-
+#navigation ul li:first-child ul {
+	margin-left:-10px;
+	width:157px;
+	padding-left:8px;
+	border-left:1px solid #c9c9c9;
+	border-radius:0 0 0 5px;
+}
+#navigation ul li:nth-child(6n) ul {
+    padding-right:8px;
+    border-right:1px solid #c9c9c9;
+    border-radius:0 0 5px 0;
+}
 #navigation ul li ul li{
     clear: both;
-    padding: 0px;
+    padding:0 5px;
     margin: 0;
     text-align:left;
+    border-right:1px solid #d5d5d5;
+    border-left:1px solid #f1f1f1;
 }
 
 #navigation ul li a{
@@ -131,37 +113,7 @@ Author: WDN
     padding: 3px 0px 3px 0px;
     font-weight: normal;
     display: block;
-    background-image: url(images/secondaryBorderBottom.gif);
-    background-repeat: repeat-x;
-    background-position: bottom left;
+    border-bottom:1px dotted #b3b3b3;
 }
+#navigation ul li ul li:last-child a{border-bottom:none;}
 #navigation ul li ul li img{display:none !important;}
-#navigation-close{
-	display:none;
-	position:absolute;
-	top:0;
-	right:0;
-	height:16px;
-	width:16px;
-	background:url('images/closeSprite.png') no-repeat;
-}
-#navigation-close:hover{
-	background-position:0 -17px;
-	cursor:pointer;
-}
-
-#navigation-expand-collapse {
-	position:absolute;
-    bottom:11px;
-    font-size:13px;
-    width:100%;
-    text-align:center;
-}
-
-#wdn_navigation_wrapper.collapsed #navigation-expand-collapse {
-	/* add styles in here for the collapsed state */
-}
-
-#navigation form {
-    display:none;
-}
