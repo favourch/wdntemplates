@@ -67,17 +67,16 @@ Navigation</a></p>
         <script type="text/javascript">
         // Here are the hacks to make the design work.
         $('document').ready(function(){
-        	lih = 0;
+        	ul_h = 0;
         	$('#navigation ul li ul').each(function(){
-        		if($(this).height() > lih) {
-        			lih = $(this).height();
+        		if($(this).height() > ul_h) {
+        			ul_h = $(this).height();
         		}
         	})
         	//loop through again and apply new height
         	$('#navigation ul li ul').each(function(){
-                if($(this).height() < lih) {
-                	r = lih - $(this).height() + $(this).children('li:last-child').height();
-                    $(this).children('li:last-child').css({'height':r+'px'});
+                if($(this).height() < ul_h) {
+                	$(this).css({'height':ul_h+'px'});
                 }
             })
             ah = 0;
