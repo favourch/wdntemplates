@@ -81,6 +81,7 @@ Author: WDN
     width:157px;
     margin-left:-1px;
     border-bottom:1px solid #c9c9c9;
+    padding-bottom:3px;
     background-image: -moz-linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,0.95)), color-stop(100%,rgba(215,215,215,0.95)));
 }
