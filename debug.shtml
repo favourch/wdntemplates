@@ -72,8 +72,14 @@ Navigation</a></p>
         		if($(this).height() > h) {
         			h = $(this).height();
         		}
-        		
         	})
+        	//loop through again and apply new height
+        	$('#navigation ul li ul').each(function(){
+                if($(this).height() < h) {
+                	r = h - $(this).height() + $(this).children('li:last-child').height();
+                    $(this).children('li:last-child').css({'height':r+'px'});
+                }
+            })
             console.log(h);
         });
         </script>
