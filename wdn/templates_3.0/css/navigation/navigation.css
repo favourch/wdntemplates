@@ -35,8 +35,8 @@ Author: WDN
 {
     float:left;
     border-radius:5px 5px 0 0; 
-    padding:0 9px;
     position:relative;
+    width:960px;
     background-image: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201));
 }
@@ -54,14 +54,18 @@ Author: WDN
 }
 
 #navigation > ul > li{
-    width:155px;
+    width:158px;
     float:left;
     text-align:center;
     border-right:1px solid #870d0c;
     border-left:1px solid #c83a3a;
 }
-
-#navigation > ul > li:last-child {
+#navigation > ul > li:first-child  {
+    border-left:none;
+    width:159px;
+}#navigation > ul > li:last-child  {
+    border-right:none;
+    width:159px;
 }
 #navigation > ul > li > a {
     display:block;
@@ -78,22 +82,21 @@ Author: WDN
 #navigation ul li ul {
     position:absolute;
     top:100%;
-    width:157px;
-    margin-left:-1px;
+    width:148px;
+    padding:10px 5px 3px 5px;
+    border-right:1px solid #d5d5d5;
+    border-left:1px solid #f1f1f1;
     border-bottom:1px solid #c9c9c9;
-    padding-bottom:3px;
+    margin-left:-1px;
     background-image: -moz-linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,0.95)), color-stop(100%,rgba(215,215,215,0.95)));
 }
 #navigation ul li:first-child ul {
-	margin-left:-10px;
-	width:157px;
-	padding-left:8px;
 	border-left:1px solid #c9c9c9;
 	border-radius:0 0 0 5px;
+	margin-left:0;
 }
 #navigation ul li:nth-child(6n) ul {
-    padding-right:8px;
     border-right:1px solid #c9c9c9;
     border-radius:0 0 5px 0;
 }
@@ -102,8 +105,6 @@ Author: WDN
     padding:0 5px;
     margin: 0;
     text-align:left;
-    border-right:1px solid #d5d5d5;
-    border-left:1px solid #f1f1f1;
 }
 
 #navigation ul li a{
