@@ -67,20 +67,30 @@ Navigation</a></p>
         <script type="text/javascript">
         // Here are the hacks to make the design work.
         $('document').ready(function(){
-        	h = 0;
+        	lih = 0;
         	$('#navigation ul li ul').each(function(){
-        		if($(this).height() > h) {
-        			h = $(this).height();
+        		if($(this).height() > lih) {
+        			lih = $(this).height();
         		}
         	})
         	//loop through again and apply new height
         	$('#navigation ul li ul').each(function(){
-                if($(this).height() < h) {
-                	r = h - $(this).height() + $(this).children('li:last-child').height();
+                if($(this).height() < lih) {
+                	r = lih - $(this).height() + $(this).children('li:last-child').height();
                     $(this).children('li:last-child').css({'height':r+'px'});
                 }
             })
-            console.log(h);
+            ah = 0;
+            $('#navigation > ul > li > a').each(function(){
+                if($(this).height() > ah) {
+                    ah = $(this).height();
+                }
+            })
+            $('#navigation > ul > li > a').each(function(){
+                if($(this).height() < ah) {
+                	$(this).css({'height':ah+'px'});
+                }
+            })
         });
         </script>
             <!-- InstanceEndEditable --> 
