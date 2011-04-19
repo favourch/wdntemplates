@@ -87,7 +87,9 @@ Navigation</a></p>
             })
             $('#navigation > ul > li > a').each(function(){
                 if($(this).height() < ah) {
-                	$(this).css({'height':ah+'px'});
+                	new_ah = (ah - $(this).height())/2;
+                	console.log(new_ah);
+                	$(this).css({'padding':new_ah+'px 0'});
                 }
             })
         });
