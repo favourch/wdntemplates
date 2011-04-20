@@ -27,8 +27,8 @@ Author: WDN
 }
 #header h1 {
 	margin:0;
-	margin-top:11px;
-	padding:5px 10px;
+	margin-top:21px;
+	padding:5px 10px 11px 10px;
 	float:left;
 	background:url('images/bottomLeftCorner.png') bottom left no-repeat;
 }
@@ -68,7 +68,6 @@ Author: WDN
 }
 #wdn_wrapper #titlegraphic { /* element in content wrapper, but forced visually into header */
 	position:absolute;
-	top:5px;
+	top:13px;
 	left:101px;
-	
 }
