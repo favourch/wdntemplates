@@ -1,73 +1,58 @@
-/*
-All styles for the header
-Created: 05/22/2009
-Last edited: 04/11/2011
-Author: WDN
-*/
-
-
 @import url('toolbar.css');
 @import url('idm.css');
 
-
-
 #header {
-    margin:-49px -12px 0 -12px;
-    position:relative;
+  margin: -49px -12px 0 -12px;
+  position: relative;
 }
 #header > a {
-    background:#fff;
-    border-radius:5px;
-    float:left;
-    display:inline-block;
-    margin-top:12px;
-    padding:12px 12px 0 12px;	
+  background: #fff;
+  border-radius: 5px;
+  float: left;
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 12px 0 12px;
 }
-#header:after {
+#header: after {
 }
 #header h1 {
-	margin:0;
-	margin-top:21px;
-	padding:5px 10px 11px 10px;
-	float:left;
-	background:url('images/bottomLeftCorner.png') bottom left no-repeat;
+  margin: 0;
+  margin-top: 11px;
+  padding: 5px 10px;
+  float: left;
+  background: url('images/bottomLeftCorner.png') bottom left no-repeat;
 }
 
 #wdn_search {
-	float:right;
-    max-height:37px;
-	background: #b70302; /* old browsers */
-    background-image: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201));
-    padding:6px 10px 7px 10px;
-    margin-right:12px;
+  float: right;
+  max-height: 37px;
+  background: #b70302; /* old browsers */
+  background-image: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201));
+  padding: 6px 10px 7px 10px;
+  margin-right: 12px;
 }
 #wdn_search form label {
-	display:none;
+  display: none;
 }
 #wdn_search form #q {
-	border:1px solid #e18887;
-	font-size:0.75em;
-	padding:0.1em 22px 0.1em 0.3em;
-	line-height:1.4em;
-	width:263px;
+  border: 1px solid #e18887;
+  font-size: 0.75em;
+  padding: 0.1em 22px 0.1em 0.3em;
+  line-height: 1.4em;
+  width: 263px;
 }
 #wdn_search .search {
-	background: url('images/searchMagnifyGlass.png') no-repeat;
-	text-indent:-9999em;
-	border:none;
-	width:18px;
-	height:19px;
-	display:block;
-	position:absolute;
-	right:26px;
-	top:10px;
+  background: url('images/searchMagnifyGlass.png') no-repeat;
+  text-indent: -9999em;
+  border: none;
+  width: 18px;
+  height: 19px;
+  display: block;
+  position: absolute;
+  right: 26px;
+  top: 10px;
 }
 #wdn_search .search:hover {
-	cursor:pointer;
-}
-#wdn_wrapper #titlegraphic { /* element in content wrapper, but forced visually into header */
-	position:absolute;
-	top:13px;
-	left:101px;
+  cursor: pointer;
 }

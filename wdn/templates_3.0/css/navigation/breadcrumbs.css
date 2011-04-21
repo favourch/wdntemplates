@@ -1,79 +1,70 @@
 #breadcrumbs {
-    font-family:arial;
-    font-size:0.689em;
-    display:inline-block;
-    margin-top:10px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.689em;
+  display: inline-block;
+  margin-top: 10px;
 }
 #breadcrumbs a acronym {
-	display:inline-block;
-	margin-top:-2px;
+  display: inline-block;
+  margin-top: -2px;
 }
 #breadcrumbs ul li:last-child a,
 #breadcrumbs ul li:last-child a:link,
 #breadcrumbs ul li:last-child a:visited {
-	background:none;
+  background: none;
 }
 #breadcrumbs ul {
-	list-style:none;
-	display:inline-block;
-	background:#E0E0E0;
-	padding:3px 6px;
-	border-radius:3px;
-	-webkit-border-radius:3px;
-	-moz-border-radius:3px;
+  list-style: none;
+  display: inline-block;
+  background: #E0E0E0;
+  padding: 3px 6px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
 }
 #breadcrumbs ul li {
-	float:left;
-	padding-right:1.7em;
-    font-weight:bold;
-    color:#686868; /* @TODO need to check contrast */
+  float: left;
+  padding-right: 1.7em;
+  font-weight: bold;
+  color: #686868; /* @TODO need to check contrast */
 }
-
-#breadcrumbs ul li:first-child{
-	
+#breadcrumbs ul li:first-child {
+  
 }
-#breadcrumbs ul li:last-child{
-    padding-right:0.6em;
+#breadcrumbs ul li:last-child {
+  padding-right: 0.6em;
 }
-#breadcrumbs ul li.selected{
-	height:44px;
-	background:url('images/tabBGRight.png') top right no-repeat;
-	display:block;
-	padding:0px;
+#breadcrumbs ul li.selected {
+  background: #FFFFFF;
+  display: block;
+  padding: 0;
 }
 #breadcrumbs ul li.selected{
-	margin-right:-8px;
+  margin-right: -8px;
 }
-
 #breadcrumbs a, #breadcrumbs a:link, #breadcrumbs a:visited {
-    text-decoration:none;
-    color:#686868; /* @TODO need to check contrast */
+  text-decoration: none;
+  color: #686868; /* @TODO need to check contrast */
 }
-
 #breadcrumbs ul li.selected a,
 #breadcrumbs ul li.selected a:link,
-#breadcrumbs ul li.selected a:visited 
-{
-	
+#breadcrumbs ul li.selected a:visited {
+  
 }
 #breadcrumbs ul li:first-child.selected {
-	margin-left:18px;
-	margin-right:-10px;
-	}
-
+  margin-left: 18px;
+  margin-right: -10px;
+}
 #breadcrumbs ul li.selected a:after {
-	
+  
 }
-
 #breadcrumbs ul li div.storednav {
-    display:none;
+  display: none;
 }
-
 #breadcrumbs img {
-    display:none;
+  display: none;
 }
-
 #breadcrumbs abbr:after,
 #breadcrumbs acronym:after {
-	content:'';
+  content: '';
 }

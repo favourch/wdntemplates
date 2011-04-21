@@ -7,9 +7,6 @@ body.fixed #breadcrumbs {
 	width: 954px;
 }
 
-body.fixed #wdn_navigation_wrapper {
-	width: 946px;
-}
 
 body.fixed #maincontent {
 	overflow:hidden;
