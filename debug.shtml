@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" media="screen"	href="wdn/templates_3.0/css/debug.css" />
 <link rel="stylesheet" type="text/css" media="print"	href="wdn/templates_3.0/css/print.css" />
+<script type="text/javascript" src="wdn/templates_3.0/scripts/debug.js"></script>
 <link rel="events" href="http://events.unl.edu/myred/" title="MyRED" />
 <!--#include virtual="sharedcode/localSiteLinks.html" -->
 <!--#include virtual="wdn/templates_3.0/includes/browserspecifics.html" -->
@@ -30,10 +31,10 @@ Navigation</a></p>
     <div id="header">
         <a href="http://www.unl.edu/" title="UNL website"><img src="wdn/templates_3.0/images/logo.png" alt="UNL graphic identifier" id="logo" /></a>
         <h1>University of Nebraska&ndash;Lincoln</h1>
-        <!--#include virtual="wdn/templates_3.0/includes/wdnTools.html" -->  
+        <!--#include virtual="wdn/templates_3.0/includes/wdnTools.html" -->
         <div id="wdn_identity_management"></div>
      </div>
-    <div id="wdn_navigation_bar">    
+    <div id="wdn_navigation_bar">
         <div id="breadcrumbs">
             <ul>
                 <!-- WDN: see glossary item 'breadcrumbs' -->
@@ -44,18 +45,19 @@ Navigation</a></p>
                 <li>This page</li>
                 <li>Current Page</li>
             </ul>
-        </div>        
+        </div>
         <div id="wdn_navigation_wrapper">
             <div id="navigation">
-                <!--#include virtual="sharedcode/navigation.html" -->                
+                <!--#include virtual="sharedcode/navigation.html" -->
                 <!-- End Navigation Markup -->
             </div>
         </div>
-    </div>    
-    <div id="wdn_content_wrapper">    
+    </div>
+    <div id="wdn_content_wrapper">
         <div id="titlegraphic">
             <h1>Jeffrey S. Raikes School of Computer Science and Management</h1>
-        </div>        
+        </div>
+        <div id="pagetitle"><h2>Current Students</h2></div>
         <div id="maincontent">
         <p> Text for height.</p>
         <p> Text for height.</p>
