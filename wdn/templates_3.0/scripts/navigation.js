@@ -99,37 +99,37 @@ WDN.navigation = function() {
          */
         fixPresentation : function(){
         	ul_h = 0;
-        	$('#navigation ul li ul').each(function(){
-                $(this).bind(
+        	WDN.jQuery('#navigation ul li ul').each(function(){
+                WDN.jQuery(this).bind(
                 		'webkitTransitionEnd transitionend oTransitionEnd', 
                 		function(event) {
-                			if($(this).parents('ul').hasClass('nav_collapsed')){
+                			if(WDN.jQuery(this).parents('ul').hasClass('nav_collapsed')){
                 				
                 			} else {
-                			   $(this).parents('ul').addClass('nav_pinned').removeClass('nav_changing');
+                			   WDN.jQuery(this).parents('ul').addClass('nav_pinned').removeClass('nav_changing');
                 			}
                 		},
                 		false
                 );
-        		if($(this).height() > ul_h) {
-        			ul_h = $(this).height();
+        		if(WDN.jQuery(this).height() > ul_h) {
+        			ul_h = WDN.jQuery(this).height();
         		}
         	});
         	//loop through again and apply new height
-        	$('#navigation ul li ul').each(function(){
-        	    $(this).css({'height':ul_h+'px'});
+        	WDN.jQuery('#navigation ul li ul').each(function(){
+        	    WDN.jQuery(this).css({'height':ul_h+'px'});
             });
             ah = 0;
-            $('#navigation > ul > li > a').each(function(){
-                if($(this).height() > ah) {
-                    ah = $(this).height();
+            WDN.jQuery('#navigation > ul > li > a').each(function(){
+                if(WDN.jQuery(this).height() > ah) {
+                    ah = WDN.jQuery(this).height();
                 }
             });
-            $('#navigation > ul > li > a').each(function(){
-                if($(this).height() < ah) {
-                	new_ah = (ah - $(this).height())/2;
+            WDN.jQuery('#navigation > ul > li > a').each(function(){
+                if(WDN.jQuery(this).height() < ah) {
+                	new_ah = (ah - WDN.jQuery(this).height())/2;
                 	console.log(new_ah);
-                	$(this).css({'padding':new_ah+'px 0'});
+                	WDN.jQuery(this).css({'padding':new_ah+'px 0'});
                 }
             });
         },

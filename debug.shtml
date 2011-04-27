@@ -52,20 +52,6 @@ Navigation</a></p>
         <p> Text for height.</p>
         <p> Text for height.</p>
         <p style="height:500px;"> Text for height.</p>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-        <script type="text/javascript">
-        // Here are the hacks to make the design work.
-        $('document').ready(function(){
-        	
-            /*
-            $('#navigation > ul').addClass('closed').hover(function(){
-                $(this).addClass('changing').removeClass('closed');
-            },function(){
-                $(this).addClass('closed').removeClass('opened');
-            })
-            */
-        });
-        </script>
             <!-- InstanceEndEditable --> 
             <div class="clear"></div> 
             <noscript> 
