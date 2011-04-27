@@ -96,10 +96,10 @@ Author: WDN
     background-image: linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%);
     background-image: -moz-linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,0.95)), color-stop(100%,rgba(225,225,225,0.95)));
-    -webkit-transition:all linear 0.2s;
-    -moz-transition:all linear 0.2s;
-    -o-transition:all linear 0.2s;
-    transition:all linear 0.2s;
+    -webkit-transition:all linear 0.1s;
+    -moz-transition:all linear 0.1s;
+    -o-transition:all linear 0.1s;
+    transition:all linear 0.1s;
 }
 
 #navigation ul li:hover ul {
@@ -140,12 +140,12 @@ Author: WDN
 #navigation ul li ul li:last-child a{border-bottom:none;}
 #navigation ul li ul li img{display:none !important;}
 
-#navigation ul.closed li ul {
-    height:0px !important;	
+#navigation ul.nav_collapsed li ul {
+    height:0px !important;
 }
-#navigation ul.closed li ul li, #navigation ul.opening li ul li {
+#navigation ul.nav_collapsed li ul li, #navigation ul.nav_changing li ul li {
     display:none;
 }
-#navigation ul.opened li ul li {
+#navigation ul.nav_pinned li ul li {
     display:block;
 }
