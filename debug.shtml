@@ -59,7 +59,7 @@ Navigation</a></p>
         	ul_h = 0;
         	$('#navigation ul li ul').each(function(){
                 $(this).bind(
-                		'webkitTransitionEnd', 
+                		'webkitTransitionEnd transitionend oTransitionEnd', 
                 		function(event) {
                 			if($(this).parents('ul').hasClass('closed')){
                 				
