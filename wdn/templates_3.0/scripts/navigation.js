@@ -77,14 +77,14 @@ WDN.navigation = function() {
                     sensitivity: 1, // Mouse must not move
                     interval:    120
                 });
-                WDN.jQuery('#navigation > ul').addClass('closed').hoverIntent({
-                    over:        WDN.navigation.switchSiteNavigation,
-                    out:         function(){},
+                WDN.jQuery('#navigation > ul').addClass('nav_collapsed').hoverIntent({
+                    over:        WDN.navigation.showFullNavigation,
+                    out:         WDN.navigation.hideFullNavigation,
                     timeout:     WDN.navigation.changeSiteNavDelay,
                     sensitivity: 1, // Mouse must not move
                     interval:    120
                 });
-                WDN.navigation.initializePreferredState();
+                //WDN.navigation.initializePreferredState();
             });
 
             //adds the curved end to the right side of the breadcrumbs bar in IE
@@ -100,17 +100,17 @@ WDN.navigation = function() {
         fixPresentation : function(){
         	ul_h = 0;
         	$('#navigation ul li ul').each(function(){
-                /*$(this).bind(
+                $(this).bind(
                 		'webkitTransitionEnd transitionend oTransitionEnd', 
                 		function(event) {
-                			if($(this).parents('ul').hasClass('closed')){
+                			if($(this).parents('ul').hasClass('nav_collapsed')){
                 				
                 			} else {
-                			   $(this).parents('ul').addClass('opened').removeClass('changing');
+                			   $(this).parents('ul').addClass('nav_pinned').removeClass('nav_changing');
                 			}
                 		},
                 		false
-                );*/
+                );
         		if($(this).height() > ul_h) {
         			ul_h = $(this).height();
         		}
@@ -132,6 +132,22 @@ WDN.navigation = function() {
                 	$(this).css({'padding':new_ah+'px 0'});
                 }
             });
+        },
+        
+        /**
+         * This function will bring open the navigation
+         */
+        
+        showFullNavigation : function(){
+        	WDN.jQuery('#navigation > ul').addClass('nav_changing').removeClass('nav_collapsed');
+        },
+        
+        /**
+         * This function will close the navigation
+         */
+        
+        hideFullNavigation : function(){
+        	WDN.jQuery('#navigation > ul').addClass('nav_collapsed').removeClass('nav_pinned');
         },
         
         /**
