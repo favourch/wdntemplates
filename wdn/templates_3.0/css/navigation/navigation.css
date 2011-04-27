@@ -143,6 +143,9 @@ Author: WDN
 #navigation ul.closed li ul {
     height:0px !important;	
 }
-#navigation ul.closed li ul li {
+#navigation ul.closed li ul li, #navigation ul.opening li ul li {
     display:none;
+}
+#navigation ul.opened li ul li {
+    display:block;
 }
