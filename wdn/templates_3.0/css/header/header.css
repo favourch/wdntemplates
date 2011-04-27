@@ -34,16 +34,21 @@
   background: #b70302; /* old browsers */
   background-image: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201));
-  padding: 6px 10px 7px 10px;
+  padding: 8px 10px 8px 10px;
   margin-right: 12px;
 }
 #wdn_search form label {
-  display: none;
+    display: none;
+    position:absolute;
+    margin:4px;
+    font-family: sans-serif;
+    font-size:0.8em;
+    color:#a1a1a1;
 }
 #wdn_search form #q {
   border: 1px solid #e18887;
-  font-size: 0.75em;
-  padding: 0.1em 22px 0.1em 0.3em;
+  font-size: 10px;
+  padding: 3px 22px 3px 4px;
   line-height: 1.4em;
   width: 263px;
 }
