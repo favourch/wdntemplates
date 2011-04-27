@@ -9,20 +9,7 @@
 <!--#include virtual="wdn/templates_3.0/includes/browserspecifics.html" -->
 <!--#include virtual="wdn/templates_3.0/includes/metanfavico.html" -->
 <title>UNL | Template</title>
-<style type="text/css">
-@font-face {
-    font-family: 'URWGroteskLCon';
-    src: url('/wdn/templates_3.0/css/fonts/URWGrotesk/URWGroTLigCon.eot'); /* IE9 Compat Modes */
-    src: url('/wdn/templates_3.0/css/fonts/URWGrotesk/URWGroTLigCon.eot?iefix') format('eot'), /* IE6-IE8 */
-         url('/wdn/templates_3.0/css/fonts/URWGrotesk/URWGroTLigCon.woff') format('woff'), /* Modern Browsers */
-         url('/wdn/templates_3.0/css/fonts/URWGrotesk/URWGroTLigCon.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('/wdn/templates_3.0/css/fonts/URWGrotesk/URWGroTLigCon.svg#URWGroTLigCon') format('svg'); /* Legacy iOS */
-}
-#maincontent .formal {
-    font-family: 'URWGroteskLCon';
-    font-size:2em;
-}
-</style>  
+
 </head>
 <body class="fixed debug">
 <p class="skipnav"><a class="skipnav" href="#maincontent">Skip
@@ -93,6 +80,9 @@ Navigation</a></p>
                 	console.log(new_ah);
                 	$(this).css({'padding':new_ah+'px 0'});
                 }
+            })
+            $('#navigation > ul').addClass('closed').hover(function(){
+            	$(this).toggleClass('closed');
             })
         });
         </script>
