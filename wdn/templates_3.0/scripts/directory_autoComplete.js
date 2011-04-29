@@ -10,16 +10,16 @@ WDN.directory_autoComplete = function() {
 					delay: 555,
 					minLength: 3,
 					source: function(request, response) {
-						WDN.jQuery.ajax({
-							delay: 555,
-			    			url: 'http://directory.unl.edu/service.php?q='+request.term+'&format=json',
-			    			dataType: "json",
-			    			success: function(data) {
+						WDN.get('http://directory.unl.edu/service.php?q='+request.term+'&format=json', false,
+			    			function(data) {
+								if (!(data instanceof Object)) {
+									data = WDN.jQuery.parseJSON(data);
+								}
 			    				var rows = new Array();
 			    				var i = 0;
 			    				for(var e=0; e<data.length; e++){
-		    						if (data[e].displayName){
-		    							rows[i] = {
+		    						if (data[e].displayName){		    							
+									rows[i] = {
 			    								label : '<span class="fn">'+data[e].displayName[0]+'</span>',
 			    								value : data[e].displayName[0],
 			    								key : data[e]
@@ -31,8 +31,7 @@ WDN.directory_autoComplete = function() {
 			    					}
 							    };
 			    				response(rows);
-						    }
-			    		});
+						    });
 			    	},
 					select: function(e, ui) {
 						WDN.directory_autoComplete.callback(ui.item.key);
@@ -46,3 +45,4 @@ WDN.directory_autoComplete = function() {
 		}
 	};
 }();
+
