@@ -16,55 +16,60 @@
 #breadcrumbs ul {
   list-style: none;
   display: inline-block;
-  background: #E0E0E0;
-  padding: 3px 6px;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
 }
 #breadcrumbs ul li {
   float: left;
-  padding-right: 1.7em;
-  font-weight: bold;
+  padding:5px;
+  padding-left:0;
   color: #686868; /* @TODO need to check contrast */
+  margin:3px 0;
+  position:relative;
+  z-index:2;
+  background: #E0E0E0;
+}
+#breadcrumbs ul li:first-child{
+    padding-left:5px;	
+}
+#breadcrumbs a {
+    padding:0 1em 0 3px;
+    font-weight: bold;
+    background: url('images/2011_breadcrumb_li.png') no-repeat right 2px;
 }
 #breadcrumbs ul li:first-child {
-  
+  border-radius: 3px 0 0 3px; 
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px; 
 }
-#breadcrumbs ul li:last-child {
+#breadcrumbs ul li:last-child { /* This is the non-link element */
   padding-right: 0.6em;
+  padding-left:4px;
+  background:none;
 }
-#breadcrumbs ul li.selected {
-  background: #FFFFFF;
-  display: block;
-  padding: 0;
+#breadcrumbs ul li:nth-last-child(2) {
+  border-radius: 0 3px 3px 0; 
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
 }
-#breadcrumbs ul li.selected{
-  margin-right: -8px;
+#breadcrumbs ul li.selected  {
+    margin:0;
+    padding:5px 3px 3px;
+    border:2px solid #f1f1f1;
+    border-radius:3px;
+    background:#fff;
+    line-height:1.2em;
+    -webkit-box-shadow: 1px 1px 1px #cccccc;
+    -moz-box-shadow: 1px 1px 1px #cccccc;
+    box-shadow: 1px 1px 1px #cccccc;
+	z-index:3;
+}
+#breadcrumbs ul li.selected + li {
+    padding-left:7px;	
 }
 #breadcrumbs a, #breadcrumbs a:link, #breadcrumbs a:visited {
   text-decoration: none;
   color: #686868; /* @TODO need to check contrast */
 }
-#breadcrumbs ul li.selected a,
-#breadcrumbs ul li.selected a:link,
-#breadcrumbs ul li.selected a:visited {
-  
-}
-#breadcrumbs ul li:first-child.selected {
-  margin-left: 18px;
-  margin-right: -10px;
-}
-#breadcrumbs ul li.selected a:after {
-  
-}
-#breadcrumbs ul li div.storednav {
-  display: none;
-}
-#breadcrumbs img {
-  display: none;
-}
-#breadcrumbs abbr:after,
-#breadcrumbs acronym:after {
-  content: '';
+#breadcrumbs ul li.selected a{
+    color:#ac0302;
+    background-position: right -14px;
 }
