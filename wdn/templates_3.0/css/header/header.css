@@ -27,7 +27,24 @@
   font-weight:normal;
   text-shadow: 0 0 3px #fff;
 }
-
+#titlegraphic h1 {
+  padding: 4px 15px;
+  position: absolute;
+  top: 10px;
+  left: 84px;
+  font-size: 40px;
+  letter-spacing: -0.045em;
+  text-shadow: 0 0 3px #fff;
+  font-weight: normal;
+}
+#titlegraphic h1,
+#titlegraphic h1 a {
+  text-decoration: none;
+  color: #737171;
+}
+#titlegraphic h2 {
+  display: none;
+}
 #wdn_search {
   float: right;
   max-height: 37px;
