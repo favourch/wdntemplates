@@ -26,15 +26,14 @@ Navigation</a></p>
             <ul>
                 <!-- WDN: see glossary item 'breadcrumbs' -->
                 <li><a href="http://www.unl.edu/" title="University of Nebraska&ndash;Lincoln">UNL</a></li>
-                <li><a href="http://other.unl.edu/">Un-accessible site</a></li>
+                <li class="selected"><a href="http://other.unl.edu/">Un-accessible site</a></li>
                 <li><a href="http://admissions.unl.edu/">Admissions</a></li>
                 <li><a href="http://admissions.unl.edu/visit.aspx">Visit</a></li>
                 <li>This page</li>
-                <li>Current Page</li>
             </ul>
         </div>
         <div id="wdn_navigation_wrapper">
-            <div id="navigation">
+            <div id="navigation" class="flag">
                 <!--#include virtual="sharedcode/navigation.html" -->
                 <!-- End Navigation Markup -->
             </div>
@@ -42,7 +41,7 @@ Navigation</a></p>
     </div>
     <div id="wdn_content_wrapper">
         <div id="titlegraphic">
-            <h1>Jeffrey S. Raikes School of Computer Science and Management</h1>
+            <h1>College of Agricultural Sciences and Natural Resources (CASNR)</h1>
         </div>
         <div id="pagetitle"><h2>Current Students</h2></div>
         <div id="maincontent">
