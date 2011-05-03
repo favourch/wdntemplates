@@ -1,7 +1,7 @@
 #wdn_identity_management {
 	position:absolute;
-	top:4px;
-	left:120px;
+	top:7px;
+	left:400px;
 	background-position: 0px 0px;
 	font-size:1em;
 	font-weight:bold;
@@ -9,38 +9,34 @@
 	font-family:sans-serif;
 	vertical-align:top;
 	overflow:visible;
+	background:#f1f1f1;
+	border-radius:5px;
+	padding:4px;
 }
-#wdn_identity_management:hover {
-
-}
+#wdn_identity_management:empty{display:none;}
 #wdn_identity_management img {
-	
 	border:1px solid #b8b8b8;
 	vertical-align: bottom;
-}
-#wdn_identity_management a,
-#wdn_identity_management a:link,
-#wdn_identity_management a:visited {
-	color:#BA0000;
-	text-decoration:none;
-	font-size:0.7em;
-	font-weight:normal;
-	margin-right:5px;
+    border-radius:5px;
 }
 #wdn_identity_management .username {
 	margin-right:5px;
-	}
-
-#wdn_identity_management a:focus,
-#wdn_identity_management a:hover {
-	color:#CC0000 !important;
-    border-bottom:1px dotted #CC0000;
 }
+
 #wdn_identity_management a:first-of-type:hover {
-border-bottom:none;	
-	}
-#wdn_identity_management a.logout {
-	margin-left:5px;
+    border-bottom:none;	
+}
+#wdn_idm_logout {
+    position:relative;
+    float:right;
+    text-indent:-999999em;
+    background:url('images/wdn_idmLogout.png') no-repeat 0 1px;
+    width:16px;
+    height:16px;
+    opacity:0.6;
+}
+#wdn_idm_logout:hover {
+    opacity:1;	
 }
 img.profile_pic {
 	padding:3px 3px 6px 3px;
