@@ -78,7 +78,7 @@ WDN.navigation = function() {
                     interval:    120
                 });
                 */
-                WDN.jQuery('#navigation.megabox > ul').addClass('nav_collapsed').hoverIntent({
+                WDN.jQuery('#navigation.mega > ul').addClass('nav_collapsed').hoverIntent({
                     over:        WDN.navigation.showFullNavigation,
                     out:         WDN.navigation.hideFullNavigation,
                     timeout:     WDN.navigation.changeSiteNavDelay,
