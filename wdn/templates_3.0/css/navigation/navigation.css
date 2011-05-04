@@ -148,13 +148,19 @@ Author: WDN
     -webkit-border-radius:5px;
     -moz-border-radius:5px;	
 }
+#navigation.flag ul li.nav_changing ul, #navigation.flag ul li.nav_pinned ul {
+    visibility:visible;
+}
+#navigation.flag ul li.nav_collapsed ul {
+	visibility:hidden;
+}
 #navigation.flag ul li ul {
-    visibility:hidden;
     border-radius:0 0 5px 5px;
     -webkit-border-radius:0 0 5px 5px;
     -moz-border-radius:0 0 5px 5px;
     
 }
+
 /**
 *	Rules for the various navigation states based on interactivity.
 *   ul.nav_* is only used for megabox	
@@ -170,19 +176,15 @@ Author: WDN
 }
 
 /*Flag, use ul li nav_* */
-
+#navigation.flag ul li.nav_pinned ul li {
+    display:block;
+}
 #navigation.flag ul li.nav_collapsed ul  {
     height:0px !important; 
-}
-#navigation.flag ul li.nav_changing ul, #navigation.flag ul li.nav_pinned ul {
-	visibility:visible;
 }
 #navigation.flag ul li.nav_collapsed ul li {
     display:none;	
 }
 #navigation.flag ul li.nav_changing ul li {
     display:none;
-}
-#navigation.flag ul li.nav_pinned ul li {
-    display:block;
 }
