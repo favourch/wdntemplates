@@ -52,7 +52,7 @@ Navigation</a></p>
         </div>
         <div id="wdn_navigation_wrapper">
             <div id="navigation" class="flag">
-                <!--#include virtual="sharedcode/navigation.html" -->
+                <!--#include virtual="../sharedcode/navigation.html" -->
                 <!-- End Navigation Markup -->
             </div>
         </div>
