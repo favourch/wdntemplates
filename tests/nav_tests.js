@@ -1,12 +1,10 @@
-//global timeout references we can use to stop them
-var timeouts = {};
+var startTime, stopTime;
 
 timer = function() {
-	var startTime, stopTime;
 	return {
 		start : function(){
 			startTime = new Date().getTime();
-			//console.log(startTime);
+			console.log(startTime);
 		},
 		
 		difference : function(){
@@ -16,7 +14,7 @@ timer = function() {
 		
 		stop : function(){
 			stopTime = new Date().getTime();
-			//console.log(stopTime);
+			console.log(stopTime);
 			store.save('flag_1', startTime, stopTime, ui.testComplete);
 		}
 	};
@@ -32,17 +30,18 @@ store = function() {
 			this.db = openDatabase('usertests', '1.0', 'All user testing storage', 8697);
 			this.db.transaction(function(tx){
 				tx.executeSql("create table if not exists " +
-						"tests(id integer primary key asc, testID varchar, startTime integer, endTime integer, completed boolean)",
+						"tests(id integer primary key asc, testID varchar, startTime integer, endTime integer, completed boolean, testOrder integer)",
 				[],
-				function(){console.log('table setup');}
+				function(){console.log('table setup');},
+				store.onError
 				);
 			});
 		},
 		
 		save : function(testID, startTime, endTime, callback){
 			store.db.transaction(function(tx){
-				tx.executeSql("insert into tests (testId, startTime, endTime, completed) values (?,?,?,?);",
-				[testID, startTime, endTime, 1],
+				tx.executeSql("insert into tests (testId, startTime, endTime, completed, testOrder) values (?,?,?,?,?);",
+				[testID, startTime, endTime, 1, 1],
 				callback,
 				store.onError);
 			});
