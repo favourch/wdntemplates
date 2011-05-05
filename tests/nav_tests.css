@@ -10,6 +10,7 @@
     color:#fff;
     font: 77%/140% "helvetica neue", helvetica, "Lucida Grande", Verdana, Arial;
 }
+#testing .test, #testing .final {display:none;}
 #testing p:empty{display:none;}
 #testing p.status{
     border: 2px solid #ee5c5c;

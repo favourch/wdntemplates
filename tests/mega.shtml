@@ -52,7 +52,7 @@ Navigation</a></p>
             </ul>
         </div>
         <div id="wdn_navigation_wrapper">
-            <div id="navigation" class="flag">
+            <div id="navigation" class="mega">
                 <!--#include virtual="../sharedcode/navigation.html" -->
                 <!-- End Navigation Markup -->
             </div>
@@ -65,7 +65,7 @@ Navigation</a></p>
         <div id="pagetitle"><h2>Iterative Navigation Examples</h2></div>
         <div id="maincontent">
             <div class="grid6 first">
-                <img src="demoFiles/box.png" alt="box image" />
+                <img src="box.png" alt="box image" />
                 <div class="supporting">
                 
                     <h3>Megabox Navigation</h3>
@@ -74,7 +74,7 @@ Navigation</a></p>
                 </div>
             </div>
             <div class="grid6" id="switch_flag">
-                <img src="demoFiles/flag.png" alt="flag image" />
+                <img src="flag.png" alt="flag image" />
                 
                 <div class="supporting">
                 
@@ -117,20 +117,7 @@ Navigation</a></p>
     </div>
     <div style="clear:both;"> </div>
 </div>
-<div id="testing">
-    <div id="testing_wrapper">
-        <p class="status"></p>
-        <div class="test" id="test1">
-            <h3>Exercise 1</h3>
-            <p>This test is designed to measure the amount of time it takes to find a particular item on the page. Your task for this exercise:</p>
-            <ol>
-                <li>Find the link for <span class="item">Pluto</span>.</li>
-                <li>Click the link.</li>
-            </ol>
-        </div>
-        <button class="begin">Begin Test</button>
-    </div>
-</div>
+<!--#include virtual="test.html" -->
 <script type="text/javascript" src="nav_tests.js"></script>
 </body>
 </html>

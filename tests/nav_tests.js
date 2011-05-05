@@ -1,4 +1,5 @@
 var startTime, stopTime;
+var counter = 0;
 
 timer = function() {
 	return {
@@ -12,10 +13,10 @@ timer = function() {
 			return time;
 		},
 		
-		stop : function(){
+		stop : function(testID){
 			stopTime = new Date().getTime();
 			console.log(stopTime);
-			store.save('flag_1', startTime, stopTime, ui.testComplete);
+			store.save(testID, startTime, stopTime, ui.testComplete);
 		}
 	};
 }();
@@ -41,7 +42,7 @@ store = function() {
 		save : function(testID, startTime, endTime, callback){
 			store.db.transaction(function(tx){
 				tx.executeSql("insert into tests (testId, startTime, endTime, completed, testOrder) values (?,?,?,?,?);",
-				[testID, startTime, endTime, 1, 1],
+				[testID, startTime, endTime, 1, counter],
 				callback,
 				store.onError);
 			});
@@ -54,14 +55,77 @@ store = function() {
 }();
 
 ui = function() {
+	
+	var variations = [1,2,3,4];
+	
+	var variationsSeen = [];
+	
 	return {
+		
+		type : function(){
+			return(WDN.jQuery('#navigation').attr('class'));
+		},
+		
+		setup : function(){
+			WDN.jQuery('.test').hide();
+			if (counter != 4){
+				do {
+					currentRandom = ui.random();
+					i = WDN.jQuery.inArray(currentRandom, variationsSeen);
+				}
+				while (i > -1); 
+				//console.log(currentRandom);
+				variationsSeen.push(currentRandom);
+				counter++;
+				//console.log(counter);
+				ui.startTest(currentRandom); //Now we have a random number never used.
+			} else {
+				ui.endTests();
+			}
+		},
+		
+		random : function(){
+			thisVariation = variations[Math.floor(Math.random()*variations.length)];
+			return thisVariation;
+		},
+		
+		startTest : function(id){ //determine which section to run and setup the test
+			WDN.jQuery('#navigation').empty().load(
+				'navigation/'+id+'.html',
+				function(){
+					ui.update(id);
+				}
+			);
+		},
+		
+		update : function(id) {
+			WDN.initializePlugin('navigation');
+			target = WDN.jQuery('#navigation a.'+ui.type()).text();
+			WDN.jQuery('#test'+id).show().find('h3 > span').text(counter);
+			WDN.jQuery('#test'+id+' li span').text(target);
+			WDN.jQuery('#navigation a.'+ui.type()).click(function(){
+				timer.stop(ui.type()+'_'+id);
+				return false;
+			});
+			WDN.jQuery('#testing').show();
+		},
+		
 		testComplete : function() {
-			alert('Got it, thanks!');
+			WDN.jQuery('#testing .status').text('Great job! Here\'s your next exercise.');
+			ui.setup();
+		},
+		
+		endTests : function(){
+			WDN.jQuery('#testing .status').text('Thanks for your help making unl.edu awesome!');
+			WDN.jQuery('#testing .begin').hide();
+			WDN.jQuery('#testing').show();
+			WDN.jQuery('#testing .final').show();
 		}
 	};
 }();
 
 window.onload = function(){
+	ui.setup();
 	store.setup();
 	WDN.jQuery('document').ready(function(){
 		//invalidate all the links on the page so our user doesn't navigate away.
@@ -69,10 +133,6 @@ window.onload = function(){
 		WDN.jQuery('button.begin').click(function(){
 			WDN.jQuery('#testing').hide();
 			timer.start();
-			return false;
-		});
-		WDN.jQuery('.target').click(function(){
-			timer.stop();
 			return false;
 		});
 	});
