@@ -16,7 +16,7 @@ timer = function() {
 		stop : function(testID){
 			stopTime = new Date().getTime();
 			console.log(stopTime);
-			store.save(testID, startTime, stopTime, ui.testComplete);
+			store.save(testID, startTime, stopTime, timer.difference(), ui.testComplete);
 		}
 	};
 }();
@@ -31,7 +31,7 @@ store = function() {
 			this.db = openDatabase('usertests', '1.0', 'All user testing storage', 8697);
 			this.db.transaction(function(tx){
 				tx.executeSql("create table if not exists " +
-						"tests(id integer primary key asc, testID varchar, startTime integer, endTime integer, completed boolean, testOrder integer)",
+						"tests(id integer primary key asc, testID varchar, startTime integer, endTime integer, difference integer, completed boolean, testOrder integer)",
 				[],
 				function(){console.log('table setup');},
 				store.onError
@@ -39,10 +39,10 @@ store = function() {
 			});
 		},
 		
-		save : function(testID, startTime, endTime, callback){
+		save : function(testID, startTime, endTime, difference, callback){
 			store.db.transaction(function(tx){
-				tx.executeSql("insert into tests (testId, startTime, endTime, completed, testOrder) values (?,?,?,?,?);",
-				[testID, startTime, endTime, 1, counter],
+				tx.executeSql("insert into tests (testId, startTime, endTime, difference, completed, testOrder) values (?,?,?,?,?,?);",
+				[testID, startTime, endTime, difference, 1, counter],
 				callback,
 				store.onError);
 			});
