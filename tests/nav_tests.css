@@ -21,6 +21,10 @@
     font-weight:bold;
     text-align:center;
 }
+#testing .status span {
+    font-size:0.5em;
+    opacity:0.5;	
+}
 #testing_wrapper {
     width:960px;
     margin:7% auto;

@@ -154,12 +154,12 @@ ui = function() {
 		},
 		
 		testComplete : function() {
-			WDN.jQuery('#testing .status').text('Great job! Here\'s your next exercise. '+ timer.difference());
+			WDN.jQuery('#testing .status').html('Great job! Here\'s your next exercise. <span>'+ timer.difference() + '</span>');
 			ui.chooseTest();
 		},
 		
 		endTests : function(){
-			WDN.jQuery('#testing .status').text('Thanks for your help making unl.edu awesome! '+ timer.difference());
+			WDN.jQuery('#testing .status').html('Thanks for your help making unl.edu awesome! <span>'+ timer.difference() + '</span>');
 			WDN.jQuery('#testing .begin, #testing .test').hide();
 			WDN.jQuery('#testing').show();
 			WDN.jQuery('#testing .final').show();
