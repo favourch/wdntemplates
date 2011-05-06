@@ -1,5 +1,6 @@
 var startTime, stopTime;
 var counter = 0;
+var types = ['flag','mega'];
 
 timer = function() {
 	return {
@@ -26,6 +27,7 @@ store = function() {
 		setup: function(){
 			if (!window.openDatabase){
 				WDN.jQuery('#testing .status').text('You are not using a browser that will support this test. Please use Chrome or Safari.');
+				WDN.jQuery('button.begin').remove();
 				return false;
 			};
 			this.db = openDatabase('usertests', '1.0', 'All user testing storage', 8697);
@@ -56,7 +58,7 @@ store = function() {
 
 ui = function() {
 	
-	var variations = [1,2,3,4];
+	var variations = [1,2,3,4,5];
 	
 	var variationsSeen = [];
 	
@@ -68,24 +70,45 @@ ui = function() {
 		
 		setup : function(){
 			WDN.jQuery('.test').hide();
-			if (counter != 4){
-				do {
-					currentRandom = ui.random();
-					i = WDN.jQuery.inArray(currentRandom, variationsSeen);
-				}
-				while (i > -1); 
-				//console.log(currentRandom);
-				variationsSeen.push(currentRandom);
-				counter++;
-				//console.log(counter);
-				ui.startTest(currentRandom); //Now we have a random number never used.
+			WDN.log(variationsSeen);
+			do {
+				currentRandom = ui.random(variations);
+				i = WDN.jQuery.inArray(currentRandom, variationsSeen);
+			}
+			while (i > -1); 
+			//console.log(currentRandom);
+			variationsSeen.push(currentRandom);
+			counter++;
+			//console.log(counter);
+			ui.startTest(currentRandom); //Now we have a random number never used.
+		},
+		
+		chooseTest : function(){
+			WDN.log(counter);
+			if (counter == 4){ //we need to switch to the other type
+				WDN.log('changing to other navgition type '+counter);
+				ui.toggleType(secondType);
 			} else {
-				ui.endTests();
+				if (counter < 9){
+					ui.setup();
+				} else {
+					ui.endTests();
+				}
 			}
 		},
 		
-		random : function(){
-			thisVariation = variations[Math.floor(Math.random()*variations.length)];
+		toggleType : function(newType) {
+			variationsSeen.length = 0;
+			WDN.jQuery("#navigation").removeAttr('class').addClass(newType);
+			ui.setup();
+		},
+		
+		changeTypeTest : function(){ //resets
+			
+		},
+		
+		random : function(theArray){
+			thisVariation = theArray[Math.floor(Math.random()*theArray.length)];
 			return thisVariation;
 		},
 		
@@ -100,23 +123,38 @@ ui = function() {
 		
 		update : function(id) {
 			WDN.initializePlugin('navigation');
-			target = WDN.jQuery('#navigation a.'+ui.type()).text();
 			WDN.jQuery('#test'+id).show().find('h3 > span').text(counter);
-			WDN.jQuery('#test'+id+' li span').text(target);
-			WDN.jQuery('#navigation a.'+ui.type()).click(function(){
-				timer.stop(ui.type()+'_'+id);
-				return false;
-			});
+			if (id != 5){ //test 5 is a multistep, so we need a bit more logic.
+				WDN.jQuery('#test'+id+' li span').text(WDN.jQuery('#navigation a.'+ui.type()).eq(0).text());
+				WDN.jQuery('#navigation a.'+ui.type()).eq(0).click(function(){
+					timer.stop(ui.type()+'_'+id);
+					return false;
+				});
+			} else {
+				WDN.jQuery('#test'+id+' li span').eq(0).text(WDN.jQuery('#navigation a.'+ui.type()).eq(1).text());
+				WDN.jQuery('#test'+id+' li span').eq(1).text(WDN.jQuery('#navigation a.'+ui.type()).eq(0).text());
+				stepOneComplete = false;
+				WDN.jQuery('#navigation a.'+ui.type()).eq(1).click(function(){
+					stepOneComplete = true;
+					return false;
+				});
+				WDN.jQuery('#navigation a.'+ui.type()).eq(0).click(function(){
+					if(stepOneComplete){
+						timer.stop(ui.type()+'_'+id);
+					}
+					return false;
+				});
+			}
 			WDN.jQuery('#testing').show();
 		},
 		
 		testComplete : function() {
-			WDN.jQuery('#testing .status').text('Great job! Here\'s your next exercise.');
-			ui.setup();
+			WDN.jQuery('#testing .status').text('Great job! Here\'s your next exercise. '+ timer.difference());
+			ui.chooseTest();
 		},
 		
 		endTests : function(){
-			WDN.jQuery('#testing .status').text('Thanks for your help making unl.edu awesome!');
+			WDN.jQuery('#testing .status').text('Thanks for your help making unl.edu awesome! '+ timer.difference());
 			WDN.jQuery('#testing .begin').hide();
 			WDN.jQuery('#testing').show();
 			WDN.jQuery('#testing .final').show();
@@ -125,7 +163,13 @@ ui = function() {
 }();
 
 window.onload = function(){
-	ui.setup();
+	firstType = ui.random(types);
+	if (firstType == 'flag'){
+		secondType = 'mega';
+	} else {
+		secondType = 'flag';
+	}
+	ui.toggleType(firstType);
 	store.setup();
 	WDN.jQuery('document').ready(function(){
 		//invalidate all the links on the page so our user doesn't navigate away.
