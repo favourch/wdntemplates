@@ -10,25 +10,6 @@
 <!--#include virtual="../wdn/templates_3.0/includes/metanfavico.html" -->
 <title>UNL | Template</title>
 <link rel="stylesheet" type="text/css" media="screen"   href="nav_tests.css" />
-<style type="text/css">
-    .grid6, .supporting h3 {
-        text-align:center;
-    }
-    .supporting h3 {
-        text-transform:uppercase;
-        letter-spacing:-0.04em;
-        font-size:1.2em;
-        font-weight:800;
-    }
-    .supporting {
-        text-align:left;
-        background:#f1f1f1;
-        border-radius:5px;
-        -webkit-border-radius:5px;
-        -moz-border-radius:5px;
-        padding:10px;
-    }
-</style>
 </head>
 <body class="fixed debug">
 <p class="skipnav"><a class="skipnav" href="#maincontent">Skip
@@ -64,24 +45,8 @@ Navigation</a></p>
         </div>
         <div id="pagetitle"><h2>Iterative Navigation Examples</h2></div>
         <div id="maincontent">
-            <div class="grid6 first">
-                <img src="box.png" alt="box image" />
-                <div class="supporting">
-                
-                    <h3>Megabox Navigation</h3>
-                    <p>Megabox navigation, the current type of navigation used in the WDN Templates, shows all the navigation available with one user interaction.</p>
-                    This is mega.
-                </div>
-            </div>
-            <div class="grid6" id="switch_flag">
-                <img src="flag.png" alt="flag image" />
-                
-                <div class="supporting">
-                
-                    <h3>Flag Navigation</h3>
-                    <p>Flag navigation, shows only the navigation related to selected primary navigational label.</p>
-                    <a class="switch flag" href="flag.shtml">Switch to Flag</a>
-                </div>
+            <div id="exercise">
+            
             </div>
             <!-- InstanceEndEditable --> 
             <div class="clear"></div> 

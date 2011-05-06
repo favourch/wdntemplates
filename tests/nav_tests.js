@@ -70,6 +70,7 @@ ui = function() {
 		
 		setup : function(){
 			WDN.jQuery('.test').hide();
+			WDN.jQuery('#exercise').empty();
 			WDN.log(variationsSeen);
 			do {
 				currentRandom = ui.random(variations);
@@ -85,11 +86,11 @@ ui = function() {
 		
 		chooseTest : function(){
 			WDN.log(counter);
-			if (counter == 4){ //we need to switch to the other type
+			if (counter == 5){ //we need to switch to the other type
 				WDN.log('changing to other navgition type '+counter);
 				ui.toggleType(secondType);
 			} else {
-				if (counter < 9){
+				if (counter < 10){
 					ui.setup();
 				} else {
 					ui.endTests();
@@ -124,6 +125,7 @@ ui = function() {
 		update : function(id) {
 			WDN.initializePlugin('navigation');
 			WDN.jQuery('#test'+id).show().find('h3 > span').text(counter);
+			WDN.log('ui.update id= '+id);
 			if (id != 5){ //test 5 is a multistep, so we need a bit more logic.
 				WDN.jQuery('#test'+id+' li span').text(WDN.jQuery('#navigation a.'+ui.type()).eq(0).text());
 				WDN.jQuery('#navigation a.'+ui.type()).eq(0).click(function(){
@@ -131,6 +133,7 @@ ui = function() {
 					return false;
 				});
 			} else {
+				WDN.log('Setup the two step test');
 				WDN.jQuery('#test'+id+' li span').eq(0).text(WDN.jQuery('#navigation a.'+ui.type()).eq(1).text());
 				WDN.jQuery('#test'+id+' li span').eq(1).text(WDN.jQuery('#navigation a.'+ui.type()).eq(0).text());
 				stepOneComplete = false;
@@ -145,6 +148,8 @@ ui = function() {
 					return false;
 				});
 			}
+			WDN.jQuery('#test'+id).clone().appendTo('#exercise');
+			WDN.jQuery('#exercise .test').removeAttr('id');
 			WDN.jQuery('#testing').show();
 		},
 		
@@ -155,7 +160,7 @@ ui = function() {
 		
 		endTests : function(){
 			WDN.jQuery('#testing .status').text('Thanks for your help making unl.edu awesome! '+ timer.difference());
-			WDN.jQuery('#testing .begin').hide();
+			WDN.jQuery('#testing .begin, #testing .test').hide();
 			WDN.jQuery('#testing').show();
 			WDN.jQuery('#testing .final').show();
 		}
