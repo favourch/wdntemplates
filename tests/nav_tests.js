@@ -66,7 +66,7 @@ store = function() {
                         );
                         
                         WDN.jQuery('#sqlStatement').append(
-                        	'insert into tblUserTests(testId, startTime, endTime, testOrder) values ('+result.rows.item(i)['testID']+', '+result.rows.item(i)['startTime']+', '+result.rows.item(i)['endTime']+', '+result.rows.item(i)['testOrder']+'); '
+                        	'insert into tblUserTests(testId, difference, testOrder) values ("'+result.rows.item(i)['testID']+'", '+result.rows.item(i)['difference']+', '+result.rows.item(i)['testOrder']+'); '
                         );
                     }
 				});
