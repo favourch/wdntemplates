@@ -68,7 +68,9 @@ WDN.navigation = function() {
             if (WDN.getCookie('n') == 1) {
                 WDN.navigation.preferredState = 1;
             }
-
+        },
+        
+        setupInteraction : function() {
             WDN.loadJS('wdn/templates_3.0/scripts/plugins/hoverIntent/jQuery.hoverIntent.js', function() {
                 /*WDN.jQuery('#breadcrumbs ul li a').hoverIntent({
                     over:        WDN.navigation.switchSiteNavigation,
@@ -159,6 +161,7 @@ WDN.navigation = function() {
         	WDN.jQuery('#navigation ul li ul').each(function(){
         	    WDN.jQuery(this).css({'height':ul_h+'px'});
             });
+        	WDN.navigation.setupInteraction();
         },
         
         /**
