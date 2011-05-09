@@ -168,7 +168,7 @@ Author: WDN
 #navigation ul.nav_collapsed li ul{
     height:0px !important;
 }
-#navigation ul.nav_collapsed li ul li, #navigation ul.nav_changing li ul li {
+#navigation ul.nav_collapsed li ul li, #navigation ul.nav_collapsed.nav_pinned li ul li, #navigation ul.nav_changing li ul li {
     display:none;
 }
 #navigation ul.nav_pinned li ul li {
