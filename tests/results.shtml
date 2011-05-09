@@ -33,7 +33,7 @@ Navigation</a></p>
             </ul>
         </div>
         <div id="wdn_navigation_wrapper">
-            <div id="navigation">
+            <div id="navigation" class="mega">
                 <!--#include virtual="../sharedcode/navigation.html" -->
                 <!-- End Navigation Markup -->
             </div>
@@ -41,16 +41,28 @@ Navigation</a></p>
     </div>
     <div id="wdn_content_wrapper">
         <div id="titlegraphic">
-            <h1>Iterative Navigation Testing</h1>
+            <h1>User Tests</h1>
         </div>
-        <div id="pagetitle"><h2>Examples</h2></div>
+        <div id="pagetitle"><h2>These are the Results</h2></div>
         <div id="maincontent">
-            <div id="heightPromo">
-                <p>Your current exercise is below.</p>
+            <table id="results" class="zentable cool" style="margin-bottom:25px;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>testID</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Difference (seconds)</th>
+                        <th>Test Order</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <h3 class="sec_header">SQL Statements for Backing Up Data</h3>
+            <div id="sqlStatement">
             </div>
-            <div id="exercise">
-            
-            </div>
+            <button id="clearResults">Clear Local Storage</button>
             <!-- InstanceEndEditable --> 
             <div class="clear"></div> 
             <noscript> 
@@ -85,7 +97,17 @@ Navigation</a></p>
     </div>
     <div style="clear:both;"> </div>
 </div>
-<!--#include virtual="test.html" -->
 <script type="text/javascript" src="nav_tests.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+    WDN.jQuery('document').ready(function(){
+    	store.setup();
+        store.display();
+        WDN.jQuery('#clearResults').click(function(){
+        	store.empty();
+        });
+    });
+};
+</script>
 </body>
 </html>

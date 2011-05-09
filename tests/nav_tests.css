@@ -94,3 +94,32 @@ button.begin:active {
   margin-top: 5px;
   margin-bottom:7px;
 }
+
+/* Maincontent junk */
+#heightPromo {
+    height:150px;
+    border-radius:5px;
+    background:#fff;
+    display:-webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+#heightPromo p {
+    font:1.4em "helvetica neue", helvetica, "Lucida Grande", Verdana, Arial;	
+}
+#exercise {
+	font:1.4em "helvetica neue", helvetica, "Lucida Grande", Verdana, Arial;
+    font-size:130%;
+    line-height:150%;	
+    background:#f1f1f1;
+    border-radius:5px;
+    padding:10px;
+    margin-bottom:55px;
+}
+#exercise ol {
+    margin-left:25px;	
+}
+#exercise ol span {
+    font-size:130%;	
+}

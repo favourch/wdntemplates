@@ -50,6 +50,41 @@ store = function() {
 			});
 		},
 		
+		display : function(){
+			store.db.transaction(function(tx){
+				tx.executeSql('select * from tests order by id desc', [], function(tx, result){
+					for(var i = 0; i < result.rows.length; i++) {
+                        WDN.jQuery('#results tbody').append(
+                        		'<tr>'
+                        		+ '<td>' + result.rows.item(i)['id'] + '</td>'
+                        		+ '<td>' + result.rows.item(i)['testID'] + '</td>'
+                        		+ '<td>' + result.rows.item(i)['startTime'] + '</td>'
+                        		+ '<td>' + result.rows.item(i)['endTime'] + '</td>'
+                        		+ '<td>' + result.rows.item(i)['difference'] + '</td>'
+                        		+ '<td>' + result.rows.item(i)['testOrder'] + '</td>'
+                        		+ '</tr>'
+                        );
+                        
+                        WDN.jQuery('#sqlStatement').append(
+                        	'insert into tblUserTests(testId, startTime, endTime, testOrder) values ('+result.rows.item(i)['testID']+', '+result.rows.item(i)['startTime']+', '+result.rows.item(i)['endTime']+', '+result.rows.item(i)['testOrder']+'); '
+                        );
+                    }
+				});
+			});
+		},
+		
+		empty : function(){
+			areYouSure = confirm('Clearing the database will remove all records. Make sure you have backed up, don\'t be a fool! Are you sure you want to continue?');
+			if(areYouSure){
+				store.db.transaction(function(tx){
+					tx.executeSql("drop table tests;", [], function(){
+						WDN.jQuery('#results, #sqlStatement').hide();
+					});
+				});
+			}
+			else {return false;}
+		},
+		
 		onError: function(tx,error){
 			console.log("Error occurred: ", error.message);
 		}
