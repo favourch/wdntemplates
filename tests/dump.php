@@ -1,5 +1,5 @@
 <?php
-include virtual('config.inc.php');
+include 'config.inc.php';
 
 // Make a MySQL Connection
 mysql_connect($server, $user, $pass) or die(mysql_error());
@@ -16,4 +16,3 @@ mysql_query(
 ) or die(mysql_error());  
 
 echo 'success';
-?>
