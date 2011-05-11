@@ -1,6 +1,7 @@
 var startTime, stopTime;
 var counter = 0;
 var types = ['flag','mega'];
+var userType = 'Other';
 
 timer = function() {
 	return {
@@ -17,7 +18,7 @@ timer = function() {
 		stop : function(testID){
 			stopTime = new Date().getTime();
 			console.log(stopTime);
-			store.save(testID, startTime, stopTime, timer.difference(), ui.testComplete);
+			ui.testComplete(testID, startTime, stopTime, timer.difference(), counter);
 		}
 	};
 }();
@@ -25,68 +26,13 @@ timer = function() {
 store = function() {
 	return {
 		setup: function(){
-			if (!window.openDatabase){
-				WDN.jQuery('#testing .status').text('You are not using a browser that will support this test. Please use Chrome or Safari.');
-				WDN.jQuery('button.begin').remove();
-				return false;
-			};
-			this.db = openDatabase('usertests', '1.0', 'All user testing storage', 8697);
-			this.db.transaction(function(tx){
-				tx.executeSql("create table if not exists " +
-						"tests(id integer primary key asc, testID varchar, startTime integer, endTime integer, difference integer, completed boolean, testOrder integer)",
-				[],
-				function(){console.log('table setup');},
-				store.onError
-				);
+			
+		},
+		
+		save : function(testID, startTime, endTime, difference, testOrder){
+			WDN.post('dump.php', {'testID' : testID, 'startTime' : startTime, 'endTime' : endTime, 'testOrder' : testOrder, 'userType' : 'student'}, function(data){
+				WDN.log(data);
 			});
-		},
-		
-		save : function(testID, startTime, endTime, difference, callback){
-			store.db.transaction(function(tx){
-				tx.executeSql("insert into tests (testId, startTime, endTime, difference, completed, testOrder) values (?,?,?,?,?,?);",
-				[testID, startTime, endTime, difference, 1, counter],
-				callback,
-				store.onError);
-			});
-		},
-		
-		display : function(){
-			store.db.transaction(function(tx){
-				tx.executeSql('select * from tests order by id desc', [], function(tx, result){
-					for(var i = 0; i < result.rows.length; i++) {
-                        WDN.jQuery('#results tbody').append(
-                        		'<tr>'
-                        		+ '<td>' + result.rows.item(i)['id'] + '</td>'
-                        		+ '<td>' + result.rows.item(i)['testID'] + '</td>'
-                        		+ '<td>' + result.rows.item(i)['startTime'] + '</td>'
-                        		+ '<td>' + result.rows.item(i)['endTime'] + '</td>'
-                        		+ '<td>' + result.rows.item(i)['difference'] + '</td>'
-                        		+ '<td>' + result.rows.item(i)['testOrder'] + '</td>'
-                        		+ '</tr>'
-                        );
-                        
-                        WDN.jQuery('#sqlStatement').append(
-                        	'insert into tblUserTests(testId, difference, testOrder) values ("'+result.rows.item(i)['testID']+'", '+result.rows.item(i)['difference']+', '+result.rows.item(i)['testOrder']+'); '
-                        );
-                    }
-				});
-			});
-		},
-		
-		empty : function(){
-			areYouSure = confirm('Clearing the database will remove all records. Make sure you have backed up, don\'t be a fool! Are you sure you want to continue?');
-			if(areYouSure){
-				store.db.transaction(function(tx){
-					tx.executeSql("drop table tests;", [], function(){
-						WDN.jQuery('#results, #sqlStatement').hide();
-					});
-				});
-			}
-			else {return false;}
-		},
-		
-		onError: function(tx,error){
-			console.log("Error occurred: ", error.message);
 		}
 	};
 }();
@@ -136,6 +82,7 @@ ui = function() {
 		toggleType : function(newType) {
 			variationsSeen.length = 0;
 			WDN.jQuery("#navigation").removeAttr('class').addClass(newType);
+			WDN.log('navigation type toggled');
 			ui.setup();
 		},
 		
@@ -174,6 +121,7 @@ ui = function() {
 				stepOneComplete = false;
 				WDN.jQuery('#navigation a.'+ui.type()).eq(1).click(function(){
 					stepOneComplete = true;
+					WDN.jQuery("#exercise ol li").eq(0).css({'text-decoration' : 'line-through', 'opacity' : '0.5'});
 					return false;
 				});
 				WDN.jQuery('#navigation a.'+ui.type()).eq(0).click(function(){
@@ -188,9 +136,10 @@ ui = function() {
 			WDN.jQuery('#testing').show();
 		},
 		
-		testComplete : function() {
+		testComplete : function(testID, startTime, endTime, difference, testOrder) {
 			WDN.jQuery('#testing .status').html('Great job! Here\'s your next exercise. <span>'+ timer.difference() + '</span>');
 			ui.chooseTest();
+			store.save(testID, startTime, endTime, difference, testOrder);
 		},
 		
 		endTests : function(){
@@ -210,13 +159,20 @@ window.onload = function(){
 		secondType = 'flag';
 	}
 	ui.toggleType(firstType);
-	store.setup();
 	WDN.jQuery('document').ready(function(){
 		//invalidate all the links on the page so our user doesn't navigate away.
 		WDN.jQuery('a').attr({'href' : '#'});
 		WDN.jQuery('button.begin').click(function(){
 			WDN.jQuery('#testing').hide();
 			timer.start();
+			return false;
+		});
+		WDN.jQuery('#hideTesting').click(function(){
+			WDN.jQuery('#testing').hide();
+			return false;
+		});
+		WDN.jQuery('#showTesting').click(function(){
+			WDN.jQuery('#testing').show();
 			return false;
 		});
 	});
