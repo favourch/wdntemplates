@@ -1,7 +1,8 @@
-var startTime, stopTime;
+var startTime, stopTime, uniqueID;
 var counter = 0;
 var types = ['flag','mega'];
 var userType = 'Other';
+var urlParams = {};
 
 timer = function() {
 	return {
@@ -30,7 +31,7 @@ store = function() {
 		},
 		
 		save : function(testID, startTime, endTime, difference, testOrder){
-			WDN.post('dump.php', {'testID' : testID, 'startTime' : startTime, 'endTime' : endTime, 'testOrder' : testOrder, 'userType' : userType}, function(data){
+			WDN.post('dump.php', {'testID' : testID, 'userID' : uniqueID, 'startTime' : startTime, 'endTime' : endTime, 'testOrder' : testOrder, 'userType' : userType}, function(data){
 				WDN.log(data);
 			});
 		}
@@ -46,7 +47,13 @@ ui = function() {
 	return {
 		
 		initialize : function(){
+			if (ui.isTester()){
+				uniqueID = 0;
+			} else {
+				uniqueID = new Date().getTime();
+			}
 			WDN.jQuery('#testing button').hide();
+			WDN.jQuery('#uniqueID').append(uniqueID);
 			dropDown = WDN.jQuery('#userType');
 			selectBox = WDN.jQuery('.selectBox');
 			
@@ -93,6 +100,18 @@ ui = function() {
 				ui.updateStatus('Excellent, thanks! Now, let\'s begin');
 				ui.toggleType(firstType);
 			});
+		},
+		
+		isTester : function() {
+			//Based on QS parameter, we can determine if this is a tester. (?testthetest=true)
+			var results = new RegExp('[\\?&]testthetest=([^&#]*)').exec(window.location.href);
+			WDN.log(results);
+			if (!results) {return false;}
+			if (results[1] == 'true'){
+				return true;
+			} else {
+				return false;
+			}
 		},
 		
 		type : function(){
