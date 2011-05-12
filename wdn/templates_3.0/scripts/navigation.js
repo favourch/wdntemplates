@@ -45,6 +45,7 @@ WDN.navigation = function() {
                 // This page has no navigation
                 return;
             }
+        	WDN.log('let us fix the presentation');
         	WDN.navigation.fixPresentation();
             if (WDN.jQuery('#navigation-close').length > 0) {
                 // Already initialized
@@ -97,11 +98,7 @@ WDN.navigation = function() {
                 //WDN.navigation.initializePreferredState();
             });
 
-            //adds the curved end to the right side of the breadcrumbs bar in IE
-            if (WDN.jQuery.browser.msie) {
-                WDN.jQuery('#breadcrumbs').append('<span></span>');
-                WDN.jQuery('#breadcrumbs span').css({'height':'35px', 'width':'8px','position':'absolute','top':'0', 'right':'-3px','margin':'0 0 0 100%','background':'url("'+WDN.template_path+'wdn/templates_3.0/css/navigation/images/breadcrumbBarSprite2.png") 0 -72px no-repeat'});
-            }
+            WDN.log('interactions setup');
         },
         
         /**
@@ -136,31 +133,31 @@ WDN.navigation = function() {
                     		false
                     ).css({'height':WDN.jQuery(this).height()+'px'});
             	});
-        		
-        		return true;
+        	} else {
+        		ul_h = 0;
+	        	WDN.jQuery('#navigation ul li ul').each(function(){
+	                WDN.jQuery(this).bind(
+	                		'webkitTransitionEnd transitionend oTransitionEnd', 
+	                		function(event) {
+	                			if(WDN.jQuery(this).parents('ul').hasClass('nav_collapsed')){
+	                				
+	                			} else {
+	                			   WDN.jQuery(this).parents('ul').addClass('nav_pinned').removeClass('nav_changing');
+	                			}
+	                		},
+	                		false
+	                );
+	                
+	        		if(WDN.jQuery(this).height() > ul_h) {
+	        			ul_h = WDN.jQuery(this).height();
+	        		}
+	        	});
+	        	//loop through again and apply new height
+	        	WDN.jQuery('#navigation ul li ul').each(function(){
+	        	    WDN.jQuery(this).css({'height':ul_h+'px'});
+	            });
         	}
-        	ul_h = 0;
-        	WDN.jQuery('#navigation ul li ul').each(function(){
-                WDN.jQuery(this).bind(
-                		'webkitTransitionEnd transitionend oTransitionEnd', 
-                		function(event) {
-                			if(WDN.jQuery(this).parents('ul').hasClass('nav_collapsed')){
-                				
-                			} else {
-                			   WDN.jQuery(this).parents('ul').addClass('nav_pinned').removeClass('nav_changing');
-                			}
-                		},
-                		false
-                );
-                
-        		if(WDN.jQuery(this).height() > ul_h) {
-        			ul_h = WDN.jQuery(this).height();
-        		}
-        	});
-        	//loop through again and apply new height
-        	WDN.jQuery('#navigation ul li ul').each(function(){
-        	    WDN.jQuery(this).css({'height':ul_h+'px'});
-            });
+        	WDN.log('we have fixed the presentation. Now to setup the interactions.');
         	WDN.navigation.setupInteraction();
         },
         
