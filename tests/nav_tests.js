@@ -17,7 +17,6 @@ timer = function() {
 		},
 		
 		stop : function(testType, testID){
-			alert(testType);
 			stopTime = new Date().getTime();
 			console.log(stopTime);
 			ui.testComplete(testType, testID, startTime, stopTime, timer.difference(), counter);
