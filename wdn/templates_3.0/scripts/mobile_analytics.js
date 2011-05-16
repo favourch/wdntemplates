@@ -24,6 +24,12 @@ analytics = function() {
 				['_setAllowLinker', true],
 				['_setAllowHash', false]
 			);
+			_gaq.push(
+				['m._setAccount', 'UA-3203435-4'],
+				['m._setDomainName', '.unl.edu'],
+				['m._setAllowLinker', true],
+				['m._setAllowHash', false]
+			);
 			
 			analytics.loadGA();
 		},
