@@ -16,10 +16,11 @@ timer = function() {
 			return time;
 		},
 		
-		stop : function(testID){
+		stop : function(testType, testID){
+			alert(testType);
 			stopTime = new Date().getTime();
 			console.log(stopTime);
-			ui.testComplete(testID, startTime, stopTime, timer.difference(), counter);
+			ui.testComplete(testType, testID, startTime, stopTime, timer.difference(), counter);
 		}
 	};
 }();
@@ -30,8 +31,8 @@ store = function() {
 			
 		},
 		
-		save : function(testID, startTime, endTime, difference, testOrder){
-			WDN.post('dump.php', {'testID' : testID, 'userID' : uniqueID, 'startTime' : startTime, 'endTime' : endTime, 'testOrder' : testOrder, 'userType' : userType}, function(data){
+		save : function(testType, testID, startTime, endTime, difference, testOrder){
+			WDN.post('dump.php', {'testType' : testType, 'testID' : testID , 'userID' : uniqueID, 'startTime' : startTime, 'endTime' : endTime, 'testOrder' : testOrder, 'userType' : userType}, function(data){
 				WDN.log(data);
 			});
 		}
@@ -40,7 +41,7 @@ store = function() {
 
 ui = function() {
 	
-	var variations = [1,2,3,4,5];
+	var variations = [1,2,3,4,5,6,7,8,9,10];
 	
 	var variationsSeen = [];
 	
@@ -149,7 +150,7 @@ ui = function() {
 		},
 		
 		toggleType : function(newType) {
-			variationsSeen.length = 0;
+			//variationsSeen.length = 0;
 			WDN.jQuery("#navigation").removeAttr('class').addClass(newType);
 			WDN.log('navigation type toggled');
 			ui.setup();
@@ -175,19 +176,21 @@ ui = function() {
 		
 		update : function(id) {
 			WDN.initializePlugin('navigation');
-			WDN.jQuery('#test'+id).show().find('h3 > span').text(counter); //showing the individual test
-			WDN.jQuery('#testing button').show();
 			WDN.log('ui.update id= '+id);
-			if (id != 5){ //test 5 is a multistep, so we need a bit more logic.
-				WDN.jQuery('#test'+id+' li span').text(WDN.jQuery('#navigation a.'+ui.type()).eq(0).text());
+			if (id != 5 && id !=10){ //test 5,10 are multisteps, so we need a bit more logic.
+				data = WDN.jQuery('#test1');
+				data.show().find('h3 > span').text(counter); //showing the individual test
+				WDN.jQuery('#test1 li span').text(WDN.jQuery('#navigation a.'+ui.type()).eq(0).text());
 				WDN.jQuery('#navigation a.'+ui.type()).eq(0).click(function(){
-					timer.stop(ui.type()+'_'+id);
+					timer.stop(ui.type(),id);
 					return false;
 				});
 			} else {
+				data = WDN.jQuery('#test2');
+				data.show().find('h3 > span').text(counter); //showing the individual test
 				WDN.log('Setup the two step test');
-				WDN.jQuery('#test'+id+' li span').eq(0).text(WDN.jQuery('#navigation a.'+ui.type()).eq(1).text());
-				WDN.jQuery('#test'+id+' li span').eq(1).text(WDN.jQuery('#navigation a.'+ui.type()).eq(0).text());
+				WDN.jQuery('#test2 li span').eq(0).text(WDN.jQuery('#navigation a.'+ui.type()).eq(1).text());
+				WDN.jQuery('#test2 li span').eq(1).text(WDN.jQuery('#navigation a.'+ui.type()).eq(0).text());
 				stepOneComplete = false;
 				WDN.jQuery('#navigation a.'+ui.type()).eq(1).click(function(){
 					stepOneComplete = true;
@@ -196,20 +199,21 @@ ui = function() {
 				});
 				WDN.jQuery('#navigation a.'+ui.type()).eq(0).click(function(){
 					if(stepOneComplete){
-						timer.stop(ui.type()+'_'+id);
+						timer.stop(ui.type(),id);
 					}
 					return false;
 				});
 			}
-			WDN.jQuery('#test'+id).clone().appendTo('#exercise');
+			WDN.jQuery('#testing button').show();
+			data.clone().appendTo('#exercise');
 			WDN.jQuery('#exercise .test').removeAttr('id');
 			WDN.jQuery('#testing').show(); //show everything
 		},
 		
-		testComplete : function(testID, startTime, endTime, difference, testOrder) {
+		testComplete : function(testType, testID, startTime, endTime, difference, testOrder) {
 			ui.updateStatus('Great job! Here\'s your next exercise. <span>'+ timer.difference() + '</span>');
 			ui.chooseTest();
-			store.save(testID, startTime, endTime, difference, testOrder);
+			store.save(testType, testID, startTime, endTime, difference, testOrder);
 		},
 		
 		updateStatus : function(msg){

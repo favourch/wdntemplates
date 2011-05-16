@@ -52,8 +52,8 @@
 #qualifiers strong {
     font-style:italic;	
 }
+.column.right {float:right;}
 video {
-    float:right;
     width:300px;
     -webkit-box-shadow:0px 0px 25px #929292;
     -moz-box-shadow:0px 0px 25px #929292;
@@ -63,7 +63,7 @@ video {
 #testing #uniqueID {
     color:#9CABAD;
     font-size:90%;
-    margin-bottom:20px;
+    margin-top:20px;
 }
 .userSelect {
     height:34px;
