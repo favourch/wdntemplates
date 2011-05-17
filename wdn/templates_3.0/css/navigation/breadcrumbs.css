@@ -18,7 +18,7 @@
 }
 #breadcrumbs ul li {
   float: left;
-  padding:5px;
+  padding:5px 5px 6px 5px;
   padding-left:0;
   color: #686868; /* @TODO need to check contrast */
   margin:3px 0;
@@ -32,7 +32,7 @@
 #breadcrumbs a {
     padding:0 1em 0 3px;
     font-weight: bold;
-    background: url('images/2011_breadcrumb_li.png') no-repeat right 2px;
+    background: url('images/2011_breadcrumb_li.png') no-repeat right 3px;
 }
 #breadcrumbs ul li:first-child {
   border-radius: 3px 0 0 3px; 
