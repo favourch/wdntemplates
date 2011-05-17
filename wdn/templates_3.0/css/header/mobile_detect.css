@@ -3,7 +3,8 @@
 	background:#F8F9D1;
 	padding:25px;
 	text-align:center;
-	font: 100%/190% "Lucida Grande",Verdana,Arial;
+	font-size:100%;
+	line-height:190%;
 	border-bottom:2px solid #c9cb8e;
 	font-weight:bold;
 }

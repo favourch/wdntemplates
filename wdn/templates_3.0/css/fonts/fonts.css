@@ -29,3 +29,6 @@
 .formal, #titlegraphic h1, #header h1 {
     font-family: 'URWGroteskCon-Lig';
 }
+body {
+	font-family:"helvetica neue", helvetica, "Lucida Grande", Verdana, Arial;
+}

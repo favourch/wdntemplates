@@ -27,7 +27,8 @@ Author: WDN
 	background-position: top left;
 	background-repeat: repeat-x;
 	text-align: left;
-	font: 71%/150% "Lucida Grande",Verdana,Arial;
+	font-size:71%;
+	line-height:150%
 	color: #494949;
 }
 #footer a,

@@ -320,7 +320,7 @@ input error reporting - highlight errant field, and some sort of text display (.
 }
 #maincontent form.zenform fieldset ol li select { outline:none;}
 #maincontent form.zenform fieldset ol li textarea {
-	font:1.1em "Lucida Grande",Verdana,Arial;	
+	font-size:1.1em;	
 }
 #maincontent form.zenform fieldset ol li input[type=text],
 #maincontent form.zenform fieldset ol li input[type=file],

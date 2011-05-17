@@ -3,7 +3,8 @@ ul.ui-autocomplete {
     background:#fff;
     padding: 0 5px 5px 5px;
     color: #494949;
-    font: 77%/140% "Lucida Grande",Verdana,Arial;	
+    font-size: 77%;
+    line-hight:140%;
     border:1px solid #828282;
     width:auto;
     max-width:300px;

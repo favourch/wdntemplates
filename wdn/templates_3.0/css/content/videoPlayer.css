@@ -27,7 +27,9 @@ video.fullscreen + .wdnVideo_controls {
     bottom:62px;
     opacity:0.8;
     min-width: 250px;
-    font: normal normal normal 77%/140% 'Lucida Grande', Verdana, Arial;
+    font-size:77%;
+    line-height:140%;
+    font-weight:normal;
 }
 
 .wdnVideo_controls div, span, p, a, ol, ul, li, button {
