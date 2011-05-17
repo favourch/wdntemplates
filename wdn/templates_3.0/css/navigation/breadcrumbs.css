@@ -24,7 +24,7 @@
   margin:3px 0;
   position:relative;
   z-index:2;
-  background: #E0E0E0;
+  background: #eee;
 }
 #breadcrumbs ul li:first-child{
     padding-left:5px;	
