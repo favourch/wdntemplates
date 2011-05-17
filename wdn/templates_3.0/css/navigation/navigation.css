@@ -79,6 +79,7 @@ Author: WDN
     font-weight:500;
     font-size:0.875em;
     margin:auto 0;
+    padding: 0 2px;
 }
 #navigation > ul > li > a:hover {
     color:#fff !important;
