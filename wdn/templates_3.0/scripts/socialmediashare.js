@@ -3,7 +3,7 @@ WDN.socialmediashare = function() {
         initialize : function() {
             try {
                 WDN.jQuery("#wdn_facebook").children('a').attr({'href': "http://www.facebook.com/share.php?u="+window.location});
-                WDN.jQuery("#wdn_twitter").children('a').attr({'href': "http://twitter.com/share?text=Great+content+from+%23UNL&url="+window.location});
+                WDN.jQuery("#wdn_twitter").children('a').attr({'href': "http://twitter.com/share?text=Great+content+from+%23UNL&related=higher+ed,nebraska,university,big+ten&via=unlnews&url="+window.location});
            } catch(f) {}
             
             WDN.jQuery('a#wdn_createGoURL').click(function() {
