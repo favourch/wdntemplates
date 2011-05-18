@@ -113,12 +113,14 @@ WDN.idm = function() {
 				}
 				icon = '<a href="http://planetred.unl.edu/pg/profile/'+planetred_uid+'" title="Your Planet Red Profile"><img src="http://planetred.unl.edu/pg/icon/'+planetred_uid+'/topbar/" alt="Your Profile Pic" /></a>';
 			}
-			
-			WDN.jQuery('#wdn_identity_management').html(icon+' <span class="username">'+uid+'</span> <a id="wdn_idm_logout" href="'+WDN.idm.logoutURL+'">Logout</a>');
+
+			//WDN.jQuery('#wdn_identity_management').html(icon+' <span class="username">'+uid+'</span> <a id="wdn_idm_logout" href="'+WDN.idm.logoutURL+'">Logout</a>');
+			WDN.jQuery('#wdn_identity_management').html(icon+' <span class="username">'+You+'</span> <a id="wdn_idm_logout" href="'+WDN.idm.logoutURL+'">Logout</a>');
 			
 			// Any time logout link is clicked, unset the user data
 			WDN.jQuery('#wdn_idm_logout').click(WDN.idm.logout);
 
+			/*
 			if (WDN.idm.user.cn) {
 				if (WDN.idm.user.cn[1]){
 					WDN.jQuery('#wdn_identity_management .username').html(WDN.idm.user.cn[1]);
@@ -126,6 +128,7 @@ WDN.idm = function() {
 					WDN.jQuery('#wdn_identity_management .username').html(WDN.idm.user.cn[0]);
 				}
 			}
+			*/
 			
 			if (WDN.jQuery('link[rel=logout]').length) {
 				WDN.idm.setLogoutURL(WDN.jQuery('link[rel=logout]').attr('href'));
