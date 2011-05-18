@@ -2,7 +2,7 @@
         cursor: pointer;
         clear: both;
         display: block;
-        width: 200px;
+        width: 100%;
     }
     .rating:after {
         content: '.';
@@ -15,12 +15,15 @@
    .rating p {
    	font-weight:bold;
    	margin-bottom:10px;
+   	display:inline;
+   	float:left;
+   	margin-right:10px;
    }
     .cancel,
     .star {
         float: left;
-        width: 24px;
-        height: 26px;
+        width: 16px;
+        height: 18px;
         overflow: hidden;
         text-indent: -999em;
         cursor: pointer;
@@ -42,8 +45,8 @@
     }
 
     div.rating div.on a {
-        background-position: 0 -56px;
+        background-position: 0 -36px;
     }
 	div.rating div.hover a {
-		background-position: 0 -28px;
+		background-position: 0 -18px;
 	}
