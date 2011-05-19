@@ -16,8 +16,9 @@
 #wdn_feedback_comments textarea {
     border:1px solid #DEDEDE;
     background-color:#FDFDFD;
-    width:212px;
+    width:210px;
     height:50px;
+    padding:0;
 }
 #wdn_feedback_comments input {
     background: -moz-linear-gradient(top, #efece9 0%, #f2f1ed 50%, #e7e4e3 51%, #e4e0dd 100%); /* FF3.6+ */
