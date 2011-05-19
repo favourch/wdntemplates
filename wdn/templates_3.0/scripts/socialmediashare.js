@@ -2,8 +2,9 @@ WDN.socialmediashare = function() {
     return {
         initialize : function() {
             try {
-                WDN.jQuery("#wdn_facebook").children('a').attr({'href': "http://www.facebook.com/share.php?u="+window.location});
-                WDN.jQuery("#wdn_twitter").children('a').attr({'href': "http://twitter.com/share?text=Great+content+from+%23UNL&related=higher+ed,nebraska,university,big+ten&via=unlnews&url="+window.location});
+            	WDN.jQuery("#wdn_emailthis").children('a').attr({'href': 'mailto:?body=Great%20content%20from%20UNL%3A%0A'+encodeURIComponent(window.location)});
+                WDN.jQuery("#wdn_facebook").children('a').attr({'href': "http://www.facebook.com/share.php?u="+encodeURIComponent(window.location)});
+                WDN.jQuery("#wdn_twitter").children('a').attr({'href': "http://twitter.com/share?text=Great+content+from+%23UNL&related=higher+ed,nebraska,university,big+ten&via=unlnews&url="+encodeURIComponent(window.location)});
            } catch(f) {}
             
             WDN.jQuery('a#wdn_createGoURL').click(function() {
@@ -30,8 +31,7 @@ WDN.socialmediashare = function() {
                 WDN.socialmediashare.createURL(
                     WDN.socialmediashare.buildGAURL(thisPage, gaTagging),
                     function(data) { //now we have a GoURL, let's replace the href with this new URL.
-                        var strLocation = new String(window.location);
-                        strLocation = strLocation.replace(/\?/g,'\\?');
+                        var strLocation = encodeURIComponent(window.location);
                         var regExpURL = new RegExp(strLocation);
                         WDN.log("regExpURL: "+regExpURL);
                         var currentHref = WDN.jQuery('#'+utm_source).children('a').attr('href');
