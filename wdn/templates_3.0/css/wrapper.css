@@ -5,21 +5,21 @@ html{
 .skipnav {display: none;}
 
 body {
-	background:url(images/bg.jpg) top center no-repeat;
-	font-size:1em;
-	line-height: 1;
+    background:url(images/bg.jpg) top center no-repeat;
+    font-size:1em;
+    line-height: 1;
 }
 
 .hidden {
-	display:none;	
+    display:none;   
 }
 
 #wdn_wrapper {
-	background:#FFF;
-    border:12px solid #E0E0E0;
-    border-top:35px solid #E0E0E0;
+    background:#FFF;
+    border:12px solid #eee;
+    border-top:35px solid #eee;
     padding:12px;
-    margin:0px auto;
+    margin:0px auto 15px;
     border-radius:10px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
@@ -29,5 +29,5 @@ body {
 }
 
 #wdn_wrapper_footer {
-	clear:both;
+    clear:both;
 }

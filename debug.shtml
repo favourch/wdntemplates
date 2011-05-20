@@ -1,15 +1,81 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<link rel="stylesheet" type="text/css" media="screen"	href="wdn/templates_3.0/css/debug.css" />
-<link rel="stylesheet" type="text/css" media="print"	href="wdn/templates_3.0/css/print.css" />
+<link rel="stylesheet" type="text/css" media="screen"   href="wdn/templates_3.0/css/debug.css" />
+<link rel="stylesheet" type="text/css" media="print"    href="wdn/templates_3.0/css/print.css" />
 <script type="text/javascript" src="wdn/templates_3.0/scripts/debug.js"></script>
 <link rel="events" href="http://events.unl.edu/myred/" title="MyRED" />
 <!--#include virtual="sharedcode/localSiteLinks.html" -->
 <!--#include virtual="wdn/templates_3.0/includes/browserspecifics.html" -->
 <!--#include virtual="wdn/templates_3.0/includes/metanfavico.html" -->
 <title>UNL | Template</title>
-
+<style type="text/css">
+    .grid6, .supporting h3 {
+        text-align:center;
+    }
+    .supporting h3 {
+        text-transform:uppercase;
+        letter-spacing:-0.04em;
+        font-size:1.2em;
+        font-weight:800;
+    }
+    .supporting {
+        text-align:left;
+        background:#f1f1f1;
+        border-radius:5px;
+        -webkit-border-radius:5px;
+        -moz-border-radius:5px;
+        padding:10px;
+    }
+    #servicesTest {
+        list-style:none;
+        float:right;
+    }
+    #servicesTest li {
+        display:inline;
+        text-transform:uppercase;
+        font-size:10px;
+        font-weight:bold;
+        border-radius:10px;
+        border:1px solid #b8ab7d;
+        padding:0px 4px;
+        background: #f0ead6; /* Old browsers */
+        background: -moz-linear-gradient(top, #f0ead6 0%, #dad0ad 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0ead6), color-stop(100%,#dad0ad)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #f0ead6 0%,#dad0ad 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #f0ead6 0%,#dad0ad 100%); /* Opera11.10+ */
+        background: -ms-linear-gradient(top, #f0ead6 0%,#dad0ad 100%); /* IE10+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F0EAD6', endColorstr='#DAD0AD',GradientType=0 ); /* IE6-9 */
+        background: linear-gradient(top, #f0ead6 0%,#dad0ad 100%); /* W3C */
+        margin:0;
+        margin-left:-12px;
+        float:left;
+        -moz-box-shadow: -1px 0px 0px #E9E7CD;
+        box-shadow: -1px 0px 0px #E9E7CD;
+        width:12px;
+        overflow:hidden;
+        padding-right:13px;
+        -webkit-transition: width 0.3s linear;
+        -moz-transition: width 0.3s linear;
+        transition: width 0.3s linear;
+    }
+    #servicesTest li:last-child{
+        padding-right:5px;
+    }
+    #servicesTest li:hover {
+        width:80px;
+    }
+    #servicesTest li a {
+        color:#6f6441;
+        text-shadow: -1px -1px 0px #f1ecdd;
+        background:url('iconTest.png') no-repeat 2px center;
+        padding-left:18px;
+        text-wrap:none;
+    }
+    #servicesTest li a:hover {
+        color:#6f6441 !important;
+    }
+</style>
 </head>
 <body class="fixed debug">
 <p class="skipnav"><a class="skipnav" href="#maincontent">Skip
@@ -33,7 +99,7 @@ Navigation</a></p>
             </ul>
         </div>
         <div id="wdn_navigation_wrapper">
-            <div id="navigation" class="flag">
+            <div id="navigation" class="mega">
                 <!--#include virtual="sharedcode/navigation.html" -->
                 <!-- End Navigation Markup -->
             </div>
@@ -43,34 +109,56 @@ Navigation</a></p>
         <div id="titlegraphic">
             <h1>College of Agricultural Sciences and Natural Resources (CASNR)</h1>
         </div>
-        <div id="pagetitle"><h2>Current Students</h2></div>
+        <div id="pagetitle"><h2>Iterative Navigation Examples</h2></div>
         <div id="maincontent">
-        <p> Text for height.</p>
-        <p> Text for height.</p>
-        <p> Text for height.</p>
-        <p> Text for height.</p>
-        <p> Text for height.</p>
-        <p style="height:500px;"> Text for height.</p>
+        <ul id="servicesTest">
+            <li><a href="#">Map</a></li>
+            <li><a href="#">RSS</a></li>
+            <li><a href="#">Weather</a></li>
+            <li><a href="#">Directory</a></li>
+            <li><a href="#">Webcams</a></li>
+        </ul>
+            <div class="grid6 first">
+                <div class="curl">
+                <img src="tests/box.png" alt="box image" />
+                </div>
+                <div class="supporting">
+                
+                    <h3>Megabox Navigation</h3>
+                    <p>Megabox navigation, the current type of navigation used in the WDN Templates, shows all the navigation available with one user interaction.</p>
+                    <a class="switch mega" href="#">Switch to Megabox</a>
+                </div>
+            </div>
+            <div class="grid6" id="switch_flag">
+                <img src="tests/flag.png" alt="flag image" />
+                
+                <div class="supporting">
+                
+                    <h3>Flag Navigation</h3>
+                    <p>Flag navigation, shows only the navigation related to selected primary navigational label.</p>
+                    <a class="switch flag" href="#">Switch to Flag</a>
+                </div>
+            </div>
             <!-- InstanceEndEditable --> 
             <div class="clear"></div> 
             <noscript> 
-			<p>
-			Your browser does not appear to support JavaScript, or you have turned JavaScript off. You may use unl.edu without enabling JavaScript, but certain functions may not be available.
-			</p>
-			</noscript> 
+            <p>
+            Your browser does not appear to support JavaScript, or you have turned JavaScript off. You may use unl.edu without enabling JavaScript, but certain functions may not be available.
+            </p>
+            </noscript> 
         <!--THIS IS THE MAIN CONTENT AREA; WDN: see glossary item 'main content area' -->
            <!--#include virtual="wdn/templates_3.0/includes/noscript.html" -->
         </div> <!-- end of maincontent -->        
         <div id="footer">
             <div id="footer_floater"></div>
             <div class="footer_col" id="footer_feedback">
-            	<!--#include virtual="wdn/templates_3.0/includes/feedback.html" -->
+                <!--#include virtual="wdn/templates_3.0/includes/feedback.html" -->
             </div>
             <div class="footer_col">
-            	<!--#include virtual="sharedcode/relatedLinks.html" -->
+                <!--#include virtual="sharedcode/relatedLinks.html" -->
             </div>            
             <div class="footer_col">
-            	<!--#include virtual="sharedcode/footerContactInfo.html" -->
+                <!--#include virtual="sharedcode/footerContactInfo.html" -->
             </div>
             <div class="footer_col">
                 <!--#include virtual="wdn/templates_3.0/includes/socialmediashare.html" -->
@@ -79,11 +167,15 @@ Navigation</a></p>
                 <!--#include virtual="sharedcode/footer.html" -->                                
                 <!--#include virtual="wdn/templates_3.0/includes/wdn.html" -->
                 | <a href="http://validator.unl.edu/check/referer">W3C</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
-                <a href="http://www.unl.edu/" title="UNL Home" id="wdn_unl_wordmark"><img src="wdn/templates_3.0/css/footer/images/wordmark.png" alt="UNL's wordmark" /></a>
+                <a href="http://www.unl.edu/" title="UNL Home" id="wdn_unl_wordmark"><img src="/wdn/templates_3.0/css/footer/images/wordmark.png" alt="UNL's wordmark" /></a>
             </div>
         </div>    
     </div>
     <div style="clear:both;"> </div>
 </div>
+            <script type="text/javascript">
+            
+            
+            </script>
 </body>
 </html>
