@@ -105,12 +105,26 @@ WDN.navigation = function() {
          * This function cleans up the navigation visual presentations
          */
         fixPresentation : function(){
-            ah = 0;
+        	secondaries = WDN.jQuery('#navigation > ul > li').has('ul');
+        	if (secondaries.length > 0){
+        		WDN.jQuery("#navigation > ul > li").not(':has(ul)').each(function(){
+            		WDN.jQuery(this).append('<ul><li></li></ul>');
+            	});
+        	}
+        		
+        	primaries = WDN.jQuery('#navigation > ul > li').length;
+        	while (primaries < 6) {
+        		WDN.jQuery('#navigation > ul').append('<li class="empty"><a href="#"></a><ul><li></li></ul></li>');
+        		primaries++;
+        	}
+        	
+        	ah = 0;
             WDN.jQuery('#navigation > ul > li > a').each(function(){
                 if(WDN.jQuery(this).height() > ah) {
                     ah = WDN.jQuery(this).height();
                 }
             });
+            
             WDN.jQuery('#navigation > ul > li > a').each(function(){
                 if(WDN.jQuery(this).height() < ah) {
                 	new_ah = (ah - WDN.jQuery(this).height())/2;
@@ -118,6 +132,7 @@ WDN.navigation = function() {
                 	WDN.jQuery(this).css({'padding':new_ah+'px 0'});
                 }
             });
+            
         	if (WDN.jQuery('#navigation').hasClass('flag')){ // Needs rewriting once megabox v. flag is decided.
         		WDN.log('we have flag navigation');
         		WDN.jQuery('#navigation ul li ul').each(function(){
@@ -157,6 +172,7 @@ WDN.navigation = function() {
 	        	    WDN.jQuery(this).css({'height':ul_h+'px'});
 	            });
         	}
+        	
         	WDN.log('we have fixed the presentation. Now to setup the interactions.');
         	WDN.navigation.setupInteraction();
         },

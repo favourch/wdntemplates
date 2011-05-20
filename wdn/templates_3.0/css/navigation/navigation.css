@@ -65,12 +65,24 @@ Author: WDN
 #navigation > ul > li:first-child  {
     border-left:none;
     width:159px;
-}#navigation > ul > li:last-child  {
+}
+#navigation > ul > li:last-child  {
     border-right:none;
     width:159px;
 }
+#navigation > ul > li ~ li.empty  {
+    border-left:1px solid #c83a3a;
+    border-right:none;
+}
+#navigation > ul > li ~ li.empty ~ li.empty {
+    border:none;
+    width:160px; /* accommodate the missing border */   
+}
 #navigation > ul > li:hover { /* rgba not supported <IE9, need png */
 	background: rgba(255,255,255,0.14);
+}
+#navigation > ul > li.empty:hover {
+    background:none;    
 }
 #navigation > ul > li > a {
     display:block;
@@ -102,12 +114,27 @@ Author: WDN
     -o-transition:all linear 0.1s;
     transition:all linear 0.1s;
 }
-
+#navigation > ul > li ~ li.empty ul  {
+    border-left:1px solid #f1f1f1;
+    border-right:none;
+}
+#navigation > ul > li ~ li.empty ~ li.empty ul {
+    border-right:none;
+    border-left:none;
+    width:150px; /* accommodate the missing border */   
+}
 #navigation ul li:hover ul {
     background-image: linear-gradient(top, rgba(251,251,251,1) 0%, rgba(240,240,240,1) 100%);
     background-image: -moz-linear-gradient(top, rgba(251,251,251,1) 0%, rgba(240,240,240,1) 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,1)), color-stop(100%,rgba(240,240,240,1)));
 }
+
+#navigation ul li.empty:hover ul {
+    background-image: linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%);
+    background-image: -moz-linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,0.95)), color-stop(100%,rgba(225,225,225,0.95)));
+}
+
 #navigation > ul > li:hover ul a {
 	color:#242424;
 }
