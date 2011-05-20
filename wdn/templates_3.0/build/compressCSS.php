@@ -19,6 +19,8 @@
     $files = array(
     'reset',
     'wrapper',
+    'fonts/fonts',
+    'grid',
     'header/header',
     'header/toolbarcontent',
     'header/tooltabs',
