@@ -167,6 +167,7 @@ WDN.navigation = function() {
         
         showFullNavigation : function(){
         	WDN.jQuery('#navigation > ul').addClass('nav_changing').removeClass('nav_collapsed');
+        	//WDN.jQuery('#maincontent').fadeTo(0, 0.2);
         },
         
         /**
@@ -175,6 +176,7 @@ WDN.navigation = function() {
         
         hideFullNavigation : function(){
         	WDN.jQuery('#navigation > ul').addClass('nav_collapsed').removeClass('nav_pinned');
+        	//WDN.jQuery('#maincontent').fadeTo(0, 1);
         },
         
 
