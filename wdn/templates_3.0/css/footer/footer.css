@@ -109,7 +109,7 @@ Author: WDN
     box-shadow: 1px 0px 0px #9d0201;
     display:inline-block;
 }
-#wdn_logos #cic_wordmark {margin-left:10px;}
+#wdn_logos #cic_wordmark {margin-left:10px;position:relative;bottom:-2px;}
 #wdn_unl_wordmark{display:none;}
 #footer .footer_col {
     width:222px;
