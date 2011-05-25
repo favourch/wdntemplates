@@ -5,27 +5,28 @@ html{
 .skipnav {display: none;}
 
 body {
-    background:url(images/bg.jpg) top center no-repeat;
+    background:url('images/bg.jpg');
     font-size:1em;
     line-height: 1;
 }
 
 .hidden {
-    display:none;   
+    display:none
 }
 
 #wdn_wrapper {
+    position:relative;
+    width:960px;
+    height:auto;
     background:#FFF;
-    border:12px solid #eee;
-    border-top:35px solid #eee;
-    padding:12px;
-    margin:0px auto 15px;
+    border:12px solid #EEE;
+    border-top:35px solid #EEE;
+    padding:12px 12px 10px;
+    margin:10px auto 20px;
+    box-shadow:0 3px 5px #CCC;
     border-radius:10px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
-    width:960px;
-    position:relative;
-    height:auto;
 }
 
 #wdn_wrapper_footer {
