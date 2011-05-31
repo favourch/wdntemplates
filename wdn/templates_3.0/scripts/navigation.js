@@ -81,19 +81,12 @@ WDN.navigation = function() {
                     interval:    120
                 });
                 */
-                WDN.jQuery('#navigation:not(.flag) > ul').addClass('nav_collapsed').hoverIntent({
+                WDN.jQuery('#navigation > ul').addClass('nav_collapsed').hoverIntent({
                     over:        WDN.navigation.showFullNavigation,
                     out:         WDN.navigation.hideFullNavigation,
                     timeout:     WDN.navigation.changeSiteNavDelay,
                     sensitivity: 1, // Mouse must not move
                     interval:    120
-                });
-                WDN.jQuery('#navigation.flag > ul > li').addClass('nav_collapsed').hoverIntent({
-                    over:        function() {WDN.navigation.showSingleNavigation(this);},
-                    out:         function() {WDN.navigation.hideSingleNavigation(this);},
-                    timeout:     WDN.navigation.changeSiteNavDelay,
-                    sensitivity: 1, // Mouse must not move
-                    interval:    70
                 });
                 //WDN.navigation.initializePreferredState();
             });
@@ -117,6 +110,13 @@ WDN.navigation = function() {
         		WDN.jQuery('#navigation > ul').append('<li class="empty"><a href="#"></a><ul><li></li></ul></li>');
         		primaries++;
         	}
+        	if (primaries > 6){
+        		WDN.jQuery('#navigation ul').addClass('double'); //add a class for CSS rules
+        		while (primaries < 12) {
+            		WDN.jQuery('#navigation > ul').append('<li class="empty"><a href="#"></a><ul><li></li></ul></li>');
+            		primaries++;
+            	}
+        	}
         	
         	ah = 0;
             WDN.jQuery('#navigation > ul > li > a').each(function(){
@@ -128,50 +128,32 @@ WDN.navigation = function() {
             WDN.jQuery('#navigation > ul > li > a').each(function(){
                 if(WDN.jQuery(this).height() < ah) {
                 	new_ah = (ah - WDN.jQuery(this).height())/2;
-                	console.log(new_ah);
                 	WDN.jQuery(this).css({'padding':new_ah+'px 0'});
                 }
             });
             
-        	if (WDN.jQuery('#navigation').hasClass('flag')){ // Needs rewriting once megabox v. flag is decided.
-        		WDN.log('we have flag navigation');
-        		WDN.jQuery('#navigation ul li ul').each(function(){
-                    WDN.jQuery(this).bind(
-                    		'webkitTransitionEnd transitionend oTransitionEnd', 
-                    		function(event) {
-                    			if(WDN.jQuery(this).parent('li').hasClass('nav_collapsed')){
-                    				
-                    			} else {
-                    			   WDN.jQuery(this).parent('li').addClass('nav_pinned').removeClass('nav_changing');
-                    			}
-                    		},
-                    		false
-                    ).css({'height':WDN.jQuery(this).height()+'px'});
-            	});
-        	} else {
-        		ul_h = 0;
-	        	WDN.jQuery('#navigation ul li ul').each(function(){
-	                WDN.jQuery(this).bind(
-	                		'webkitTransitionEnd transitionend oTransitionEnd', 
-	                		function(event) {
-	                			if(WDN.jQuery(this).parents('ul').hasClass('nav_collapsed')){
-	                				
-	                			} else {
-	                			   WDN.jQuery(this).parents('ul').addClass('nav_pinned').removeClass('nav_changing');
-	                			}
-	                		},
-	                		false
-	                );
-	                
-	        		if(WDN.jQuery(this).height() > ul_h) {
-	        			ul_h = WDN.jQuery(this).height();
-	        		}
-	        	});
-	        	//loop through again and apply new height
-	        	WDN.jQuery('#navigation ul li ul').each(function(){
-	        	    WDN.jQuery(this).css({'height':ul_h+'px'});
-	            });
-        	}
+    		ul_h = 0;
+        	WDN.jQuery('#navigation ul li ul').each(function(){
+                WDN.jQuery(this).bind(
+                		'webkitTransitionEnd transitionend oTransitionEnd', 
+                		function(event) {
+                			if(WDN.jQuery(this).parents('ul').hasClass('nav_collapsed')){
+                				
+                			} else {
+                			   WDN.jQuery(this).parents('ul').addClass('nav_pinned').removeClass('nav_changing');
+                			}
+                		},
+                		false
+                );
+                
+        		if(WDN.jQuery(this).height() > ul_h) {
+        			ul_h = WDN.jQuery(this).height();
+        		}
+        	});
+        	//loop through again and apply new height
+        	WDN.jQuery('#navigation ul li ul').each(function(){
+        	    WDN.jQuery(this).css({'height':ul_h+'px'});
+            });
         	
         	WDN.log('we have fixed the presentation. Now to setup the interactions.');
         	WDN.navigation.setupInteraction();
@@ -182,8 +164,10 @@ WDN.navigation = function() {
          */
         
         showFullNavigation : function(){
+        	if (WDN.jQuery('#navigation > ul').hasClass('double')){
+        		WDN.jQuery('#navigation > ul > li').slice(6).css('top', (ul_h+13)+'px');
+        	}
         	WDN.jQuery('#navigation > ul').addClass('nav_changing').removeClass('nav_collapsed');
-        	//WDN.jQuery('#maincontent').fadeTo(0, 0.2);
         },
         
         /**
@@ -191,8 +175,10 @@ WDN.navigation = function() {
          */
         
         hideFullNavigation : function(){
+        	if (WDN.jQuery('#navigation > ul').hasClass('double')){
+        		WDN.jQuery('#navigation > ul > li').slice(6).css('top','0px');
+        	}
         	WDN.jQuery('#navigation > ul').addClass('nav_collapsed').removeClass('nav_pinned');
-        	//WDN.jQuery('#maincontent').fadeTo(0, 1);
         },
         
 

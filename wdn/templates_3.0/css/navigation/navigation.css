@@ -30,15 +30,9 @@ Author: WDN
 }
 #navigation > ul
 {
-    float:left;
-    border-radius:5px 5px 0 0; 
-    -webkit-border-radius:5px 5px 0 0; 
-    -moz-border-radius:5px 5px 0 0; 
+    float:left; 
     position:relative;
     width:960px;
-    background-image: linear-gradient(top, #b70302 0%, #9d0201 100%);
-    background-image: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201));
 }
 
 
@@ -61,28 +55,54 @@ Author: WDN
     -o-transition:all linear 0.2s;
     transition:all linear 0.2s;
     */
+    position:relative;
+    background-image: linear-gradient(top, #b70302 0%, #9d0201 100%);
+    background-image: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201));
 }
-#navigation > ul > li:first-child  {
+#navigation > ul > li:first-child {
+    border-radius:5px 0px 0 0; 
+    -webkit-border-radius:5px 0px 0 0; 
+    -moz-border-radius:5px 0px 0 0;
+}
+#navigation > ul > li:nth-child(6){
+	border-radius:0 5px 0 0; 
+    -webkit-border-radius:0 5px 0 0; 
+    -moz-border-radius:0 5px 0 0;
+}
+#navigation > ul > li:first-child, #navigation > ul > li:nth-child(7)  {
     border-left:none;
     width:159px;
 }
-#navigation > ul > li:last-child  {
+#navigation > ul > li:nth-child(6), #navigation > ul > li:nth-child(12)  {
     border-right:none;
     width:159px;
+}
+#navigation > ul > li:nth-child(7), #navigation > ul > li:nth-child(8), #navigation > ul > li:nth-child(9), #navigation > ul > li:nth-child(10), #navigation > ul > li:nth-child(11), #navigation > ul > li:nth-child(12) {
+    border-top:1px solid #c83a3a;
+    box-shadow: 0 -1px 0px #870d0c;
 }
 #navigation > ul > li ~ li.empty  {
     border-left:1px solid #c83a3a;
     border-right:none;
 }
 #navigation > ul > li ~ li.empty ~ li.empty {
-    border:none;
+    border-left:none;
+    border-right:none;
     width:160px; /* accommodate the missing border */   
 }
+#navigation ul li:nth-child(12) {
+    width:161px !important;    
+}
 #navigation > ul > li:hover { /* rgba not supported <IE9, need png */
-	background: rgba(255,255,255,0.14);
+    background-image: linear-gradient(top, #c12726 0%, #ac2625 100%);
+    background-image: -moz-linear-gradient(top, #c12726 0%, #ac2625 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c12726), color-stop(100%,#ac2625));
 }
 #navigation > ul > li.empty:hover {
-    background:none;    
+    background-image: linear-gradient(top, #b70302 0%, #9d0201 100%);
+    background-image: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201));  
 }
 #navigation > ul > li > a {
     display:block;
@@ -114,6 +134,12 @@ Author: WDN
     -o-transition:all linear 0.1s;
     transition:all linear 0.1s;
 }
+#navigation ul.double li ul {
+	-webkit-transition:all linear 0.01s;
+    -moz-transition:all linear 0.01s;
+    -o-transition:all linear 0.01s;
+    transition:all linear 0.01s;
+}
 #navigation > ul > li ~ li.empty ul  {
     border-left:1px solid #f1f1f1;
     border-right:none;
@@ -138,18 +164,35 @@ Author: WDN
 #navigation > ul > li:hover ul a {
 	color:#242424;
 }
-#navigation ul li:first-child ul {
+#navigation ul li:first-child ul, #navigation ul li:nth-child(7) ul {
 	border-left:1px solid #c9c9c9;
     border-radius:0 0 0 5px;
     -webkit-border-radius:0 0 0 5px;
     -moz-border-radius:0 0 0 5px;
 	margin-left:0;
 }
-#navigation ul li:nth-child(6n) ul {
+#navigation ul.double li:first-child ul{
+    border-radius:0;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;	
+}
+#navigation ul li:nth-child(6) ul {
     border-right:1px solid #c9c9c9;
     border-radius:0 0 5px 0;
     -webkit-border-radius:0 0 5px 0;
     -moz-border-radius:0 0 5px 0;
+}
+#navigation ul.double li:nth-child(6) ul {
+    border-radius:0;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+}
+#navigation ul li:nth-child(12) ul {
+    border-right:1px solid #c9c9c9 !important;
+    border-radius:0 0 5px 0;
+    -webkit-border-radius:0 0 5px 0;
+    -moz-border-radius:0 0 5px 0;
+    width:151px !important;
 }
 #navigation ul li ul li{
     clear: both;
@@ -169,29 +212,21 @@ Author: WDN
 #navigation ul li ul li img{display:none !important;}
 
 /**
-*   Rules for FLAG navigation options  
+*   Rules for Double Bar navigation  
 */
-#navigation.flag > ul {
-    border-radius:5px;
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;	
-}
-#navigation.flag ul li.nav_changing ul, #navigation.flag ul li.nav_pinned ul {
-    visibility:visible;
-}
-#navigation.flag ul li.nav_collapsed ul {
-	visibility:hidden;
-}
-#navigation.flag ul li ul {
-    border-radius:0 0 5px 5px;
-    -webkit-border-radius:0 0 5px 5px;
-    -moz-border-radius:0 0 5px 5px;
-    
+#navigation .double.nav_collapsed li:nth-child(1) ul,
+	#navigation .double.nav_collapsed li:nth-child(2) ul,
+	#navigation .double.nav_collapsed li:nth-child(3) ul,
+	#navigation .double.nav_collapsed li:nth-child(4) ul,
+	#navigation .double.nav_collapsed li:nth-child(5) ul,
+	#navigation .double.nav_collapsed li:nth-child(6) ul
+{
+    display: none;
 }
 
+
 /**
-*	Rules for the various navigation states based on interactivity.
-*   ul.nav_* is only used for megabox	
+*	Rules for the various navigation states based on interactivity.	
 */
 #navigation ul.nav_collapsed li ul{
     height:0px !important;
@@ -201,18 +236,4 @@ Author: WDN
 }
 #navigation ul.nav_pinned li ul li {
     display:block;
-}
-
-/*Flag, use ul li nav_* */
-#navigation.flag ul li.nav_pinned ul li {
-    display:block;
-}
-#navigation.flag ul li.nav_collapsed ul  {
-    height:0px !important; 
-}
-#navigation.flag ul li.nav_collapsed ul li {
-    display:none;	
-}
-#navigation.flag ul li.nav_changing ul li {
-    display:none;
 }
