@@ -1,13 +1,12 @@
 #wdn_navigation_wrapper {
-	margin-right:24px;
+	
 }
 
 #wdn_wrapper  {
-	/*overflow:hidden;*/
-	border-top:12px solid #e0e0e0;
+	
 }
-#header {
-	margin-top:-12px;
+#titlegraphic h1 {
+    top:10px;	
 }
 
 #wdn_content_wrapper {
@@ -19,10 +18,9 @@
 }
 
 #tooltabs a{
-	margin-top:20px;
+	
 }
 
-#footer .footer_col h3,
 #toolbarcontent .toolbar_plugin h3 {
 	background-color:#ac0302;
 	margin-bottom:20px;
@@ -67,20 +65,18 @@ ul#wdn_tool_links li {
 }
 
 #breadcrumbs {
-	width:958px;
+	
 }	
 
 #breadcrumbs ul li.selected {
-	position:relative;
-	margin-left:0px;
+	
 }
 
 #breadcrumbs ul li.selected a,
 #breadcrumbs ul li.selected a:link,
 #breadcrumbs ul li.selected a:visited 
 {
-	padding-right:36px;
-	background:url('navigation/images/tabBGLeft_IE7.png') 0 0 no-repeat;
+	
 }
 
 #wdn_navigation_bar,
