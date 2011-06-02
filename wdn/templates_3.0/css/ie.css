@@ -1,23 +1,9 @@
-#wdn_navigation_wrapper {
-	
-}
-
-#wdn_wrapper  {
-	
-}
 #titlegraphic h1 {
     top:10px;	
 }
 
-#wdn_content_wrapper {
-}
-
 #tooltabs {
 	top:-11px;	
-}
-
-#tooltabs a{
-	
 }
 
 #toolbarcontent .toolbar_plugin h3 {
@@ -63,21 +49,6 @@ ul#wdn_tool_links li {
 	display:block;
 }
 
-#breadcrumbs {
-	
-}	
-
-#breadcrumbs ul li.selected {
-	
-}
-
-#breadcrumbs ul li.selected a,
-#breadcrumbs ul li.selected a:link,
-#breadcrumbs ul li.selected a:visited 
-{
-	
-}
-
 #wdn_navigation_bar,
 .nav_collapsed #wdn_navigation_bar {
      top:auto;
@@ -92,16 +63,6 @@ ul#wdn_tool_links li {
 #wdn_search_form input.search {
     color: transparent;
     text-transform: capitalize;
-}
-#footer {
-	background-position:top;
-}
-
-#wdn_copyright {
-	
-}
-#wdn_unl_wordmark {
-	
 }
 
 /* These are the additional, easier-to-use, selectors */
