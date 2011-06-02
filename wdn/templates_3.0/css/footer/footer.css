@@ -154,14 +154,6 @@ Author: WDN
 #footer div ~ .footer_col ~ .footer_col{ /* reset the rest */
     margin-left:24px; 
 }
-/* Experiment making the contact column stand out. This might be too much?
-#footer > div:nth-of-type(4) {
-    background:#dfdfdf;
-    margin:38px -12px -12px 12px !important;
-    padding:12px;   
-    border-radius:5px;
-}
-*/
 body.liquid #footer .footer_col {width:22.9%}   
     
 #footer .footer_col h3 {
