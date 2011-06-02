@@ -38,6 +38,7 @@ WDN.navigation = function() {
         	var div = document.createElement('div');
         	div.innerHTML = '<div style="-webkit-transition:color 1s linear;-ms-transition:color 1s linear;-o-transition:color 1s linear;-moz-transition:color 1s linear;"></div>';
         	q = (div.firstChild.style.webkitTransition !== undefined) || (div.firstChild.style.MozTransition !== undefined) || (div.firstChild.style.OTransition !== undefined) || (div.firstChild.style.MsTransition !== undefined);
+        	delete div;
         	return q;
         },
         
@@ -81,14 +82,13 @@ WDN.navigation = function() {
         
         setupInteraction : function() {
             WDN.loadJS('wdn/templates_3.0/scripts/plugins/hoverIntent/jQuery.hoverIntent.js', function() {
-                /*WDN.jQuery('#breadcrumbs ul li a').hoverIntent({
+                WDN.jQuery('#breadcrumbs ul li a').hoverIntent({
                     over:        WDN.navigation.switchSiteNavigation,
                     out:         function(){},
                     timeout:     WDN.navigation.changeSiteNavDelay,
                     sensitivity: 1, // Mouse must not move
                     interval:    120
                 });
-                */
                 WDN.jQuery('#navigation > ul').addClass('nav_collapsed').hoverIntent({
                     over:        WDN.navigation.showFullNavigation,
                     out:         WDN.navigation.hideFullNavigation,
@@ -421,15 +421,16 @@ WDN.navigation = function() {
         },
 
         setNavigationContents : function(contents, expand) {
-            WDN.log('setNavigationContents called');
+        	WDN.log('setNavigationContents called');
             WDN.jQuery('#navloading').remove();
             WDN.jQuery('#navigation').children('ul').remove()
                 .end().prepend(contents);
+            WDN.navigation.initialize();
             if (!expand) {
                 return;
             }
             WDN.navigation.currentState = -1;
-            WDN.navigation.expand();
+            WDN.navigation.showFullNavigation();
         },
 
         setWrapperClass : function(css_class) {
@@ -451,6 +452,7 @@ WDN.navigation = function() {
                 WDN.jQuery(li).append(storednavDiv);
             }
             storednavDiv.append(data);
+            storednavDiv.children('ul').removeAttr('class').children('li').children('ul').removeAttr('style');
         }
     };
 }();

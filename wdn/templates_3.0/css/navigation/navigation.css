@@ -7,6 +7,7 @@ Last edited: 04/12/2011
 Author: WDN
 
 */
+.ie9 #maincontent {background:black;}
 #wdn_navigation_bar {
     width:100%;
     clear:both;
@@ -49,16 +50,19 @@ Author: WDN
     border-right:1px solid #870d0c;
     border-left:1px solid #c83a3a;
     padding:0.47em 0;
-    /*
-    -webkit-transition:all linear 0.2s;
-    -moz-transition:all linear 0.2s;
-    -o-transition:all linear 0.2s;
-    transition:all linear 0.2s;
-    */
+    -webkit-background-clip:padding-box;
+    -webkit-background-origin:border-box;
+    background-clip:padding-box;
+    background-origin:border-box;
     position:relative;
-    background-image: linear-gradient(top, #b70302 0%, #9d0201 100%);
-    background-image: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201));
+    background: #b70302; /* Old browsers */
+	background: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #b70302 0%,#9d0201 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #b70302 0%,#9d0201 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #b70302 0%,#9d0201 100%); /* IE10+ */
+	background: linear-gradient(top, #b70302 0%,#9d0201 100%); /* W3C */
+	/* Note: Removed IE gradient support for IE9 border radius preference */
 }
 #navigation > ul > li:first-child {
     border-radius:5px 0px 0 0; 
@@ -94,15 +98,24 @@ Author: WDN
 #navigation ul li:nth-child(12) {
     width:161px !important;    
 }
-#navigation > ul > li:hover { /* rgba not supported <IE9, need png */
-    background-image: linear-gradient(top, #c12726 0%, #ac2625 100%);
-    background-image: -moz-linear-gradient(top, #c12726 0%, #ac2625 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c12726), color-stop(100%,#ac2625));
+#navigation > ul > li:hover {
+    background: #c12726; /* Old browsers */
+	background: -moz-linear-gradient(top, #c12726 0%, #ac2625 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c12726), color-stop(100%,#ac2625)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #c12726 0%,#ac2625 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #c12726 0%,#ac2625 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #c12726 0%,#ac2625 100%); /* IE10+ */
+	background: linear-gradient(top, #c12726 0%,#ac2625 100%); /* W3C */
 }
 #navigation > ul > li.empty:hover {
-    background-image: linear-gradient(top, #b70302 0%, #9d0201 100%);
-    background-image: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201));  
+    background: #b70302; /* Old browsers */
+    background: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b70302), color-stop(100%,#9d0201)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #b70302 0%,#9d0201 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #b70302 0%,#9d0201 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #b70302 0%,#9d0201 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b70302', endColorstr='#9d0201',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #b70302 0%,#9d0201 100%); /* W3C */ 
 }
 #navigation > ul > li > a {
     display:block;
@@ -126,18 +139,24 @@ Author: WDN
     border-left:1px solid #f1f1f1;
     border-bottom:1px solid #c9c9c9;
     margin-left:-1px;
-    background-image: linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%);
-    background-image: -moz-linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,0.95)), color-stop(100%,rgba(225,225,225,0.95)));
+    background: -moz-linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,0.95)), color-stop(100%,rgba(215,215,215,0.95))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(251,251,251,0.95) 0%,rgba(215,215,215,0.95) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(251,251,251,0.95) 0%,rgba(215,215,215,0.95) 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, rgba(251,251,251,0.95) 0%,rgba(215,215,215,0.95) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2fbfbfb', endColorstr='#f2d7d7d7',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, rgba(251,251,251,0.95) 0%,rgba(215,215,215,0.95) 100%); /* W3C */
     -webkit-transition:all linear 0.1s;
     -moz-transition:all linear 0.1s;
     -o-transition:all linear 0.1s;
+    -ms-transition:all linear 0.1s;
     transition:all linear 0.1s;
 }
 #navigation ul.double li ul {
 	-webkit-transition:all linear 0.01s;
     -moz-transition:all linear 0.01s;
     -o-transition:all linear 0.01s;
+    -ms-transition:all linear 0.01s;
     transition:all linear 0.01s;
 }
 #navigation > ul > li ~ li.empty ul  {
@@ -150,21 +169,31 @@ Author: WDN
     width:150px; /* accommodate the missing border */   
 }
 #navigation ul li:hover ul {
-    background-image: linear-gradient(top, rgba(251,251,251,1) 0%, rgba(240,240,240,1) 100%);
-    background-image: -moz-linear-gradient(top, rgba(251,251,251,1) 0%, rgba(240,240,240,1) 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,1)), color-stop(100%,rgba(240,240,240,1)));
+    /* http://www.colorzilla.com/gradient-editor/#fbfbfb+0,f0f0f0+100;Custom */
+    background: rgb(251,251,251); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(251,251,251,1) 0%, rgba(240,240,240,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,1)), color-stop(100%,rgba(240,240,240,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(251,251,251,1) 0%,rgba(240,240,240,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(251,251,251,1) 0%,rgba(240,240,240,1) 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, rgba(251,251,251,1) 0%,rgba(240,240,240,1) 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#f0f0f0',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, rgba(251,251,251,1) 0%,rgba(240,240,240,1) 100%); /* W3C */
 }
 
 #navigation ul li.empty:hover ul {
-    background-image: linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%);
-    background-image: -moz-linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,0.95)), color-stop(100%,rgba(225,225,225,0.95)));
+    background: -moz-linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,0.95)), color-stop(100%,rgba(215,215,215,0.95))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(251,251,251,0.95) 0%,rgba(215,215,215,0.95) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(251,251,251,0.95) 0%,rgba(215,215,215,0.95) 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, rgba(251,251,251,0.95) 0%,rgba(215,215,215,0.95) 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2fbfbfb', endColorstr='#f2d7d7d7',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, rgba(251,251,251,0.95) 0%,rgba(215,215,215,0.95) 100%); /* W3C */
 }
 
 #navigation > ul > li:hover ul a {
 	color:#242424;
 }
-#navigation ul li:first-child ul, #navigation ul li:nth-child(7) ul {
+#navigation ul li:first-child ul, #navigation ul li:nth-child(7) ul, #navigation ul li.first ul {
 	border-left:1px solid #c9c9c9;
     border-radius:0 0 0 5px;
     -webkit-border-radius:0 0 0 5px;
@@ -187,7 +216,7 @@ Author: WDN
     -webkit-border-radius:0;
     -moz-border-radius:0;
 }
-#navigation ul li:nth-child(12) ul {
+#navigation ul li:nth-child(12) ul, #navigation ul.double li:last-child ul {
     border-right:1px solid #c9c9c9 !important;
     border-radius:0 0 5px 0;
     -webkit-border-radius:0 0 5px 0;
