@@ -32,7 +32,15 @@ WDN.navigation = function() {
         collapseDelay : 120,
 
         changeSiteNavDelay : 400,
-
+        
+        cssTransitionsSupport : function(){
+        	q = false;
+        	var div = document.createElement('div');
+        	div.innerHTML = '<div style="-webkit-transition:color 1s linear;-ms-transition:color 1s linear;-o-transition:color 1s linear;-moz-transition:color 1s linear;"></div>';
+        	q = (div.firstChild.style.webkitTransition !== undefined) || (div.firstChild.style.MozTransition !== undefined) || (div.firstChild.style.OTransition !== undefined) || (div.firstChild.style.MsTransition !== undefined);
+        	return q;
+        },
+        
         /**
          * Initialize the navigation, and determine what the correct state
          * should be (expanded/collapsed).
@@ -98,6 +106,7 @@ WDN.navigation = function() {
          * This function cleans up the navigation visual presentations
          */
         fixPresentation : function(){
+        	WDN.jQuery('#navigation ul li:first-child, #navigation ul li:nth-child(7)').addClass('first'); //Fix for IE presentations
         	secondaries = WDN.jQuery('#navigation > ul > li').has('ul');
         	if (secondaries.length > 0){
         		WDN.jQuery("#navigation > ul > li").not(':has(ul)').each(function(){
@@ -136,18 +145,19 @@ WDN.navigation = function() {
             
     		ul_h = 0;
         	WDN.jQuery('#navigation ul li ul').each(function(){
-                WDN.jQuery(this).bind(
-                		'webkitTransitionEnd transitionend oTransitionEnd', 
-                		function(event) {
-                			if(WDN.jQuery(this).parents('ul').hasClass('nav_collapsed')){
-                				
-                			} else {
-                			   WDN.jQuery(this).parents('ul').addClass('nav_pinned').removeClass('nav_changing');
-                			}
-                		},
-                		false
-                );
-                
+        		if(WDN.navigation.cssTransitionsSupport()){
+	                WDN.jQuery(this).bind(
+	                		'webkitTransitionEnd transitionend oTransitionEnd msTransitionEnd', 
+	                		function(event) {
+	                			if(WDN.jQuery(this).parents('ul').hasClass('nav_collapsed')){
+	                				
+	                			} else {
+	                			   WDN.jQuery(this).parents('ul').addClass('nav_pinned').removeClass('nav_changing');
+	                			}
+	                		},
+	                		false
+	                );
+        		}
         		if(WDN.jQuery(this).height() > ul_h) {
         			ul_h = WDN.jQuery(this).height();
         		}
@@ -166,10 +176,15 @@ WDN.navigation = function() {
          */
         
         showFullNavigation : function(){
+        	WDN.log('showing full navigation');
         	if (double){
         		WDN.jQuery('#navigation > ul > li').slice(6).css('top', (ul_h+13)+'px');
         	}
-        	WDN.jQuery('#navigation > ul').addClass('nav_changing').removeClass('nav_collapsed');
+        	if(!WDN.navigation.cssTransitionsSupport()){
+        		WDN.jQuery('#navigation > ul').addClass('nav_pinned').removeClass('nav_collapsed');
+        	} else {
+            	WDN.jQuery('#navigation > ul').addClass('nav_changing').removeClass('nav_collapsed');
+        	}
         },
         
         /**
@@ -183,22 +198,6 @@ WDN.navigation = function() {
         	WDN.jQuery('#navigation > ul').addClass('nav_collapsed').removeClass('nav_pinned');
         },
         
-
-        /**
-         * This function will bring open the FLAG navigation
-         */
-        
-        showSingleNavigation : function(el){
-        	WDN.jQuery(el).addClass('nav_changing').removeClass('nav_collapsed');
-        },
-        
-        /**
-         * This function will close the FLAG navigation
-         */
-        
-        hideSingleNavigation : function(el){
-        	WDN.jQuery(el).addClass('nav_collapsed').removeClass('nav_pinned');
-        },
         /**
          * This function should determine which breadcrumb should be selected.
          */
