@@ -10,7 +10,6 @@
 }
 
 #wdn_content_wrapper {
-	padding-bottom:22px;
 }
 
 #tooltabs {
@@ -95,34 +94,14 @@ ul#wdn_tool_links li {
     text-transform: capitalize;
 }
 #footer {
-	padding-top:13px;
 	background-position:top;
 }
-#footer_floater {
-	width:960px;
-	padding-top:24px;
-}
-
-#footer ul.socialmedia {
-	clear:both;
-	padding:0 0 0 18px;
-	margin-bottom:-15px;
-}
-#footer ul.socialmedia li {
-	float:left;
-	width:26px;
-	padding-right:5px;
-}
-#footer ul.socialmedia li a {
-	display:block;
-}
-
 
 #wdn_copyright {
-	padding-top:6px;
+	
 }
 #wdn_unl_wordmark {
-	margin: -52px 12px 0 0;
+	
 }
 
 /* These are the additional, easier-to-use, selectors */
