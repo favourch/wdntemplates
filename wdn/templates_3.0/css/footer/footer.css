@@ -19,6 +19,7 @@ Author: WDN
 @import url('rating.css');
 #footer {
     margin:15px -12px -12px -12px;
+    padding-top: 50px;
     position: relative;
     clear: both;
     background: #eee;
@@ -53,7 +54,7 @@ Author: WDN
     background-repeat: no-repeat;
     height:41px;
     width:984px;
-    margin-top:-18px;
+    margin-top:-71px;
     position:absolute;
 }
 #footer_floater.showcase {
@@ -113,7 +114,6 @@ Author: WDN
 #wdn_unl_wordmark{display:none;}
 #footer .footer_col {
     width:222px;
-    margin-top:50px;
     float:left;
     position:relative;
     margin-left: 24px;
