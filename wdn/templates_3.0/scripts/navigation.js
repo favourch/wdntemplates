@@ -174,16 +174,19 @@ WDN.navigation = function() {
         /**
          * This function will bring open the MEGABOX navigation
          */
-        
         showFullNavigation : function(){
         	WDN.log('showing full navigation');
         	if (doublebar){
         		WDN.jQuery('#navigation > ul > li').slice(6).css('top', (ul_h+13)+'px');
         	}
-        	if(!WDN.navigation.cssTransitionsSupport()){
+        	if (!WDN.navigation.cssTransitionsSupport()){
         		WDN.jQuery('#navigation > ul').addClass('nav_pinned').removeClass('nav_collapsed');
         	} else {
             	WDN.jQuery('#navigation > ul').addClass('nav_changing').removeClass('nav_collapsed');
+            	setTimeout(function(){
+            		// After the CSS transition, show the sub-nav
+            		WDN.jQuery('#navigation > ul').addClass('nav_pinned').removeClass('nav_changing');
+            	}, 100);
         	}
         },
         
