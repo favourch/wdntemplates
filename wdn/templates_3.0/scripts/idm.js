@@ -92,13 +92,7 @@ WDN.idm = function() {
 				WDN.jQuery('#header').append('<div id="wdn_identity_management" class="loggedin"></div>');
 			}
 			
-			if (WDN.jQuery('#wdn_search').length > 0) {
-				// search box is being displayed, adjust the positioning
-				WDN.jQuery('#wdn_identity_management').css({right:'362px'});
-			}
-			
 			var icon = '';
-			
 			// in planet red's use of CAS, staff usernames are converted like jdoe2 -> unl_jdoe2
 			//  and student usernames are converted like s-jdoe3 -> unl_s_jdoe3
 			var planetred_uid;
