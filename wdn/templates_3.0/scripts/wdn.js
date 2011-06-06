@@ -132,7 +132,7 @@ var WDN = function() {
 			}
 			WDN.initializePlugin('mobile_detect');
 			WDN.initializePlugin('navigation');
-			//WDN.initializePlugin('search');
+			WDN.initializePlugin('search');
 			WDN.initializePlugin('feedback');
 			WDN.initializePlugin('socialmediashare');
 			WDN.contentAdjustments();
