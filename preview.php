@@ -124,11 +124,11 @@ echo ''.PHP_EOL;
         <div id="breadcrumbs">
             <!-- WDN: see glossary item 'breadcrumbs' -->
             <!-- InstanceBeginEditable name="breadcrumbs" -->
-            <?php echo $p->breadcrumbs; ?>
+            <?php echo (isset($p->breadcrumbs))?$p->breadcrumbs:''; ?>
         <!-- InstanceEndEditable --></div>
         <div id="wdn_navigation_wrapper">
             <div id="navigation"><!-- InstanceBeginEditable name="navlinks" -->
-                <?php echo $p->navlinks; ?>
+                <?php echo (isset($p->navlinks))?$p->navlinks:''; ?>
                 <!-- InstanceEndEditable --></div>
         </div>
     </div>
@@ -136,6 +136,7 @@ echo ''.PHP_EOL;
         <div id="titlegraphic"><!-- InstanceBeginEditable name="titlegraphic" -->
             <?php echo $p->titlegraphic; ?>
             <!-- InstanceEndEditable --></div>
+        <div id="pagetitle"><!-- InstanceBeginEditable name="pagetitle" --><?php echo (isset($p->pagetitle))?$p->pagetitle:''; ?><!-- InstanceEndEditable --></div>
         <div id="maincontent">
             <!--THIS IS THE MAIN CONTENT AREA; WDN: see glossary item 'main content area' -->
             <!-- InstanceBeginEditable name="maincontentarea" -->
@@ -150,20 +151,17 @@ echo ''.PHP_EOL;
             <div class="footer_col">
                 <?php include 'wdn/templates_3.0/includes/feedback.html'; ?>
             </div>
-            <div class="footer_col">
-            	<?php include 'wdn/templates_3.0/includes/socialmediashare.html'; ?>
-            </div>
             <div class="footer_col"><!-- InstanceBeginEditable name="leftcollinks" -->
-            <?php echo $p->leftcollinks; ?>
+            <?php echo (isset($p->leftcollinks))?$p->leftcollinks:''; ?>
             <!-- InstanceEndEditable --></div>
             <div class="footer_col"><!-- InstanceBeginEditable name="contactinfo" -->
-                <!--#include virtual="sharedcode/footerContactInfo.html" -->
+                <?php echo (isset($p->contactinfo))?$p->contactinfo:''; ?>
             <!-- InstanceEndEditable --></div>
-            <!-- InstanceBeginEditable name="optionalfooter" -->
-            <?php echo $p->optionalfooter; ?>
-            <!-- InstanceEndEditable -->
+            <div class="footer_col">
+                <?php include 'wdn/templates_3.0/includes/socialmediashare.html'; ?>
+            </div>
             <div id="wdn_copyright"><!-- InstanceBeginEditable name="footercontent" -->
-                <?php echo $p->footercontent; ?>
+                <?php echo (isset($p->footercontent))?$p->footercontent:''; ?>
                 <!-- InstanceEndEditable -->
                 <ul>
                     <li><a href="http://validator.unl.edu/check/referer">W3C</a></li>
