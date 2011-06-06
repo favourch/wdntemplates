@@ -1,0 +1,16 @@
+body.liquid #wdn_wrapper {
+    max-width:auto;
+    width:auto;
+}
+
+body.liquid #wdn_content_wrapper {
+	width:100%;
+}
+
+body.liquid #maincontent, body.liquid .container {
+	width:auto;
+}
+
+body.liquid #footer_floater {
+    width:100%;
+}
