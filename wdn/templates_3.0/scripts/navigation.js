@@ -119,9 +119,9 @@ WDN.navigation = function() {
         		WDN.jQuery('#navigation > ul').append('<li class="empty"><a href="#"></a><ul><li></li></ul></li>');
         		primaries++;
         	}
-        	double = false;
+        	doublebar = false;
         	if (primaries > 6){
-        		double = true;
+        		doublebar = true;
         		WDN.jQuery('#navigation ul').addClass('double'); //add a class for CSS rules
         		while (primaries < 12) {
             		WDN.jQuery('#navigation > ul').append('<li class="empty"><a href="#"></a><ul><li></li></ul></li>');
@@ -177,7 +177,7 @@ WDN.navigation = function() {
         
         showFullNavigation : function(){
         	WDN.log('showing full navigation');
-        	if (double){
+        	if (doublebar){
         		WDN.jQuery('#navigation > ul > li').slice(6).css('top', (ul_h+13)+'px');
         	}
         	if(!WDN.navigation.cssTransitionsSupport()){
