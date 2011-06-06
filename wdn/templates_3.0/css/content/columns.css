@@ -28,6 +28,7 @@
 #maincontent .four_col, #colorbox .four_col {
 	float:left;
 	width:940px;
+	padding:0 10px;
 	}
 
 #maincontent .col_half, #colorbox .col_half{
