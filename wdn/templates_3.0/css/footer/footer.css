@@ -100,6 +100,7 @@ Author: WDN
 #wdn_logos a:visited {
     border:none;
     vertical-align:baseline;
+    float:left;
 }
 #wdn_logos #unl_wordmark {
     padding-right:6px;
@@ -110,7 +111,7 @@ Author: WDN
     box-shadow: 1px 0px 0px #9d0201;
     display:inline-block;
 }
-#wdn_logos #cic_wordmark {margin-left:10px;position:relative;bottom:-2px;}
+#wdn_logos #cic_wordmark {margin:19px 0 0 -40px;}
 #wdn_unl_wordmark{display:none;}
 #footer .footer_col {
     width:222px;
