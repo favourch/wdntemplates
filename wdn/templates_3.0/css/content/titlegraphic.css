@@ -3,7 +3,6 @@
 }
 #pagetitle h2 {
   margin: 25px 0 18px 0;
-  color: #535353;
   font-weight: normal;
   font-size: 1.6em;
   line-height: 1.1em;
@@ -12,5 +11,6 @@
 }
 #pagetitle h2,
 #pagetitle h2 a {
+  color: #535353;
   text-decoration: none;
 }
