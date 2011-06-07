@@ -19,6 +19,20 @@
 	vertical-align: bottom;
     border-radius:5px;
 }
+#wdn_identity_management a,
+#wdn_identity_management a:link,
+#wdn_identity_management a:visited {
+    color:#BA0000;
+    text-decoration:none;
+    font-size:0.7em;
+    font-weight:normal;
+    margin-right:5px;
+}
+#wdn_identity_management a:focus,
+#wdn_identity_management a:hover {
+    color:#CC0000;
+    border-bottom:1px dotted #CC0000;
+}
 #wdn_identity_management .username {
 	margin-right:5px;
 }
@@ -28,15 +42,18 @@
 }
 #wdn_idm_logout {
     position:relative;
-    float:right;
+    top: -2px;
+    display:inline-block;
     text-indent:-999999em;
     background:url('images/wdn_idmLogout.png') no-repeat 0 1px;
     width:16px;
     height:16px;
+	vertical-align:middle;
     opacity:0.6;
 }
-#wdn_idm_logout:hover {
-    opacity:1;	
+a#wdn_idm_logout:hover, a#wdn_idm_logout:focus {
+    opacity:1;
+    border-bottom:none;
 }
 img.profile_pic {
 	padding:3px 3px 6px 3px;
