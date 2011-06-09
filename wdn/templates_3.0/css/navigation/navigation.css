@@ -244,11 +244,11 @@ Author: WDN
 *   Rules for Double Bar navigation  
 */
 #navigation .double.nav_collapsed li:nth-child(1) ul,
-	#navigation .double.nav_collapsed li:nth-child(2) ul,
-	#navigation .double.nav_collapsed li:nth-child(3) ul,
-	#navigation .double.nav_collapsed li:nth-child(4) ul,
-	#navigation .double.nav_collapsed li:nth-child(5) ul,
-	#navigation .double.nav_collapsed li:nth-child(6) ul
+#navigation .double.nav_collapsed li:nth-child(2) ul,
+#navigation .double.nav_collapsed li:nth-child(3) ul,
+#navigation .double.nav_collapsed li:nth-child(4) ul,
+#navigation .double.nav_collapsed li:nth-child(5) ul,
+#navigation .double.nav_collapsed li:nth-child(6) ul
 {
     display: none;
 }
