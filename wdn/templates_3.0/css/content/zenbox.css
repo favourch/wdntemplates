@@ -11,7 +11,7 @@ Red: primary #c20403
 /*Set the background of the div*/
 #maincontent div.zenboxsolid, #maincontent div.zenboxfixed, #maincontent div.zenboxfeature, #maincontent div.zenbox,
 #maincontent div.zenboxsolid.bright, #maincontent div.zenboxfixed.bright, #maincontent div.zenboxfeature.bright, #maincontent div.zenbox.bright {
-	border:1px solid #ededed;
+	border:1px solid #DDD;
     border-radius:5px;
     padding:5px;
     margin-bottom:1em;

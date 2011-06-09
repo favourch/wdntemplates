@@ -48,7 +48,7 @@
 #footer img.frame,
 #cboxLoadedContent img.frame
 {
-    border:1px solid #ededed;
+    border:1px solid #DDD;
     border-radius:3px;
     background: #f7f7f7;
 	padding:4px;
@@ -60,7 +60,7 @@
 #maincontent p.caption, #footer p.caption { 
 	line-height:normal;
 	background:#f7f7f7;
-	border:1px solid #ededed;
+	border:1px solid #DDD;
 	border-radius:3px;
 	border-top:none;
 	padding:2px 4px 5px;
