@@ -1,3 +1,5 @@
+#header { zoom:1; }
+
 #titlegraphic h1 {
     top:10px;	
 }
@@ -48,6 +50,43 @@ ul#wdn_tool_links li {
 #wdn_tool_links a {
 	display:block;
 }
+
+/** CSS3 Workarounds for #navigation **/
+#navigation > ul > li.start  {
+    border-left:none;
+    width:159px;
+}
+#navigation > ul > li.end  {
+    border-right:none;
+    width:159px;
+}
+#navigation > ul > li.mid-bar {
+    border-top:1px solid #870d0c;
+}
+
+#navigation > ul > li ul {
+	left:0;
+}
+#navigation > ul > li.start ul {
+    border-left:1px solid #c9c9c9;
+    margin-left:0;
+}
+
+#navigation ul li ul li.last a {border-bottom:none;}
+/** **/
+
+#footer { *width:984px; }
+
+#footer_floater { left: 0; }
+
+#wdn_copyright {
+	*margin: 0 -12px -23px;
+	*position: relative;
+}
+#wdn_logos { 
+    *right: 24px;	
+}
+
 
 #wdn_navigation_bar,
 .nav_collapsed #wdn_navigation_bar {
