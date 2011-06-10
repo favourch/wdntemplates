@@ -76,8 +76,8 @@ function removeRelativePaths($html, $base_url)
     return $html;
 }
 
-foreach (array('maincontentarea','head') as $key) {
-	$p->$key = removeRelativePaths($p->$key, $_GET['u']);
+foreach (array('maincontentarea','head', 'doctitle') as $key) {
+	$p->$key = str_replace(array('//<![CDATA['), ' ', removeRelativePaths($p->$key, $_GET['u']));
 }
 
 
