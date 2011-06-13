@@ -125,8 +125,9 @@ Author: WDN
     list-style:none;    
 }
 #footer .footer_col ul li {
-    margin:7px 0;
-    padding:3px 8px;
+    margin:2px 0;
+}
+#footer .footer_col ul li a {
     background: #f2f1ed;
     background: -moz-linear-gradient(top, #efece9 0%, #f2f1ed 50%, #e7e4e3 51%, #e4e0dd 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efece9), color-stop(50%,#f2f1ed), color-stop(51%,#e7e4e3), color-stop(100%,#e4e0dd)); /* Chrome,Safari4+ */
@@ -134,20 +135,18 @@ Author: WDN
     background: -o-linear-gradient(top, #efece9 0%,#f2f1ed 50%,#e7e4e3 51%,#e4e0dd 100%); /* Opera11.10+ */
     background: -ms-linear-gradient(top, #efece9 0%,#f2f1ed 50%,#e7e4e3 51%,#e4e0dd 100%); /* IE10+ */
     background: linear-gradient(top, #efece9 0%,#f2f1ed 50%,#e7e4e3 51%,#e4e0dd 100%); /* W3C */
+    display: inline-block;
+    padding:1px 8px;
     border-radius:1em;
     border:1px solid #d5d5d5;
+    text-decoration:none;
     -moz-background-clip: padding-box;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
 }
-#footer .footer_col ul li:hover {
+#footer .footer_col ul li a:hover {
     background:#ac0302;
-}
-#footer .footer_col ul li a {
-    text-decoration:none;
-}
-#footer .footer_col ul li:hover a {
-    color:#fff;
+    color:#fff; 
     text-shadow:none;
 }
 #footer div ~ .footer_col{ /* override the first .footer_col */
@@ -190,10 +189,8 @@ body.liquid #footer .footer_col {width:22.9%}
 #footer .footer_col ul.socialmedia li {
     display:inline-block;
     border:1px solid #f5f2ef;
-    border-radius:0;
     border-right:1px solid #d5d5d5;
     margin:0;
-    padding:0;
     float:left;
     text-transform:uppercase;
     font-size:11px;
