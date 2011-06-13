@@ -61,12 +61,6 @@ WDN.navigation = function() {
 
             WDN.navigation.determineSelectedBreadcrumb();
             WDN.navigation.linkSiteTitle();
-            
-            WDN.jQuery('#maincontent img').hover(function() {
-            	WDN.log('ENTERED IMG');
-            }, function() {
-            	WDN.log('EXITED IMG');
-            });
 			
             // Store the current state of the cookie
             if (WDN.getCookie('n') == 1) {
