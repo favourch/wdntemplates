@@ -295,6 +295,8 @@ WDN.navigation = function() {
          */
         initializePreferredState : function() {
             WDN.log('initializepreferredstate, current state is '+WDN.navigation.currentState);
+            
+            WDN.jQuery('#navigation').addClass('disableTransition');
             var mouseout;
             
             if (WDN.navigation.preferredState == 1) {
@@ -325,6 +327,8 @@ WDN.navigation = function() {
                 sensitivity: 1, // Mouse must not move
                 interval:    120
             });
+            
+            WDN.jQuery('#navigation').removeClass('disableTransition');
         },
         
         applyStateFixes : function() {
