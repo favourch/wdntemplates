@@ -1,3 +1,5 @@
+
+body.liquid #wdn_wrapper,
 #header { zoom:1; }
 body.popup #header { left:0; }
 
@@ -86,6 +88,7 @@ ul#wdn_tool_links li {
 /** **/
 
 #footer { *width:984px; }
+body.liquid #footer,
 body.popup #footer { *width:auto; zoom:1; }
 
 #footer_floater { left: 0; }
