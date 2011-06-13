@@ -1,5 +1,6 @@
 WDN.navigation = function() {
     var expandedHeight = 0;
+    var ul_h;
     return {
 
         preferredState : 0,
@@ -33,14 +34,14 @@ WDN.navigation = function() {
 
         changeSiteNavDelay : 400,
         
-        cssTransitionsSupport : function(){
+        cssTransitionsSupport : (function(){
         	q = false;
         	var div = document.createElement('div');
         	div.innerHTML = '<div style="-webkit-transition:color 1s linear;-ms-transition:color 1s linear;-o-transition:color 1s linear;-moz-transition:color 1s linear;"></div>';
         	q = (div.firstChild.style.webkitTransition !== undefined) || (div.firstChild.style.MozTransition !== undefined) || (div.firstChild.style.OTransition !== undefined) || (div.firstChild.style.MsTransition !== undefined);
         	delete div;
         	return q;
-        },
+        })(),
         
         /**
          * Initialize the navigation, and determine what the correct state
@@ -54,33 +55,24 @@ WDN.navigation = function() {
                 // This page has no navigation
                 return;
             }
+        	
         	WDN.log('let us fix the presentation');
         	WDN.navigation.fixPresentation();
-            if (WDN.jQuery('#navigation-close').length > 0) {
-                // Already initialized
-                return;
-            }
 
-            /*
-            WDN.jQuery('#navigation').append('<div id="navigation-close"></div>');
-            WDN.jQuery('#navigation').append('<div id="navigation-expand-collapse"><span></span></div>');
-            WDN.jQuery('#navigation-expand-collapse').click(WDN.navigation.setPreferredState);
-            WDN.jQuery('#navigation-close').click(function(evt) {
-                if (WDN.navigation.preferredState == 1) {
-                    WDN.navigation.setPreferredState(evt);
-                }
-                WDN.navigation.collapse();
-            });
             WDN.navigation.determineSelectedBreadcrumb();
             WDN.navigation.linkSiteTitle();
-			*/
+            
+            WDN.jQuery('#maincontent img').hover(function() {
+            	WDN.log('ENTERED IMG');
+            }, function() {
+            	WDN.log('EXITED IMG');
+            });
+			
             // Store the current state of the cookie
             if (WDN.getCookie('n') == 1) {
                 WDN.navigation.preferredState = 1;
             }
-        },
-        
-        setupInteraction : function() {
+            
             WDN.loadJS('wdn/templates_3.0/scripts/plugins/hoverIntent/jQuery.hoverIntent.js', function() {
                 WDN.jQuery('#breadcrumbs ul li a').hoverIntent({
                     over:        WDN.navigation.switchSiteNavigation,
@@ -89,116 +81,94 @@ WDN.navigation = function() {
                     sensitivity: 1, // Mouse must not move
                     interval:    120
                 });
-                WDN.jQuery('#navigation > ul').addClass('nav_collapsed').hoverIntent({
-                    over:        WDN.navigation.showFullNavigation,
-                    out:         WDN.navigation.hideFullNavigation,
-                    timeout:     WDN.navigation.changeSiteNavDelay,
-                    sensitivity: 1, // Mouse must not move
-                    interval:    120
-                });
-                //WDN.navigation.initializePreferredState();
+                WDN.navigation.initializePreferredState();
             });
-
-            WDN.log('interactions setup');
         },
         
         /**
          * This function cleans up the navigation visual presentations
          */
         fixPresentation : function(){
-        	WDN.jQuery('#navigation ul li:first-child, #navigation ul li:nth-child(7)').addClass('first'); //Fix for IE presentations
-        	secondaries = WDN.jQuery('#navigation > ul > li').has('ul');
-        	if (secondaries.length > 0){
-        		WDN.jQuery("#navigation > ul > li").not(':has(ul)').each(function(){
-            		WDN.jQuery(this).append('<ul><li></li></ul>');
-            	});
+        	var primaries = WDN.jQuery('#navigation > ul > li');
+        	var primaryCount = primaries.length;
+        	while (primaryCount % 6 > 0) {
+        		WDN.jQuery('#navigation > ul').append('<li class="empty"><a /><ul><li/></ul></li>');
+        		primaryCount++;
         	}
-        		
-        	primaries = WDN.jQuery('#navigation > ul > li').length;
-        	while (primaries < 6) {
-        		WDN.jQuery('#navigation > ul').append('<li class="empty"><a href="#"></a><ul><li></li></ul></li>');
-        		primaries++;
-        	}
-        	doublebar = false;
-        	if (primaries > 6){
-        		doublebar = true;
-        		WDN.jQuery('#navigation ul').addClass('double'); //add a class for CSS rules
-        		while (primaries < 12) {
-            		WDN.jQuery('#navigation > ul').append('<li class="empty"><a href="#"></a><ul><li></li></ul></li>');
-            		primaries++;
-            	}
+        	primaries = WDN.jQuery('#navigation > ul > li');
+        	
+        	var secondaries = primaries.has('ul');
+        	if (secondaries.length){
+        		primaries.not(':has(ul)').each(function(){
+        			WDN.jQuery(this).append('<ul><li/></ul>');
+        		});
         	}
         	
-        	ah = 0;
-            WDN.jQuery('#navigation > ul > li > a').each(function(){
-                if(WDN.jQuery(this).height() > ah) {
-                    ah = WDN.jQuery(this).height();
+        	// fix old IE for CSS3
+        	var majorIEVersion = WDN.jQuery.browser.version.split(".")[0];
+        	if (WDN.jQuery.browser.msie && majorIEVersion < 9) {
+        		WDN.log("Fixing IE CSS3");
+        		var $bar_starts = WDN.jQuery('#navigation > ul > li:nth-child(6n+1)');
+        		$bar_starts.addClass('start');
+        		WDN.jQuery('#navigation > ul > li:nth-child(6n+6)').addClass('end');
+        		WDN.jQuery('#navigation > ul > li:nth-child(n+7)').addClass('mid-bar');
+        		$bar_starts.last().prevAll().addClass('top-bars');
+        		WDN.jQuery('#navigation > ul > li ul li:last-child').addClass('last');
+        	}
+        	
+        	var ah = [];
+        	var primaryLinks = WDN.jQuery('> a', primaries);
+            primaryLinks.each(function(i){
+            	var row = Math.floor(i/6);
+            	var height = WDN.jQuery(this).outerHeight();
+                if(!ah[row] || height > ah[row]) {
+                    ah[row] = height;
                 }
             });
             
-            WDN.jQuery('#navigation > ul > li > a').each(function(){
-                if(WDN.jQuery(this).height() < ah) {
-                	new_ah = (ah - WDN.jQuery(this).height())/2;
-                	WDN.jQuery(this).css({'padding':new_ah+'px 0'});
+            primaryLinks.each(function(i){
+            	var row = Math.floor(i/6);
+            	var height = WDN.jQuery(this).outerHeight();
+            	var pad = parseFloat(WDN.jQuery(this).css('padding-top'));
+                if (height < ah[row]) {
+                	var new_ah = [(ah[row] - height) / 2];
+                	new_ah[1] = new_ah[0];
+                	
+                	if (WDN.jQuery.browser.msie) {
+                		 if (majorIEVersion == 8) {
+                			 new_ah[0] -= 1;
+                		 } else if (majorIEVersion == 7 && WDN.jQuery(this).parent().hasClass('empty')) {
+                			 new_ah[0] -= 1;
+                			 new_ah[1] -= 1;
+                		 }
+                	}
+                	WDN.jQuery(this).css({
+                		'padding-top' : new_ah[0] + pad + 'px',
+            			'padding-bottom' : new_ah[1] + pad + 'px'
+                	});
                 }
             });
             
-    		ul_h = 0;
-        	WDN.jQuery('#navigation ul li ul').each(function(){
-        		if(WDN.navigation.cssTransitionsSupport()){
-	                WDN.jQuery(this).bind(
-	                		'webkitTransitionEnd transitionend oTransitionEnd msTransitionEnd', 
-	                		function(event) {
-	                			if(WDN.jQuery(this).parents('ul').hasClass('nav_collapsed')){
-	                				
-	                			} else {
-	                			   WDN.jQuery(this).parents('ul').addClass('nav_pinned').removeClass('nav_changing');
-	                			}
-	                		},
-	                		false
-	                );
-        		}
-        		if(WDN.jQuery(this).height() > ul_h) {
-        			ul_h = WDN.jQuery(this).height();
+    		ul_h = [];
+    		var secondaryLists = WDN.jQuery('ul', primaries);
+        	secondaryLists.each(function(i){
+        		var row = Math.floor(i/6);
+        		var height = WDN.jQuery(this).height();
+        		if(!ul_h[row] || height > ul_h[row]) {
+        			ul_h[row] = height;
         		}
         	});
         	//loop through again and apply new height
-        	WDN.jQuery('#navigation ul li ul').each(function(){
-        	    WDN.jQuery(this).css({'height':ul_h+'px'});
+        	secondaryLists.each(function(i){
+        		var row = Math.floor(i/6);
+    	    	WDN.jQuery(this).css({'height':ul_h[row]+'px'});
             });
         	
-        	WDN.log('we have fixed the presentation. Now to setup the interactions.');
-        	WDN.navigation.setupInteraction();
+        	WDN.log('we have fixed the presentation.');
         },
         
-        /**
-         * This function will bring open the MEGABOX navigation
-         */
-        showFullNavigation : function(){
-        	WDN.log('showing full navigation');
-        	if (doublebar){
-        		WDN.jQuery('#navigation > ul > li').slice(6).css('top', (ul_h+13)+'px');
-        	}
-        	if (!WDN.navigation.cssTransitionsSupport()){
-        		WDN.jQuery('#navigation > ul').addClass('nav_pinned').removeClass('nav_collapsed');
-        	} else {
-            	WDN.jQuery('#navigation > ul').addClass('nav_changing').removeClass('nav_collapsed');
-            	setTimeout(function(){
-            		// After the CSS transition, show the sub-nav
-            		WDN.jQuery('#navigation > ul').addClass('nav_pinned').removeClass('nav_changing');
-            	}, 100);
-        	}
-        },
-        
-        /**
-         * This function will close the MEGABOX navigation
-         */
-        
-        hideFullNavigation : function(){
-        	if (WDN.jQuery('#navigation > ul').hasClass('double')){
-        		WDN.jQuery('#navigation > ul > li').slice(6).css('top','0px');
-        	}
-        	WDN.jQuery('#navigation > ul').addClass('nav_collapsed').removeClass('nav_pinned');
+        transitionEnd: function() {
+        	WDN.navigation.setWrapperClass('expanded');
         },
         
         /**
@@ -254,54 +224,45 @@ WDN.navigation = function() {
 
         linkSiteTitle: function() {
             // check if the link already exists
-            if (WDN.jQuery("#titlegraphic h1 a").length > 0) {
+            if (WDN.jQuery("#titlegraphic h1 a").length > 0 || !WDN.navigation.siteHomepage) {
                 return;
             }
             // create the link using whatever the Homepage is set to
             WDN.jQuery("#titlegraphic h1").wrapInner('<a href="' + WDN.navigation.siteHomepage +'" />');
         },
-
+        
         /**
          * Expand the navigation section.
          */
         expand : function() {
-            WDN.log('expand called');
-            WDN.jQuery('#navigation-close').show();
-            WDN.navigation.setWrapperClass('expanded');
-            WDN.navigation.currentState = 1;
-            WDN.navigation.updateHelperText();
-            //WDN.jQuery('#navigation ul > li:nth-child(6) a:visible:first').css('width','86%');
-        },
-
-        updateHelperText : function() {
-            if (WDN.navigation.preferredState == 1) {
-                WDN.jQuery('#navigation-expand-collapse span').text('click to always hide full navigation');
-            } else {
-                if (WDN.navigation.currentState === 0) {
-                    WDN.jQuery('#navigation-expand-collapse span').text('roll over for full navigation');
-                } else {
-                    WDN.jQuery('#navigation-expand-collapse span').text('click to always show full navigation');
-                }
-            }
+        	WDN.log('expand called');
+        	if (WDN.navigation.currentState === 1) {
+        		return;
+        	}
+        	
+        	if (WDN.navigation.currentState !== -1 && WDN.navigation.cssTransitionsSupport) {
+        		WDN.navigation.setWrapperClass('changing');
+        	} else {
+        		WDN.navigation.transitionEnd();
+        	}
+        	
+        	WDN.navigation.currentState = 1;
         },
 
         /**
          * Collapse the navigation
          */
-        collapse : function(animate) {
+        collapse : function(switchNav) {
             WDN.log('collapse called');
             if (WDN.navigation.currentState === 0) {
                 return;
             }
-            if (expandedHeight === 0) {
-                //expandedHeight = WDN.jQuery('#navigation').height();
-            }
-            //WDN.jQuery('#navigation-close').hide();
-            //WDN.jQuery('#navigation-expand-collapse span').text('roll over for full navigation');
-            //WDN.jQuery('#navigation ul:first li:nth-child(6) a:visible:first').css('width','100%');
+            
             WDN.navigation.setWrapperClass('collapsed');
             WDN.navigation.currentState = 0;
-            WDN.navigation.switchSiteNavigation(WDN.jQuery(WDN.navigation.homepageLI).children('a:first-child'), false);
+            if (switchNav !== false) {
+            	WDN.navigation.switchSiteNavigation(WDN.jQuery(WDN.navigation.homepageLI).children('a:first-child'), false);
+            }
         },
 
         /**
@@ -310,8 +271,7 @@ WDN.navigation = function() {
         startCollapseDelay: function(event) {
             WDN.log('start collapse delay');
             clearTimeout(WDN.navigation.timeout);
-            if (WDN.navigation.currentState === 0
-                || WDN.navigation.preferredState == 1) {
+            if (WDN.navigation.currentState === 0 || WDN.navigation.preferredState == 1) {
                 // Already collapsed, or, prefer to stay open
                 return;
             }
@@ -341,13 +301,27 @@ WDN.navigation = function() {
          */
         initializePreferredState : function() {
             WDN.log('initializepreferredstate, current state is '+WDN.navigation.currentState);
-            var mouseout = WDN.jQuery.noop;
-            if (WDN.navigation.preferredState==1) {
-                WDN.navigation.setWrapperClass('pinned');
-                WDN.navigation.expand();
-            } else {
-                WDN.navigation.collapse();
-                mouseout = WDN.navigation.startCollapseDelay;
+            var mouseout;
+            
+            if (WDN.navigation.preferredState == 1) {
+            	mouseout = WDN.jQuery.noop;
+            	WDN.navigation.expand();
+        	} else {
+        		WDN.navigation.collapse(false);
+        		mouseout = WDN.navigation.startCollapseDelay;
+        	}
+            
+            WDN.navigation.applyStateFixes();
+            
+            if (WDN.navigation.cssTransitionsSupport) {
+            	WDN.jQuery('#navigation').bind(
+        			'webkitTransitionEnd transitionend oTransitionEnd msTransitionEnd',
+        			function(event) {
+        				if (WDN.navigation.currentState == 1) {
+        					WDN.navigation.transitionEnd();
+        				}
+        			}
+            	);
             }
 
             WDN.jQuery('#wdn_navigation_bar').hoverIntent({
@@ -357,9 +331,20 @@ WDN.navigation = function() {
                 sensitivity: 1, // Mouse must not move
                 interval:    120
             });
-            WDN.jQuery('#wdn_content_wrapper,#header').hover(
-                    WDN.navigation.startCollapseDelay);
-            WDN.navigation.updateHelperText();
+        },
+        
+        applyStateFixes : function() {
+        	WDN.jQuery('#wdn_content_wrapper').css('margin-top', '');
+        	
+        	if (WDN.navigation.preferredState == 1) {
+        		WDN.navigation.setWrapperPState('pinned');
+        	} else {
+	        	WDN.navigation.setWrapperPState('unpinned');
+	        	var nav_height = WDN.jQuery('#wdn_navigation_wrapper').height();
+	        	if (nav_height > 41) {
+	        		WDN.jQuery('#wdn_content_wrapper').css('margin-top', nav_height);
+	        	}
+        	}
         },
 
         switchSiteNavigation : function(event, expand) {
@@ -367,13 +352,13 @@ WDN.navigation = function() {
             if (expand === undefined) {
                 expand = true;
             }
-            var breadcrumb = (event.target)?event.target:event;
+            var breadcrumb = (event.target) ? event.target : event;
             if (WDN.jQuery(breadcrumb).parent().hasClass('selected')) {
                 WDN.log('already showing this nav');
                 return true;
             }
 
-            var height = WDN.jQuery('#navigation ul').height() || 50;
+            var height = WDN.jQuery('#navigation > ul').height() || 50;
             var oldSelected = WDN.jQuery('#breadcrumbs > ul > li.selected:first');
 
             if (!WDN.jQuery('div.storednav', oldSelected).length && WDN.jQuery('#navigation > ul').length) {
@@ -425,25 +410,38 @@ WDN.navigation = function() {
 
         setNavigationContents : function(contents, expand) {
         	WDN.log('setNavigationContents called');
+        	WDN.jQuery('#navigation').addClass('disableTransition');
             WDN.jQuery('#navloading').remove();
             WDN.jQuery('#navigation').children('ul').remove()
                 .end().prepend(contents);
-            WDN.navigation.initialize();
-            if (!expand) {
-                return;
-            }
+            
             WDN.navigation.currentState = -1;
-            WDN.navigation.showFullNavigation();
+            WDN.navigation.setWrapperClass('expanded');
+            WDN.navigation.fixPresentation();
+            WDN.navigation.collapse(false);
+        	WDN.navigation.applyStateFixes();
+        	
+        	WDN.jQuery('#navigation').removeClass('disableTransition');
+        	
+        	if (expand) {
+        		WDN.navigation.expand();
+        	}
         },
 
         setWrapperClass : function(css_class) {
-            WDN.log('Adding class '+css_class);
+        	var $wrapper = WDN.jQuery('#wdn_wrapper');
+        	$wrapper.removeClass('nav_changing');
+        	
             if (css_class=='collapsed') {
-                WDN.jQuery('#navigation > ul').removeClass('nav_pinned').addClass('nav_'+css_class);
+            	$wrapper.removeClass('nav_expanded nav_changing').addClass('nav_'+css_class);
                 return;
             }
 
-            WDN.jQuery('#navigation > ul').removeClass('nav_collapsed').addClass('nav_'+css_class);
+            $wrapper.removeClass('nav_collapsed').addClass('nav_'+css_class);
+        },
+        
+        setWrapperPState : function(css_class) {
+        	WDN.jQuery('#wdn_wrapper').removeClass('nav_unpinned nav_pinned').addClass('nav_' + css_class);
         },
 
         storeNav : function(li, data) {
@@ -455,7 +453,6 @@ WDN.navigation = function() {
                 WDN.jQuery(li).append(storednavDiv);
             }
             storednavDiv.append(data);
-            storednavDiv.children('ul').removeAttr('class').children('li').children('ul').removeAttr('style');
         }
     };
 }();

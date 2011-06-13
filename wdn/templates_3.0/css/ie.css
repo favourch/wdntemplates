@@ -1,8 +1,10 @@
 #header { zoom:1; }
+body.popup #header { left:0; }
 
 #titlegraphic h1 {
     top:10px;	
 }
+body.popup #titlegraphic { zoom:1; }
 
 #tooltabs {
 	top:-11px;	
@@ -55,6 +57,7 @@ ul#wdn_tool_links li {
 #navigation > ul > li.start  {
     border-left:none;
     width:159px;
+    clear:left;
 }
 #navigation > ul > li.end  {
     border-right:none;
@@ -71,11 +74,19 @@ ul#wdn_tool_links li {
     border-left:1px solid #c9c9c9;
     margin-left:0;
 }
+#navigation > ul > li.end ul {
+    border-right:1px solid #c9c9c9 !important;
+    margin-right:0;
+}
+.nav_collapsed #navigation > ul > li.top-bars ul {
+	display: none;
+}
 
-#navigation ul li ul li.last a {border-bottom:none;}
+#navigation > ul > li ul li.last a {border-bottom:none;}
 /** **/
 
 #footer { *width:984px; }
+body.popup #footer { *width:auto; zoom:1; }
 
 #footer_floater { left: 0; }
 
