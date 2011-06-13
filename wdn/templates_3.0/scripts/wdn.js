@@ -190,6 +190,7 @@ var WDN = function() {
 		},
 		
 		contentAdjustments : function () {
+			WDN.jQuery('#footer_floater').css("zoom", 1);
 			WDN.jQuery('#maincontent p.caption, #footer p.caption').each(function(i){
 				if (WDN.jQuery(this).height()>20) {
 					WDN.jQuery(this).css({border:'1px solid #ededed',marginleft:'0'});
