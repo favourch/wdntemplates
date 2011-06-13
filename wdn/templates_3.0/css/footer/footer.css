@@ -190,8 +190,10 @@ body.liquid #footer .footer_col {width:22.9%}
 #footer .footer_col ul.socialmedia li {
     display:inline-block;
     border:1px solid #f5f2ef;
+    border-radius:0;
     border-right:1px solid #d5d5d5;
     margin:0;
+    padding:0;
     float:left;
     text-transform:uppercase;
     font-size:11px;
