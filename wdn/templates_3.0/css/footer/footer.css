@@ -86,7 +86,7 @@ Author: WDN
 }
 #footer #wdn_copyright a {color:#fff;}
 #wdn_copyright ul {
-    margin-top:10px;
+    display:inline;
 }
 #wdn_copyright ul li {
     display:inline;
