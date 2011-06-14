@@ -13,8 +13,6 @@
   margin-top: 12px;
   padding: 12px 12px 0 12px;
 }
-#header: after {
-}
 #header h1 {
   margin: 13px 0 0 0;
   padding: 12px 10px;
@@ -30,7 +28,7 @@
 #titlegraphic h1 {
   padding: 4px 15px;
   position: absolute;
-  top: 14px;
+  top: 10px;
   left: 84px;
   font-size: 40px;
   letter-spacing: -1px;
