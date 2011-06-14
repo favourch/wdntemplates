@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" media="print"    href="wdn/templates_3.0/css/print.css" />
 <script type="text/javascript" src="wdn/templates_3.0/scripts/debug.js"></script>
 <link rel="events" href="http://events.unl.edu/myred/" title="MyRED" />
+<link rel="home" href="http://www.unl.edu/" title="UNL" />
 <!--#include virtual="sharedcode/localSiteLinks.html" -->
 <!--#include virtual="wdn/templates_3.0/includes/browserspecifics.html" -->
 <!--#include virtual="wdn/templates_3.0/includes/metanfavico.html" -->
@@ -27,54 +28,15 @@
         -moz-border-radius:5px;
         padding:10px;
     }
-    #servicesTest {
-        list-style:none;
-        float:right;
-    }
-    #servicesTest li {
-        display:inline;
-        text-transform:uppercase;
-        font-size:10px;
-        font-weight:bold;
-        border-radius:10px;
-        border:1px solid #b8ab7d;
-        padding:0px 4px;
-        background: #f0ead6; /* Old browsers */
-        background: -moz-linear-gradient(top, #f0ead6 0%, #dad0ad 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0ead6), color-stop(100%,#dad0ad)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top, #f0ead6 0%,#dad0ad 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top, #f0ead6 0%,#dad0ad 100%); /* Opera11.10+ */
-        background: -ms-linear-gradient(top, #f0ead6 0%,#dad0ad 100%); /* IE10+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F0EAD6', endColorstr='#DAD0AD',GradientType=0 ); /* IE6-9 */
-        background: linear-gradient(top, #f0ead6 0%,#dad0ad 100%); /* W3C */
-        margin:0;
-        margin-left:-12px;
-        float:left;
-        -moz-box-shadow: -1px 0px 0px #E9E7CD;
-        box-shadow: -1px 0px 0px #E9E7CD;
-        width:12px;
-        overflow:hidden;
-        padding-right:13px;
-        -webkit-transition: width 0.3s linear;
-        -moz-transition: width 0.3s linear;
-        transition: width 0.3s linear;
-    }
-    #servicesTest li:last-child{
-        padding-right:5px;
-    }
-    #servicesTest li:hover {
-        width:80px;
-    }
-    #servicesTest li a {
-        color:#6f6441;
-        text-shadow: -1px -1px 0px #f1ecdd;
-        background:url('iconTest.png') no-repeat 2px center;
-        padding-left:18px;
-        text-wrap:none;
-    }
-    #servicesTest li a:hover {
-        color:#6f6441 !important;
-    }
+    .grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11 {
+	    margin-bottom: 15px;
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+	    background: rgba(255,0,0,.2);
+	    border: solid 1px #999;
+	    border-width: 1px 0;
+	    text-align:center;
+	}
 </style>
 </head>
 <body class="fixed debug">
@@ -83,7 +45,7 @@ Navigation</a></p>
 <div id="wdn_wrapper">
     <div id="header">
         <a href="http://www.unl.edu/" title="UNL website"><img src="wdn/templates_3.0/images/logo.png" alt="UNL graphic identifier" id="logo" /></a>
-        <h1>University of Nebraska&ndash;Lincoln</h1>
+        <h1></h1>
         <!--#include virtual="wdn/templates_3.0/includes/wdnTools.html" -->
         <div id="wdn_identity_management"></div>
      </div>
@@ -91,15 +53,12 @@ Navigation</a></p>
         <div id="breadcrumbs">
             <ul>
                 <!-- WDN: see glossary item 'breadcrumbs' -->
-                <li><a href="http://www.unl.edu/" title="University of Nebraska&ndash;Lincoln">UNL</a></li>
-                <li class="selected"><a href="http://other.unl.edu/">Un-accessible site</a></li>
-                <li><a href="http://admissions.unl.edu/">Admissions</a></li>
-                <li><a href="http://admissions.unl.edu/visit.aspx">Visit</a></li>
-                <li>This page</li>
+                <li class="selected"><a href="http://www.unl.edu/" title="University of Nebraska&ndash;Lincoln">UNL</a></li>
+                <li>Home</li>
             </ul>
         </div>
         <div id="wdn_navigation_wrapper">
-            <div id="navigation" class="mega">
+            <div id="navigation">
                 <!--#include virtual="sharedcode/navigation.html" -->
                 <!-- End Navigation Markup -->
             </div>
@@ -107,38 +66,111 @@ Navigation</a></p>
     </div>
     <div id="wdn_content_wrapper">
         <div id="titlegraphic">
-            <h1>College of Agricultural Sciences and Natural Resources (CASNR)</h1>
+            <h1>UNIVERSITY OF NEBASKA&ndash;LINCOLN</h1>
         </div>
-        <div id="pagetitle"><h2>Iterative Navigation Examples</h2></div>
+        <div id="pagetitle"><h2></h2></div>
         <div id="maincontent">
-        <ul id="servicesTest">
-            <li><a href="#">Map</a></li>
-            <li><a href="#">RSS</a></li>
-            <li><a href="#">Weather</a></li>
-            <li><a href="#">Directory</a></li>
-            <li><a href="#">Webcams</a></li>
-        </ul>
-            <div class="grid6 first">
-                <div class="curl">
-                <img src="tests/box.png" alt="box image" />
-                </div>
-                <div class="supporting">
-                
-                    <h3>Megabox Navigation</h3>
-                    <p>Megabox navigation, the current type of navigation used in the WDN Templates, shows all the navigation available with one user interaction.</p>
-                    <a class="switch mega" href="#">Switch to Megabox</a>
-                </div>
-            </div>
-            <div class="grid6" id="switch_flag">
-                <img src="tests/flag.png" alt="flag image" />
-                
-                <div class="supporting">
-                
-                    <h3>Flag Navigation</h3>
-                    <p>Flag navigation, shows only the navigation related to selected primary navigational label.</p>
-                    <a class="switch flag" href="#">Switch to Flag</a>
-                </div>
-            </div>
+            <div class="grid1 first"> 
+        grid1
+    </div> 
+    <div class="grid11"> 
+        grid11
+    </div> 
+ 
+    <div class="grid2 first"> 
+        grid2
+    </div> 
+    <div class="grid10"> 
+        grid10
+    </div> 
+ 
+    <div class="grid3 first"> 
+        grid3
+    </div> 
+    <div class="grid9"> 
+        grid9
+    </div> 
+ 
+    <div class="grid4 first"> 
+        grid4
+    </div> 
+    <div class="grid8"> 
+        grid8
+    </div> 
+
+    <div class="grid4 first"> 
+        grid4
+    </div>    
+    <div class="grid4"> 
+        grid4
+    </div>    
+    <div class="grid4"> 
+        grid4
+    </div> 
+    
+    <div class="grid5 first"> 
+        grid5
+    </div> 
+    <div class="grid7"> 
+        grid7
+    </div> 
+ 
+    <div class="grid6 first"> 
+        grid6
+    </div> 
+    <div class="grid6"> 
+        grid6
+    </div> 
+ 
+    <div class="grid3 first"> 
+        grid3
+    </div> 
+    <div class="grid3"> 
+        grid3
+    </div> 
+    <div class="grid1"> 
+        grid1
+    </div> 
+    <div class="grid5"> 
+        grid5
+    </div> 
+ 
+    <div class="grid1 first"> 
+        grid1
+    </div> 
+    <div class="grid5"> 
+        grid5
+    </div> 
+    <div class="grid3"> 
+        grid3
+    </div> 
+    <div class="grid3"> 
+        grid3
+    </div> 
+ 
+    <div class="grid3 first"> 
+        3
+    </div> 
+    <div class="grid9"> 
+        <div class="grid3 first">3</div> 
+        <div class="grid3">3</div> 
+        <div class="grid3">3</div> 
+        <div class="grid5 first">5</div> 
+        <div class="grid2">2</div> 
+        <div class="grid2">2</div> 
+    </div> 
+ 
+    <div class="grid8 first"> 
+        <div class="grid3 first">3</div> 
+        <div class="grid3">3</div> 
+        <div class="grid2">2</div> 
+        <div class="grid1 first">1</div> 
+        <div class="grid1">1</div> 
+        <div class="grid6">6</div> 
+    </div> 
+    <div class="grid4"> 
+        4
+    </div>
             <!-- InstanceEndEditable --> 
             <div class="clear"></div> 
             <noscript> 
