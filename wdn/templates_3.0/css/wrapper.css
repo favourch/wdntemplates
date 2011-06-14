@@ -5,7 +5,7 @@ html{
 .skipnav {display: none;}
 
 body {
-    background:url('images/bg.jpg');
+    background:url('images/bg_light.jpg');
     font-size:1em;
     line-height: 1;
 }
@@ -23,7 +23,9 @@ body {
     border-top:35px solid #EEE;
     padding:12px 12px 10px;
     margin:10px auto 20px;
-    box-shadow:0 3px 5px #CCC;
+    -webkit-box-shadow:0 1px 5px #AAA;
+    -moz-box-shadow:0 1px 5px #AAA;
+    box-shadow:0 1px 5px #AAA;
     border-radius:10px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
