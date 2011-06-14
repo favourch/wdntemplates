@@ -54,45 +54,17 @@ Author: WDN
 
 
 /* Primary Elements */
-#navigation > ul > li{
-    width:158px;
+#navigation > ul > li {
+    width:160px;
     float:left;
     text-align:center;
-    border-right:1px solid #870d0c;
-    border-left:1px solid #c83a3a;
     position:relative;
 }
 
 /* Clear the first element of a row of 6 */
 /* (duplicated in ie.css with .start class) */
 #navigation > ul > li:nth-child(6n+1) {
-    border-left:none;
-    width:159px;
-    clear:left;
-}
-
-/* Clear the last element of a row of 6 */
-/* (duplicated in ie.css with .start class) */
-#navigation > ul > li:nth-child(6n+6) {
-    border-right:none;
-    width:159px;
-}
-
-/* Add a separator between rows */
-/* (duplicated in ie.css with .mid-bar class) */
-#navigation > ul > li:nth-child(n+7) {
-    border-top:1px solid #c83a3a;
-    box-shadow: 0 -1px 0px #870d0c;
-}
-
-/* Combine empty primary elements */
-#navigation > ul > li ~ li.empty  {
-    border-right:none;
-    width:159px; /* accommodate the missing border */
-}
-#navigation > ul > li ~ li.empty ~ li.empty {
-    border-left:none;
-    width:160px; /* accommodate the missing border */   
+    clear: left;	
 }
 
 /* Primary Links */
@@ -104,6 +76,8 @@ Author: WDN
     font-size:0.875em;
     margin:auto 0;
     padding: 0.47em 2px;
+    border-right:1px solid #870d0c;
+    border-left:1px solid #c83a3a;
     
     background: #b70302; /* Old browsers */
     background: -moz-linear-gradient(top, #b70302 0%, #9d0201 100%); /* FF3.6+ */
@@ -113,6 +87,35 @@ Author: WDN
     background: -ms-linear-gradient(top, #b70302 0%,#9d0201 100%); /* IE10+ */
     background: linear-gradient(top, #b70302 0%,#9d0201 100%); /* W3C */
     /* Note: Removed IE gradient support for IE9 border radius preference */
+}
+
+/* Clear the first element of a row of 6 */
+/* (duplicated in ie.css with .start class) */
+#navigation > ul > li:nth-child(6n+1) > a {
+    border-left:none;
+}
+
+/* Clear the last element of a row of 6 */
+/* (duplicated in ie.css with .end class) */
+#navigation > ul > li:nth-child(6n+6) > a {
+    border-right:none;
+}
+
+/* Add a separator between rows */
+/* (duplicated in ie.css with .mid-bar class) */
+#navigation > ul > li:nth-child(n+7) > a {
+    border-top:1px solid #c83a3a;
+    box-shadow: 0 -1px 0px #870d0c;
+}
+
+/* Combine empty primary elements */
+#navigation > ul > li ~ li.empty > a {
+    border-right-color: transparent;
+    /* width:159px; /* accommodate the missing border */
+}
+#navigation > ul > li ~ li.empty ~ li.empty > a {
+    border-left-color: transparent;
+    /* width:160px; /* accommodate the missing border */   
 }
 
 /* Round the corners of the top row */
@@ -160,7 +163,6 @@ Author: WDN
     border-right:1px solid #d5d5d5;
     border-left:1px solid #f1f1f1;
     border-bottom:1px solid #c9c9c9;
-    margin-left:-1px;
     background: rgb(233,233,233);
     background: -moz-linear-gradient(top, rgba(251,251,251,0.95) 0%, rgba(215,215,215,0.95) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,251,251,0.95)), color-stop(100%,rgba(215,215,215,0.95))); /* Chrome,Safari4+ */
@@ -189,7 +191,7 @@ Author: WDN
 /* Add strong border around first-in-row secondaries */
 /* (duplicated in ie.css with .start class) */
 #navigation > ul > li:nth-child(6n+1) ul {
-    border-left:1px solid #c9c9c9;
+    border-left-color:#c9c9c9;
     margin-left:0;
 }
 
@@ -225,12 +227,16 @@ Author: WDN
 
 /* Collapse borders on empty secondaries */
 #navigation > ul > li ~ li.empty ul {
-	border-right:none;
+	border-right: none;
 	width: 149px;
 }
 #navigation > ul > li ~ li.empty ~ li.empty ul {
-    border-left:none;
+    border-left: none;
     width: 150px;
+}
+/* (duplicated in ie.css with .end class) */
+#navigation > ul > li ~ li.empty ~ li.empty:nth-child(6n+6) ul {
+	width: 149px;
 }
 
 /* Hover states for secondaries */
