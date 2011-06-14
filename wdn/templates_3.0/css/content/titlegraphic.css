@@ -4,10 +4,11 @@
 #pagetitle h2 {
   margin: 0 0 18px 0;
   font-weight: normal;
-  font-size: 1.6em;
+  font-size: 2.2em;
   line-height: 1.1em;
   letter-spacing: -0.04em;
   text-shadow:-1px -1px 0 #f1f1f1;
+  font-family: 'URWGroteskCon-Lig';
 }
 #pagetitle h2,
 #pagetitle h2 a {
