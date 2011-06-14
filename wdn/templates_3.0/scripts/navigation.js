@@ -146,8 +146,12 @@ WDN.navigation = function() {
     		ul_h = [];
     		var secondaryLists = WDN.jQuery('ul', primaries);
         	secondaryLists.each(function(i){
-        		var row = Math.floor(i/6);
-        		var height = WDN.jQuery(this).height();
+        		var row = Math.floor(i/6), height;
+        		if (WDN.jQuery('body').hasClass('liquid') && !(WDN.jQuery.browser.msie && majorIEVersion < 8)) {
+        			height = WDN.jQuery(this).outerHeight();
+        		} else {
+        			height = WDN.jQuery(this).height();
+        		}
         		if(!ul_h[row] || height > ul_h[row]) {
         			ul_h[row] = height;
         		}
@@ -157,6 +161,26 @@ WDN.navigation = function() {
         		var row = Math.floor(i/6);
     	    	WDN.jQuery(this).css({'height':ul_h[row]+'px'});
             });
+        	
+        	// Fix liquid box-sizing
+    		if (WDN.jQuery('body').hasClass('liquid') && WDN.jQuery.browser.msie && majorIEVersion < 8) {
+    			// Fix box-size
+    			var firstRun = true;
+    			var resizeFunc = function() {
+    				var $wrapper = WDN.jQuery('#wdn_navigation_wrapper');
+    				
+    				$wrapper.css('width', '');
+    				$wrapper.css('padding-right', 0);
+    				$wrapper.each(function() {
+    					var contentWidth = WDN.jQuery(this).width();
+    					var outerWidth = WDN.jQuery(this).outerWidth();
+    					WDN.jQuery(this).css('width', contentWidth * 2 - outerWidth);
+					});
+    				
+    			};
+    			resizeFunc();
+    			WDN.jQuery(window).unbind('resize').bind('resize', resizeFunc);
+    		}
         	
         	WDN.log('we have fixed the presentation.');
         },
