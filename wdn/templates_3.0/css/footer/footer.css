@@ -126,28 +126,26 @@ Author: WDN
 }
 #footer .footer_col ul li {
     margin:2px 0;
+    border-bottom:1px dotted #BABABA;
 }
+#footer .footer_col ul li ul {
+	border-top:1px dotted #BABABA;
+}
+#footer .footer_col ul li ul li {
+    margin:2px 10px;
+}
+#footer .footer_col ul li ul li:last-child {border-bottom:none;margin:0 10px;}
 #footer .footer_col ul li a {
-    background: #f2f1ed;
-    background: -moz-linear-gradient(top, #efece9 0%, #f2f1ed 50%, #e7e4e3 51%, #e4e0dd 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efece9), color-stop(50%,#f2f1ed), color-stop(51%,#e7e4e3), color-stop(100%,#e4e0dd)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #efece9 0%,#f2f1ed 50%,#e7e4e3 51%,#e4e0dd 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #efece9 0%,#f2f1ed 50%,#e7e4e3 51%,#e4e0dd 100%); /* Opera11.10+ */
-    background: -ms-linear-gradient(top, #efece9 0%,#f2f1ed 50%,#e7e4e3 51%,#e4e0dd 100%); /* IE10+ */
-    background: linear-gradient(top, #efece9 0%,#f2f1ed 50%,#e7e4e3 51%,#e4e0dd 100%); /* W3C */
     display: inline-block;
     padding:1px 8px;
-    border-radius:1em;
-    border:1px solid #d5d5d5;
     text-decoration:none;
-    -moz-background-clip: padding-box;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
 }
 #footer .footer_col ul li a:hover {
-    background:#ac0302;
-    color:#fff; 
+    color:#BA0000; 
     text-shadow:none;
+}
+#footer .footer_col ul li a.external {
+	padding-right:19px;
 }
 #footer div ~ .footer_col{ /* override the first .footer_col */
     margin-left:12px;   
