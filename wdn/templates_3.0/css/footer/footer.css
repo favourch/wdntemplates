@@ -245,7 +245,7 @@ body.liquid #footer .footer_col {width:22.9%}
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69AD77', endColorstr='#358446',GradientType=0 ); /* IE6-9 */
     background: linear-gradient(bottom, #69ad77 0%,#5ea36c 50%,#449955 51%,#358446 100%); /* W3C */
 }
-#footer .footer_col ul.socialmedia li:first-child a:hover {background:none;}
+#footer .footer_col ul.socialmedia li:first-child a:hover {background:none;color:#fff;}
 #footer .footer_col ul.socialmedia #wdn_emailthis:hover {
     background: #b29e95; /* Old browsers */
     background: -moz-linear-gradient(bottom, #b29e95 0%, #9e867c 50%, #826d64 51%, #725447 100%); /* FF3.6+ */
