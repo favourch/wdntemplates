@@ -1,22 +1,20 @@
-#maincontent h1, #maincontent h2, #maincontent h3, #colorbox h1, #colorbox h2{
+#maincontent h1, #maincontent h2, #maincontent h3, #colorbox h1, #colorbox h2, #maincontent h4, #maincontent h5, #maincontent h6, #colorbox h4{
     line-height:1.2;
     font-weight: 500;
     padding-top: .2em;
     padding-bottom: .3em;
     color:#555;
-    }
+    font-family:Helvetica, "Lucida Grande", Verdana, Arial;
+}
 
 #maincontent h4, #maincontent h5, #maincontent h6, #colorbox h4{
-    line-height:1.2;
-    font-weight: 500;
     padding-top: .1em;
     padding-bottom: .2em;
-    color:#555;
-    }
+}
 
 #maincontent h1, #colorbox h1{
     font-size: 1.8em;
-    }
+}
         
 #maincontent h2, #colorbox h2{
     font-size: 1.7em;
