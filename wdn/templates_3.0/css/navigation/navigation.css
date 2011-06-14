@@ -26,7 +26,7 @@ Author: WDN
 
 /* Resets */
 #wdn_navigation_wrapper:after {
-	content: ".";
+	content: " ";
 	display: block;
 	line-height: 0;
 	height: 0;
@@ -156,7 +156,7 @@ Author: WDN
     position:relative;
     top:0;
     width:148px;
-    padding:10px 5px 3px 5px;
+    padding:3px 5px 3px 5px;
     border-right:1px solid #d5d5d5;
     border-left:1px solid #f1f1f1;
     border-bottom:1px solid #c9c9c9;
