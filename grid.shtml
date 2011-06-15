@@ -72,7 +72,7 @@ Navigation</a></p>
 	        <p>The new grid system should be used for new layouts. The old grid system, while still available, is in the process of being deprecated. <em>It is displayed below only as reference.</em></p>
 	        <p>To implement, use the class names from below. Ex: <code>&lt;div class="grid6"&gt;</code>. For the first column in a row (the left-most column), you must add the class <code>first</code>. Ex: <code>&lt;div class="grid6 first"&gt;</code></p>
         </div>
-        <div class="grid3" style="text-align:center;">
+        <div class="grid3">
             <img src="images/grid_Monitor.png" alt="Grid supporting demonstration" />
         </div>
         <div class="demo">
