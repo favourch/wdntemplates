@@ -28,7 +28,7 @@
         -moz-border-radius:5px;
         padding:10px;
     }
-    .grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11 {
+    .grid1, .grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8, .grid9, .grid10, .grid11, .col div, .two_col div, .three_col div, .col_half div, .four_col div {
 	    margin-bottom: 15px;
 	    padding-top: 5px;
 	    padding-bottom: 5px;
@@ -36,6 +36,14 @@
 	    border: solid 1px #999;
 	    border-width: 1px 0;
 	    text-align:center;
+	}
+	#maincontent h3 {
+	   border-bottom:1px solid #888;
+	   margin-bottom:40px;
+	   line-height:0.8;
+	}
+	#maincontent h3 {
+	   clear:both;
 	}
 </style>
 </head>
@@ -45,7 +53,7 @@ Navigation</a></p>
 <div id="wdn_wrapper">
     <div id="header">
         <a href="http://www.unl.edu/" title="UNL website"><img src="wdn/templates_3.0/images/logo.png" alt="UNL graphic identifier" id="logo" /></a>
-        <h1></h1>
+        <h1>University of Nebraska&ndash;Lincoln</h1>
         <!--#include virtual="wdn/templates_3.0/includes/wdnTools.html" -->
         <div id="wdn_identity_management"></div>
      </div>
@@ -68,8 +76,9 @@ Navigation</a></p>
         <div id="titlegraphic">
             <h1>UNIVERSITY OF NEBRASKA&ndash;LINCOLN</h1>
         </div>
-        <div id="pagetitle"><h2></h2></div>
+        <div id="pagetitle"><h2>Demo: Grid System</h2></div>
         <div id="maincontent">
+        <h3>New, Supported Grid System</h3>
             <div class="grid1 first"> 
         grid1
     </div> 
@@ -171,6 +180,61 @@ Navigation</a></p>
     <div class="grid4"> 
         4
     </div>
+    <h3>Old, Deprecated Grid System</h3>
+    <div class="col left">
+        <div>
+            col
+        </div>
+    </div>
+    
+    <div class="three_col right">
+        <div>
+            three_col
+        </div>
+    </div>
+    
+    <div class="two_col left">
+        <div>
+            two_col
+        </div>
+    </div>
+    
+    <div class="two_col right">
+        <div>
+            two_col
+        </div>
+    </div>
+    
+    <div class="two_col left">
+        <div>
+            two_col
+        </div>
+    </div>
+    
+    <div class="col_half">
+        <div>
+            col_half
+        </div>
+    </div>
+    
+    <div class="col_half">
+        <div>
+            col_half
+        </div>
+    </div>
+    
+    <div class="col right">
+        <div>
+            col
+        </div>
+    </div>
+    
+    <div class="four_col">
+        <div>
+            four_col
+        </div>
+    </div>
+    
             <!-- InstanceEndEditable --> 
             <div class="clear"></div> 
             <noscript> 
