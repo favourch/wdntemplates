@@ -236,7 +236,10 @@ Author: WDN
 }
 /* (duplicated in ie.css with .end class) */
 #navigation > ul > li ~ li.empty ~ li.empty:nth-child(6n+6) ul {
-	width: 149px;
+    width: 149px;
+}
+#navigation > ul > li ~ li.empty:nth-child(6n+6) ul {
+    width: 148px;
 }
 
 /* Hover states for secondaries */
