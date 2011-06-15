@@ -43,7 +43,7 @@ $p->breadcrumbs = str_replace('<a href="http://admissions.unl.edu/apply/" title=
 
 function removeRelativePaths($html, $base_url)
 {
-    $needles = array('href="', 'src="', 'background="');
+    $needles = array('href="', 'src="', 'background="', 'loadCSS("', 'loadCSS(\'');
     $new_base_url = $base_url;
     $base_url_parts = parse_url($base_url);
 
@@ -77,7 +77,7 @@ function removeRelativePaths($html, $base_url)
 }
 
 foreach (array('maincontentarea','head', 'doctitle') as $key) {
-	$p->$key = str_replace(array('//<![CDATA['), ' ', removeRelativePaths($p->$key, $_GET['u']));
+	$p->$key = str_replace(array('//<![CDATA[', '//]]>'), ' ', removeRelativePaths($p->$key, $_GET['u']));
 }
 
 
