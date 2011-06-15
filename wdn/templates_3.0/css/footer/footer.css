@@ -128,10 +128,10 @@ Author: WDN
 }
 #footer .footer_col ul li {
     margin:2px 0;
-    border-bottom:1px dotted #BABABA;
+    border-bottom:1px dotted #c0c0c0;
 }
 #footer .footer_col ul li ul {
-	border-top:1px dotted #BABABA;
+	border-top:1px dotted #c0c0c0;
 }
 #footer .footer_col ul li ul li {
     margin:2px 10px;
