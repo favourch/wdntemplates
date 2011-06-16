@@ -67,6 +67,9 @@ WDN.navigation = function() {
                 WDN.navigation.preferredState = 1;
             }
             
+            // find the last-link in breadcrumbs
+            WDN.jQuery('#breadcrumbs > ul > li > a').last().parent().addClass('last-link');
+            
             WDN.loadJS('wdn/templates_3.0/scripts/plugins/hoverIntent/jQuery.hoverIntent.js', function() {
                 WDN.jQuery('#breadcrumbs ul li a').hoverIntent({
                     over:        WDN.navigation.switchSiteNavigation,
