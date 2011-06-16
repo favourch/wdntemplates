@@ -1,4 +1,4 @@
-
+body {text-rendering: optimizeLegibility;}
 body.liquid #wdn_wrapper,
 #header { zoom:1; }
 body.popup #header { left:0; }
