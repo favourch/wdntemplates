@@ -18,19 +18,15 @@
 }
 #breadcrumbs ul li {
   float: left;
-  padding:5px 5px 6px 5px;
-  padding-left:0;
+  padding:5px 5px 6px 8px;
   color: #686868; /* @TODO need to check contrast */
   margin:3px 0;
   position:relative;
   z-index:2;
   background: #eee;
 }
-#breadcrumbs ul li:first-child{
-    padding-left:5px;	
-}
 #breadcrumbs a {
-    padding:0 1em 0 3px;
+	padding-right: 11px;
     font-weight: bold;
     background: url('images/2011_breadcrumb_li.png') no-repeat right 3px;
 }
@@ -40,8 +36,6 @@
   -moz-border-radius: 3px 0 0 3px; 
 }
 #breadcrumbs ul li:last-child { /* This is the non-link element */
-  padding-right: 0.6em;
-  padding-left:4px;
   background:none;
 }
 #breadcrumbs ul li:nth-last-child(2) {
@@ -51,7 +45,7 @@
 }
 #breadcrumbs ul li.selected  {
     margin:0;
-    padding:5px 3px 3px;
+    padding:5px 3px 3px 6px;
     border:2px solid #f1f1f1;
     border-radius:3px;
     background:#fff;
@@ -61,15 +55,12 @@
     box-shadow: 1px 1px 1px #cccccc;
 	z-index:3;
 }
-#breadcrumbs ul li.selected + li {
-    padding-left:7px;	
+#breadcrumbs ul li.selected a{
+    color:#ac0302;
+    background-position: right -13px;
 }
 #breadcrumbs a, #breadcrumbs a:link, #breadcrumbs a:visited {
   text-decoration: none;
   color: #686868; /* @TODO need to check contrast */
-}
-#breadcrumbs ul li.selected a{
-    color:#ac0302;
-    background-position: right -13px;
 }
 #breadcrumbs .storednav {display:none;}
