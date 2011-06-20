@@ -88,24 +88,24 @@ ul.wdn_tabs span sup {
 }
 
 /* ZENTABLE AND ZENBOXES*/
-.zentable tbody tr:nth-child(odd) td, .zentable.bright tbody tr:nth-child(odd) td{background-color: #FFFDDF;}
-.zentable tbody tr:nth-child(even) td, .zentable tbody td .zentable tbody tr:nth-child(even) td, .zentable.bright tbody tr:nth-child(even) td, .zentable tbody td .zentable.bright tbody tr:nth-child(even) td{background-color: #FFFFFF;}
-table.zentable.cool tbody tr:nth-child(odd) td, .zentable table.zentable.cool tbody tr:nth-child(odd) td{background-color: #EFF7FF;}
-table.zentable.soothing tbody tr:nth-child(odd) td, .zentable table.zentable.soothing tbody tr:nth-child(odd) td{background-color: #EFFFEF;}
-table.zentable.energetic tbody tr:nth-child(odd) td, .zentable table.zentable.energetic tbody tr:nth-child(odd) td{background-color: #FFE9DF;}
-table.zentable.neutral tbody tr:nth-child(odd) td, .zentable table.zentable.neutral tbody tr:nth-child(odd) td{background-color: #EFEFEF;}
-table.zentable.primary tbody tr:nth-child(odd) td, .zentable table.zentable.primary tbody tr:nth-child(odd) td{background-color: #FFEFEF;}
+.zentable tbody tr:nth-child(odd) td, .zentable.bright tbody tr:nth-child(odd) td {background-color: #FFFDDF;}
+.zentable tbody tr:nth-child(even) td, .zentable.bright tbody tr:nth-child(even) td {background-color: #FFFFFF;}
+.zentable.cool tbody tr:nth-child(odd) td {background-color: #EFF7FF;}
+.zentable.soothing tbody tr:nth-child(odd) td {background-color: #EFFFEF;}
+.zentable.energetic tbody tr:nth-child(odd) td {background-color: #FFE9DF;}
+.zentable.neutral tbody tr:nth-child(odd) td {background-color: #EFEFEF;}
+.zentable.primary tbody tr:nth-child(odd) td {background-color: #FFEFEF;}
   
 #maincontent div.zenboxsolid h3:first-of-type, #maincontent div.zenboxfixed h3:first-of-type, #maincontent div.zenboxfeature h3:first-of-type, #maincontent div.zenbox h3:first-of-type {
 -moz-border-radius:5px 5px 0px 0px;
 -webkit-border-top-left-radius:5px;
 -webkit-border-top-right-radius:5px;
 }
-#maincontent table.zentable tr th:first-of-type {
+.zentable tr th:first-of-type {
 -moz-border-radius-topleft:5px;
 -webkit-border-top-left-radius:5px;
 }
-#maincontent table.zentable tr th:last-of-type {
+.zentable tr th:last-of-type {
 -moz-border-radius-topright:5px;
 -webkit-border-top-right-radius:5px;
 }

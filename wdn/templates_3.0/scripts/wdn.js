@@ -170,8 +170,8 @@ var WDN = function() {
                 (navigator.userAgent.match(/firefox/i) && (navigator.userAgent.match(/firefox\/[12]/i) || navigator.userAgent.match(/firefox\/3.[01234]/i))) ||
                 (navigator.userAgent.match(/msie/i))){
                 // old browser needs help zebra striping
-                WDN.jQuery('table.zentable tbody tr:nth-child(odd)').addClass('rowOdd');
-                WDN.jQuery('table.zentable tbody tr:nth-child(even)').addClass('rowEven');
+                WDN.jQuery('.zentable tbody tr:nth-child(odd)').addClass('rowOdd');
+                WDN.jQuery('.zentable tbody tr:nth-child(even)').addClass('rowEven');
             } 
 		},
 		
