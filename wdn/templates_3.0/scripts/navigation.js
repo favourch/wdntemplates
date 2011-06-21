@@ -268,7 +268,7 @@ WDN.navigation = function() {
         		return;
         	}
         	
-        	if (WDN.navigation.currentState !== -1 && WDN.navigation.cssTransitionsSupport) {
+        	if (WDN.navigation.currentState !== -1 && WDN.navigation.preferredState != 1 && WDN.navigation.cssTransitionsSupport) {
         		WDN.navigation.setWrapperClass('changing');
         	} else {
         		WDN.navigation.transitionEnd();
