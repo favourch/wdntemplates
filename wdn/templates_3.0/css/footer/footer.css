@@ -229,6 +229,7 @@ body.liquid #footer .footer_col {width:22.9%}
     text-align:center;
     width:82px;
     background:none;
+    font-size:90%;
 }
 #footer .footer_col ul.socialmedia li.outpost a {
     text-indent:-9999em;
@@ -284,7 +285,10 @@ body.liquid #footer .footer_col {width:22.9%}
     background: -ms-linear-gradient(bottom, #a9d1fc 0%,#96c8ff 50%,#76b5fc 51%,#4099ff 100%); /* IE10+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A9D1FC', endColorstr='#4099FF',GradientType=0 ); /* IE6-9 */
     background: linear-gradient(bottom, #a9d1fc 0%,#96c8ff 50%,#76b5fc 51%,#4099ff 100%); /* W3C */ 
-} 
+}
+#footer #wdn_createGoURL span {
+    text-transform:lowercase;	
+}
 #footer input#goURLResponse {
     width:89px;
     padding:0 0 0 5px;
