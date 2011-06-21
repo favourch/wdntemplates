@@ -11,8 +11,29 @@ Author: WDN
     width:100%;
     clear:both;
 }
+#wdn_navigation_bar .pin_state {
+	position: absolute;
+	bottom: -2px;
+	right: -5px;
+	z-index: 101;
+	height: 28px;
+	width: 19px;
+}
+#wdn_navigation_bar .pin_state a {
+	display: block;
+	height: 100%;
+	background-image: url(images/pin_state.png);
+	background-repeat: no-repeat;
+	text-indent: -9999em;
+}
+
+.nav_pinned #wdn_navigation_bar .pin_state a {
+	background-position: 0 -28px;
+}
+
 #wdn_navigation_wrapper{
     margin-top:5px;
+    position:relative;
 }
 
 /* Unpinned/floating state */
@@ -275,7 +296,9 @@ Author: WDN
 
 /* Hide the secondary elements during transition */
 .nav_collapsed #navigation > ul > li ul li,
-.nav_changing #navigation > ul > li ul li {
+.nav_changing #navigation > ul > li ul li,
+.nav_collapsed .pin_state,
+.nav_changing .pin_state {
     display:none;
 }
 

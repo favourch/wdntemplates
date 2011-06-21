@@ -70,6 +70,13 @@ WDN.navigation = function() {
             // find the last-link in breadcrumbs
             WDN.jQuery('#breadcrumbs > ul > li > a').last().parent().addClass('last-link');
             
+            // add the pinned state UI element
+            var $pin = WDN.jQuery('<div class="pin_state"><a href="#" /></div>').appendTo('#wdn_navigation_wrapper');
+            $pin.children('a').click(function(evt) {
+            	WDN.navigation.setPreferredState(evt);
+            	return false;
+            });
+            
             WDN.loadJS('wdn/templates_3.0/scripts/plugins/hoverIntent/jQuery.hoverIntent.js', function() {
                 WDN.jQuery('#breadcrumbs ul li a').hoverIntent({
                     over:        WDN.navigation.switchSiteNavigation,
@@ -325,13 +332,16 @@ WDN.navigation = function() {
             
             WDN.jQuery('#navigation').addClass('disableTransition');
             var mouseout;
+            var pinUI = WDN.jQuery('#wdn_navigation_wrapper .pin_state a');
             
             if (WDN.navigation.preferredState == 1) {
             	mouseout = WDN.jQuery.noop;
+            	pinUI.attr('title', 'Navigation pinned open, click to unpin');
             	WDN.navigation.expand();
         	} else {
-        		WDN.navigation.collapse(false);
         		mouseout = WDN.navigation.startCollapseDelay;
+        		pinUI.attr('title', 'Navigation unpinned, click to pin open');
+        		WDN.navigation.collapse(false);
         	}
             
             WDN.navigation.applyStateFixes();
@@ -466,7 +476,7 @@ WDN.navigation = function() {
         },
         
         setWrapperPState : function(css_class) {
-        	WDN.jQuery('#wdn_wrapper').removeClass('nav_unpinned nav_pinned').addClass('nav_' + css_class);
+        	WDN.jQuery('#wdn_wrapper').removeClass('nav_changing nav_unpinned nav_pinned').addClass('nav_' + css_class);
         },
 
         storeNav : function(li, data) {
