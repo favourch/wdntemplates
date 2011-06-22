@@ -114,7 +114,8 @@ Author: WDN
     box-shadow: 1px 0px 0px #9d0201;
     display:inline-block;
 }
-#wdn_logos #cic_wordmark {margin:19px 0 0 -40px;}
+#wdn_logos #cic_wordmark {float:left;}
+#wdn_logos #b1g_wordmark {margin:25px 0 0 -46px;}
 #wdn_unl_wordmark{display:none;}
 #footer .footer_col {
     width:222px;
