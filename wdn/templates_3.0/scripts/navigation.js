@@ -336,11 +336,11 @@ WDN.navigation = function() {
             
             if (WDN.navigation.preferredState == 1) {
             	mouseout = WDN.jQuery.noop;
-            	pinUI.attr('title', 'Navigation pinned open, click to unpin');
+            	pinUI.attr('title', 'Click to un-pin');
             	WDN.navigation.expand();
         	} else {
         		mouseout = WDN.navigation.startCollapseDelay;
-        		pinUI.attr('title', 'Navigation unpinned, click to pin open');
+        		pinUI.attr('title', 'Click to pin open');
         		WDN.navigation.collapse(false);
         	}
             
