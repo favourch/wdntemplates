@@ -196,50 +196,48 @@ Navigation</a></p>
             </div>
             <div class="band">
                 <div class="grid3 callout first">
-                    <div>
-	                    <h3 class="ribbon">Become a Husker</h3>
-	                    <ul>
-	                        <li>
-	                            <a href="http://admissions.unl.edu/apply/index.aspx">Apply</a>
-	                            <ul>
-	                                <li>
-	                                    <a href="http://admissions.unl.edu/apply/">Undergrad</a>
-	                                </li>
-	                                <li>
-	                                    <a href="http://www.unl.edu/gradstudies/prospective/steps/">Grad</a>
-	                                </li>
-	                                <li>
-	                                    <a href="http://law.unl.edu/prospective/apply.shtml">Law</a>
-	                                </li>
-	                            </ul>
-	                        </li>
-	                        <li>
-	                            <a href="http://admissions.unl.edu/visit/">Visit</a>
-	                            <ul>
-	                                <li>
-	                                    <a href="http://admissions.unl.edu/daily_visit/index.aspx">Schedule a Visit</a>
-	                                </li>
-	                                <li>
-	                                    <a href="http://maps.unl.edu/">Maps</a>
-	                                </li>
-	                            </ul>
-	                        </li>
-	                        <li>
-	                            <a href="http://admissions.unl.edu/visit/">Student Resources</a>
-	                            <ul>
-	                                <li>
-	                                    <a href="http://myred.unl.edu/">MyRED</a>
-	                                </li>
-	                                <li>
-	                                    <a href="http://events.unl.edu/academic/upcoming/">Academic Calendar</a>
-	                                </li>
-	                                <li>
-	                                    <a href="http://my.unl.edu/">MyUNL</a>
-	                                </li>
-	                            </ul>
-	                        </li>
-	                    </ul>
-                    </div>
+                    <h3 class="ribbon">Become a Husker</h3>
+                    <ul>
+                        <li>
+                            <a href="http://admissions.unl.edu/apply/index.aspx">Apply</a>
+                            <ul>
+                                <li>
+                                    <a href="http://admissions.unl.edu/apply/">Undergrad</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.unl.edu/gradstudies/prospective/steps/">Grad</a>
+                                </li>
+                                <li>
+                                    <a href="http://law.unl.edu/prospective/apply.shtml">Law</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://admissions.unl.edu/visit/">Visit</a>
+                            <ul>
+                                <li>
+                                    <a href="http://admissions.unl.edu/daily_visit/index.aspx">Schedule a Visit</a>
+                                </li>
+                                <li>
+                                    <a href="http://maps.unl.edu/">Maps</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://admissions.unl.edu/visit/">Student Resources</a>
+                            <ul>
+                                <li>
+                                    <a href="http://myred.unl.edu/">MyRED</a>
+                                </li>
+                                <li>
+                                    <a href="http://events.unl.edu/academic/upcoming/">Academic Calendar</a>
+                                </li>
+                                <li>
+                                    <a href="http://my.unl.edu/">MyUNL</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
                 
                 <div class="grid3 announce_story">
