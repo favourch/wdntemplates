@@ -120,7 +120,7 @@
 #maincontent .assert ul li.outlier {
 	
 }
-#maincontent .assert ul li.outlier span {
+#maincontent .assert ul li.outlier > a > span {
     font-size:8px;
     display:block;
     color:#7a7a7a;
@@ -150,7 +150,7 @@
     border-color:#d9d4b8;
     border-style:solid;
     padding:5px 0;
-    height:auto%;
+    margin-bottom:20px;
 }
 .band > div {
 }
@@ -265,11 +265,42 @@
 }
 #maincontent .announce_story .article p {
     font-size:0.9em;
-    line-height:1.5em;	
+    line-height:1.4em;	
 }
 #maincontent .announce_story .article h4 a {
 	color:#12516e;
 }
 #maincontent .announce_story .article h4 a:hover {
+    text-decoration:underline;
+}
+/* End styles for the Stories
+
+/*
+*
+* Styles for the Remainder
+*
+*/
+#maincontent .remainder h5 {
+	text-transform:uppercase;
+    font-weight:bold;
+    text-shadow:-1px 0 -1px #eee;
+    border-bottom:1px solid #e2dfd1;
+    line-height:1em;
+    padding:0;
+}
+#maincontent .remainder ul {
+    list-style:none;	
+    padding:10px 0;
+}
+#maincontent .remainder ul li {
+    display:inline-block;
+    margin-bottom:10px;
+    margin-right:18px;
+    font-size:10px;
+}
+#maincontent .remainder ul li a {
+    color:#000;	
+}
+#maincontent .remainder ul li a:hover {
     text-decoration:underline;
 }
