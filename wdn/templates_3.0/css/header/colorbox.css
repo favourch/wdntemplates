@@ -40,11 +40,10 @@
 				#cboxClose.hover{background-position:-95px 0px;}
 
 /*UNL Styles for colorbox elements, inside the frame*/
-#alertboxContent h1.sec_header {
+#alertbox h1.sec_header {
 	border-color: #CC0000;
 }
-#alertboxContent .effectiveDate {
-    font-size:0.5em;
-    display:block;	
+#alertbox .two_col.right {
+	width: 70%;
 }
 
