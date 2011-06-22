@@ -11,6 +11,30 @@ Author: WDN
     width:100%;
     clear:both;
 }
+
+#wdn_navigation_bar .expand_toggle {
+	position: absolute;
+    top: -18px;
+    right: 3px;
+    z-index: 101;
+    height: 30px;
+    width: 28px;
+}
+
+#wdn_navigation_bar .expand_toggle a {
+    display: block;
+    height: 100%;
+    background-image: url(images/expand_toggle.png);
+    background-repeat: no-repeat;
+    text-indent: -9999em;
+}
+
+.nav_expanded #wdn_navigation_bar .expand_toggle a {
+    background-position: 0 -30px;
+}
+
+.nav_pinned #wdn_navigation_bar .expand_toggle { display: none; }
+
 #wdn_navigation_bar .pin_state {
 	position: absolute;
 	bottom: -2px;

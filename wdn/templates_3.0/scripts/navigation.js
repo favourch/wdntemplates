@@ -1,6 +1,6 @@
 WDN.navigation = function() {
     var expandedHeight = 0;
-    var ul_h;
+    var ul_h, lockHover = false;
     return {
 
         preferredState : 0,
@@ -69,6 +69,24 @@ WDN.navigation = function() {
             
             // find the last-link in breadcrumbs
             WDN.jQuery('#breadcrumbs > ul > li > a').last().parent().addClass('last-link');
+            
+            // add an expand toggler UI element
+            var $toggler = WDN.jQuery('<div class="expand_toggle"><a href="#" /></div>').prependTo('#wdn_navigation_wrapper');
+            $toggler.children('a').click(function(evt) {
+            	if (WDN.navigation.currentState === 0) {
+            		WDN.navigation.expand();
+            	} else {
+            		WDN.navigation.collapse();
+            	}
+            	return false;
+            });
+            $toggler.hover(function() {
+            	lockHover = !lockHover;
+            	WDN.jQuery('#wdn_navigation_bar').mouseout();
+            }, function() {
+            	lockHover = !lockHover;
+            	WDN.jQuery('#wdn_navigation_bar').mouseover();
+            });
             
             // add the pinned state UI element
             var $pin = WDN.jQuery('<div class="pin_state"><a href="#" /></div>').appendTo('#wdn_navigation_wrapper');
@@ -339,7 +357,11 @@ WDN.navigation = function() {
             	pinUI.attr('title', 'Click to un-pin');
             	WDN.navigation.expand();
         	} else {
-        		mouseout = WDN.navigation.startCollapseDelay;
+        		mouseout = function() {
+        			if (!lockHover) {
+        				WDN.navigation.startCollapseDelay();
+        			}
+        		};
         		pinUI.attr('title', 'Click to pin open');
         		WDN.navigation.collapse(false);
         	}
@@ -358,7 +380,11 @@ WDN.navigation = function() {
             }
 
             WDN.jQuery('#wdn_navigation_bar').hoverIntent({
-                over:        WDN.navigation.expand,
+                over:        function() {
+                	if (!lockHover) {
+                		WDN.navigation.expand();
+                	}
+                },
                 out:         mouseout,
                 timeout:     WDN.navigation.expandDelay,
                 sensitivity: 1, // Mouse must not move
