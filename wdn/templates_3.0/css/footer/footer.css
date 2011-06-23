@@ -67,9 +67,9 @@ Author: WDN
 #wdn_copyright {
     clear: both;
     border-top:2px solid #fff;
-    -webkit-box-shadow: 0px -1px 0px #cecece, 0 3px 5px #AAA;
-    -moz-box-shadow: 0px -1px 0px #cecece, 0 3px 5px #AAA;
-    box-shadow: 0px -1px 0px #cecece, 0 3px 5px #AAA;
+    -webkit-box-shadow: 0px -1px 0px #cecece, 0px 3px 5px #AAA;
+    -moz-box-shadow: 0px -1px 0px #cecece, 0px 3px 5px #AAA;
+    box-shadow: 0px -1px 0px #cecece, 0px 3px 5px #AAA;
     padding: 15px 200px 24px 15px;
     position:relative;
     color:#fff;
