@@ -1,3 +1,46 @@
+#maincontent .wdn_carousel {
+	height:340px;
+	background:url('splash_images/sliderBG.png') no-repeat bottom center;
+}
+#maincontent .wdn_carousel .sliderControl { display:none;}
+#maincontent .currentScroller {
+    width:960px;
+    height:310px;
+    overflow:hidden;	
+}
+#maincontent .currentScroller ul {
+    margin:0;
+    padding:0;
+    width: 4800px; /* for 5 stories */	
+    list-style:none;
+}
+#maincontent .currentScroller ul li {
+    position:relative;
+    display:inline;
+    float:left;
+    width:960px;
+    height:310px;
+    background:#fff;	
+}
+#maincontent .currentScroller .promoText {
+    position:absolute;
+    bottom:5%;
+    left:50px;	
+    width:260px;
+}
+#maincontent .currentScroller .promoText h3 {
+    font-size:3em;
+    font-weight:bold;
+    text-transform:uppercase;
+    color:#fff;
+    text-shadow: -1px -1px 1px #787878;
+    filter: dropshadow(color=#787878, offx=-1, offy=-1);	
+}
+#maincontent .currentScroller .promoText p {
+    color:#fff;
+    text-shadow:1px 1px 1px #787878;
+    font-size:1.3em;	
+}
 /*
 *
 * Styles for the Academic Colleges Bar
@@ -237,7 +280,7 @@
     background:#12516e;
     border-radius:1em;
 }
-/* End styles for the Become a Husker Section
+/* End styles for the Become a Husker Section */
 
 /*
 *
@@ -311,4 +354,21 @@
 }
 #maincontent .remainder ul li a:hover {
     text-decoration:underline;
+}
+#maincontent ul#outposts {
+    margin:0;
+    padding:0;
+    list-style:none;	
+}
+#maincontent ul#outposts li {
+    display:inline;
+    float:left;	
+}
+#maincontent ul#outposts li a {
+    display:block;
+    float:left;
+    text-indent:-99999px;
+    width:38px;
+    height:38px;
+    background:url('splash_images/outpostSprite.gif') 0 0 no-repeat; 
 }

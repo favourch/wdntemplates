@@ -100,9 +100,9 @@ echo ''.PHP_EOL;
     
     $Id: fixed.dwt 414 2009-07-09 21:05:52Z bbieber2 $
 -->
-<link rel="stylesheet" type="text/css" media="screen" href="/wdn/templates_3.0/css/all.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/wdn/templates_3.0/css/debug.css" />
 <link rel="stylesheet" type="text/css" media="print" href="/wdn/templates_3.0/css/print.css" />
-<script type="text/javascript" src="/wdn/templates_3.0/scripts/all.js"></script>
+<script type="text/javascript" src="/wdn/templates_3.0/scripts/debug.js"></script>
 <?php include 'wdn/templates_3.0/includes/browserspecifics.html'; ?>
 <?php include 'wdn/templates_3.0/includes/metanfavico.html'; ?>
 <!-- InstanceBeginEditable name="doctitle" -->
