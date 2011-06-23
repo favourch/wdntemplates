@@ -227,7 +227,15 @@
     display:inline;
     font-size:0.6em;
     font-weight:normal;
-    margin-right:15px;
+    margin-right:3px;
+}
+#maincontent .callout ul li ul a {
+    padding:2px 6px;
+}
+#maincontent .callout ul li ul a:hover {
+    color: #fff;
+    background:#12516e;
+    border-radius:1em;
 }
 /* End styles for the Become a Husker Section
 
