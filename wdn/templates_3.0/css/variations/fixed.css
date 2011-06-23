@@ -5,11 +5,3 @@ body.fixed #wdn_wrapper {
 body.fixed #breadcrumbs {
 	width: 954px;
 }
-
-
-body.fixed #maincontent {
-	overflow:hidden;
-}
-
-body.fixed #footer {
-}
