@@ -1,0 +1,38 @@
+#maincontent {
+  margin-bottom: 100px;
+}
+#footer {
+  z-index: 105;
+}
+#footer_floater {
+  min-height: 41px;
+  text-align: center;
+}
+#releasetheballoons {
+  position: absolute;
+  top: -75px;
+  width: 100%;
+  text-align: center;
+}
+#releasetheballoons img:hover {
+  cursor: pointer;
+}
+.balloon-message { 
+  text-align: center;
+  border: 1px dotted #eae7d5;
+  position: relative;
+  top: -20px;
+}
+#ithinkyouvehadenough {
+  background-color: #fc5629;
+  text-shadow: none;
+  color: white;
+}
+#okclicksomemore {
+  background-color: #c5edab;
+}
+
+.balloon {
+  z-index: 104;
+  position: absolute;
+}
