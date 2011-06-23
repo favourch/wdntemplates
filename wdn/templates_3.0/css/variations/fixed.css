@@ -1,7 +1,3 @@
 body.fixed #wdn_wrapper {
-	max-width:960px;
-}
-
-body.fixed #breadcrumbs {
-	width: 954px;
+    max-width:960px;
 }
