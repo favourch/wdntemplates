@@ -71,7 +71,7 @@ WDN.navigation = function() {
             WDN.jQuery('#breadcrumbs > ul > li > a').last().parent().addClass('last-link');
             
             // add an expand toggler UI element
-            var $toggler = WDN.jQuery('<div class="expand_toggle"><a href="#" /></div>').prependTo('#wdn_navigation_wrapper');
+            var $toggler = WDN.jQuery('<div class="expand_toggle"><a href="#" title="Click to expand/collapse navigation" /></div>').prependTo('#wdn_navigation_wrapper');
             $toggler.children('a').click(function(evt) {
             	if (WDN.navigation.currentState === 0) {
             		WDN.navigation.expand();
