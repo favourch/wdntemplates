@@ -107,7 +107,7 @@
 #maincontent .assert > ul > li {
     display:table-cell;
     float:left;
-    margin-right:30px;
+    margin-right:25px;
     line-height:2em;
     position:relative;
     padding:0 4px;
@@ -225,6 +225,8 @@
     line-height:18px;
     padding:6px 0 6px 19px;
     top:10px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
 }
 #maincontent .callout h3:before {
     content:' ';
@@ -346,14 +348,15 @@
 #maincontent .remainder ul li {
     display:inline-block;
     margin-bottom:10px;
-    margin-right:18px;
+    margin-right:13px;
     font-size:10px;
 }
 #maincontent .remainder ul li a {
-    color:#000;	
+    color:#000;
+    border-bottom:1px solid #ccc;	
 }
 #maincontent .remainder ul li a:hover {
-    text-decoration:underline;
+    border-bottom:1px solid #fff;
 }
 #maincontent #outposts {text-align:center;}
 #maincontent #outposts ul {
