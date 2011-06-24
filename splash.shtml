@@ -297,12 +297,11 @@ Navigation</a></p>
             </div>
             <div class="grid4" id="outposts">
                 <ul>
-                    <li class="facebook"><a href="facebook">Facebook</a></li>
-                    <li class="twitter"><a href="facebook">Twitter</a></li>
-                    <li class="youtube"><a href="facebook">YouTube</a></li>
-                    <li class="itunes"><a href="facebook">iTunes</a></li>
-                    <li class="flickr"><a href="facebook">Flickr</a></li>
-                    <li class="foursquare"><a href="facebook">Foursquare</a></li>
+                    <li class="facebook"><a href="http://www.facebook.com/unl.edu">Facebook</a></li>
+                    <li class="twitter"><a href="http://twitter.com/unlnews/">Twitter</a></li>
+                    <li class="youtube"><a href="http://www.youtube.com/unl">YouTube</a></li>
+                    <li class="itunes"><a href="http://itunes.unl.edu/admin/?anonymous=true">iTunes</a></li>
+                    <li class="flickr"><a href="http://www.flickr.com/photos/universityofnebraska/">Flickr</a></li>
                 </ul>
             </div>
             <!-- InstanceEndEditable --> 
