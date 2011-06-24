@@ -23,7 +23,7 @@
 <body class="fixed">
 <p class="skipnav"><a class="skipnav" href="#maincontent">Skip
 Navigation</a></p>
-<div id="wdn_wrapper">xk
+<div id="wdn_wrapper">
     <div id="header">
         <a href="http://www.unl.edu/" title="UNL website"><img src="wdn/templates_3.0/images/logo.png" alt="UNL graphic identifier" id="logo" /></a>
         <h1>University of Nebraska&ndash;Lincoln</h1>
@@ -198,8 +198,7 @@ Navigation</a></p>
                         <div class="moreOptions">
                             <img alt="College of Law recruitment photo" src="splash_images/collegeCASNR.jpg" />
                             <ul>
-                                <li><a href="http://bulletin.unl.edu/undergraduate/college/Law/majors"><span>Law</span> Undergrad Majors</a></li>
-                                <li><a href="http://www.unl.edu/gradstudies/prospective/majors.shtml">Grad Programs</a></li>
+                                <li><a href="http://law.unl.edu/academics/degree_programs.shtml" title="View degree program information for the College of Law"><span>Law</span> Degree Programs</a></li>
                                 <li><a href="http://directory.unl.edu/departments/75" title="View contact information for the College of Law"><span>Law</span> Directory</a></li>
                             </ul>
                         </div>
@@ -209,7 +208,7 @@ Navigation</a></p>
             </div>
             <div class="band">
                 <div class="grid3 callout first">
-                    <h3 class="ribbon">Become a Husker</h3>
+                    <h3 class="ribbon">Go Big</h3>
                     <ul>
                         <li>
                             <a href="http://admissions.unl.edu/apply/index.aspx">Apply</a>
@@ -247,6 +246,17 @@ Navigation</a></p>
                                 </li>
                                 <li>
                                     <a href="http://my.unl.edu/">MyUNL</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://admissions.unl.edu/visit/">Support</a>
+                            <ul>
+                                <li>
+                                    <a href="http://myred.unl.edu/">Alumni</a>
+                                </li>
+                                <li>
+                                    <a href="http://events.unl.edu/academic/upcoming/">Foundation</a>
                                 </li>
                             </ul>
                         </li>
