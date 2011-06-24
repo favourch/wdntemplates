@@ -131,6 +131,7 @@
     z-index:11;  
 }
 #maincontent .assert ul li div img {float:left;}
+#maincontent .assert ul li div span {display:none;}
 #maincontent .assert ul li ul {
     list-style:none;
     padding:0;
@@ -159,9 +160,6 @@
 }
 #maincontent .assert ul li ul li a:hover {
     text-decoration:underline;	
-}
-#maincontent .assert ul li.outlier {
-	
 }
 #maincontent .assert ul li.outlier > a > span {
     font-size:8px;
