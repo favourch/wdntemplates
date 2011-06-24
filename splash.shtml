@@ -22,7 +22,7 @@
 <body class="fixed">
 <p class="skipnav"><a class="skipnav" href="#maincontent">Skip
 Navigation</a></p>
-<div id="wdn_wrapper">
+<div id="wdn_wrapper">xk
     <div id="header">
         <a href="http://www.unl.edu/" title="UNL website"><img src="wdn/templates_3.0/images/logo.png" alt="UNL graphic identifier" id="logo" /></a>
         <h1>University of Nebraska&ndash;Lincoln</h1>
@@ -295,8 +295,8 @@ Navigation</a></p>
 		            <li><a href="http://emeriti.unl.edu/" title="UNL Emeriti Association">UNL Emeriti</a></li> 
                 </ul>
             </div>
-            <div class="grid4">
-                <ul id="outposts">
+            <div class="grid4" id="outposts">
+                <ul>
                     <li class="facebook"><a href="facebook">Facebook</a></li>
                     <li class="twitter"><a href="facebook">Twitter</a></li>
                     <li class="youtube"><a href="facebook">YouTube</a></li>

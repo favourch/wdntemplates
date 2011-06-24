@@ -355,20 +355,63 @@
 #maincontent .remainder ul li a:hover {
     text-decoration:underline;
 }
-#maincontent ul#outposts {
+#maincontent #outposts {text-align:center;}
+#maincontent #outposts ul {
     margin:0;
+    margin-top:20px;
     padding:0;
     list-style:none;	
+    display:inline-block;
 }
-#maincontent ul#outposts li {
+#maincontent #outposts li {
     display:inline;
-    float:left;	
+    float:left;
+    margin-right:5px;
 }
-#maincontent ul#outposts li a {
+#maincontent #outposts li a {
     display:block;
     float:left;
     text-indent:-99999px;
     width:38px;
     height:38px;
-    background:url('splash_images/outpostSprite.gif') 0 0 no-repeat; 
+    background:url('splash_images/outpostSprite.gif') no-repeat;
+    background-position:0 0;
+    -webkit-transition:background-position ease 0.2s;
+    -moz-transition:background-position ease 0.2s;
+    -o-transition:background-position ease 0.2s;
+    -ms-transition:background-position ease 0.2s;
+    transition:background-position ease 0.2s;
+}
+#maincontent #outposts li a:hover {
+    background-position: 0 -41px;
+}
+#maincontent #outposts li.facebook a {
+    background-position: -45px 0;
+}
+#maincontent #outposts li.facebook a:hover {
+    background-position: -45px -41px;
+}
+#maincontent #outposts li.twitter a {
+    background-position: -88px 0;
+}
+#maincontent #outposts li.twitter a:hover {
+    background-position: -88px -41px;
+}
+#maincontent #outposts li.flickr a {
+    background-position: -132px 0;
+}
+#maincontent #outposts li.flickr a:hover {
+    background-position: -132px -41px;
+}
+#maincontent #outposts li.youtube a {
+    background-position: -176px 0;
+}
+#maincontent #outposts li.youtube a:hover {
+    background-position: -176px -41px;
+}
+#maincontent #outposts li.foursquare a {
+    background-position: -265px 0;
+}
+#maincontent #outposts li.foursquare a:hover {
+    background-position: -265px -41px;
 }
