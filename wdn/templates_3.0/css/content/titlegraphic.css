@@ -1,17 +1,17 @@
 #pagetitle {
-    margin:25px 0 25px 0;	
+    margin: 25px 0 25px 0;
 }
 #pagetitle h2 {
-  margin: 0 0 18px 0;
-  font-weight: normal;
-  font-size: 2.2em;
-  line-height: 1.1em;
-  letter-spacing: -0.02em;
-  text-shadow:-1px -1px 0 #f1f1f1;
-  font-family: 'URWGroteskCon-Lig';
+    margin: 0 0 18px 0;
+    font-weight: normal;
+    font-size: 2.2em;
+    line-height: 1.1em;
+    letter-spacing: -0.02em;
+    text-shadow: -1px -1px 0 #f1f1f1;
+    font-family: 'URWGroteskCon-Lig';
 }
 #pagetitle h2,
 #pagetitle h2 a {
-  color: #535353;
-  text-decoration: none;
+    color: #535353;
+    text-decoration: none;
 }

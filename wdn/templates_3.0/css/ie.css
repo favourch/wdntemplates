@@ -1,20 +1,19 @@
-
 body.liquid #wdn_wrapper,
 #header { zoom:1; }
 body.popup #header { left:0; }
 
 #titlegraphic h1 {
-    top:10px;	
+    top:10px;
 }
 body.popup #titlegraphic { zoom:1; }
 
 #tooltabs {
-	top:-11px;	
+    top:-11px;
 }
 
 #toolbarcontent .toolbar_plugin h3 {
-	background-color:#ac0302;
-	margin-bottom:20px;
+    background-color:#ac0302;
+    margin-bottom:20px;
 }
 
 #maincontent div.zenboxsolid h3, #maincontent div.zenboxfixed h3, #maincontent div.zenboxfeature h3, #maincontent div.zenbox h3,
@@ -41,18 +40,18 @@ body.popup #titlegraphic { zoom:1; }
     margin: -13px 0 0 -7px !important;
 }
 #maincontent form.cool fieldset fieldset legend {
-	margin: 4px 0 !important;
+    margin: 4px 0 !important;
     top: 0 !important;
 }
 #maincontent form.compact fieldset legend {
     margin: -5px 0 0 -7px !important;
 }
 ul#wdn_tool_links li {
-	float:left;
-	width:20px;
+    float:left;
+    width:20px;
 }
 #wdn_tool_links a {
-	display:block;
+    display:block;
 }
 
 /** CSS3 Workarounds for #navigation **/
@@ -71,7 +70,7 @@ ul#wdn_tool_links li {
 }
 
 #navigation > ul > li ul {
-	left:0;
+    left:0;
 }
 #navigation > ul > li.start ul {
     border-left-color:#c9c9c9;
@@ -85,7 +84,7 @@ ul#wdn_tool_links li {
     width: 149px;
 }
 .nav_collapsed #navigation > ul > li.top-bars ul {
-	display: none;
+    display: none;
 }
 
 #navigation > ul > li ul li.last a {border-bottom:none;}
@@ -98,11 +97,11 @@ body.popup #footer { *width:auto; zoom:1; }
 #footer_floater { left: 0; }
 
 #wdn_copyright {
-	*margin: 0 -12px -23px;
-	*position: relative;
+    *margin: 0 -12px -23px;
+    *position: relative;
 }
 #wdn_logos { 
-    *right: 24px;	
+    *right: 24px;
 }
 
 
@@ -112,10 +111,10 @@ body.popup #footer { *width:auto; zoom:1; }
 }
 
 .nav_expanded #navigation {
-	padding-bottom:44px;
+    padding-bottom:44px;
 }
 #wdn_search .search {
-	color:transparent;	
+    color:transparent;
 }
 #wdn_search_form input.search {
     color: transparent;

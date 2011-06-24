@@ -38,6 +38,6 @@ http://www.fontspring.com/blog/further-hardening-of-the-bulletproof-syntax
     font-family: 'URWGroteskCon-Lig';
 }
 body {
-	font-family:"Lucida Grande", Verdana, Arial;
-	text-rendering: optimizeLegibility;
+    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+    text-rendering: optimizeLegibility;
 }

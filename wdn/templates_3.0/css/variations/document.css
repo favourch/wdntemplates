@@ -1,32 +1,32 @@
 body.document #navigation,
 body.document #wdn_search,
 body.document #wdn_tool_links {
-    display:none;
+    display: none;
 }
 
 body.document #pagetitle {
-    margin:0;
+    margin: 0;
 }
 
 body.document #breadcrumbs ul li.selected {
-    background:none;
+    background: none;
 }
 body.document #breadcrumbs ul li a,
 body.document #breadcrumbs ul li a:link,
 body.document #breadcrumbs ul li a:visited 
 {
-    margin:0;
+    margin: 0;
 }
 body.document #breadcrumbs ul li.selected a,
 body.document #breadcrumbs ul li.selected a:link,
 body.document #breadcrumbs ul li.selected a:visited 
 {
-    background:none;
+    background: none;
 }
 body.document #breadcrumbs ul li.selected a:after {
-    background-image:none;
+    background-image: none;
 }
 
 body.document #footer .footer_col {
-    display:none;
+    display: none;
 }

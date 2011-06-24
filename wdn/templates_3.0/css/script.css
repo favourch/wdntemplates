@@ -1,11 +1,11 @@
 @CHARSET "UTF-8";
 @media screen {
 #wdn_search form label {
-  display: block;
+    display: block;
 }
-  
+    
 #navloading {
-  background:url(header/images/colorbox/loading.gif) center center no-repeat #f2f2f2;
+    background: url(header/images/colorbox/loading.gif) center center no-repeat #f2f2f2;
 }
 
 /* BORDER RADIUS */
@@ -57,12 +57,12 @@ ul#wdn_tool_links li {
 -webkit-border-radius:5px;
 }
 
-#weathercontent #showradar{
+#weathercontent #showradar {
 -moz-border-radius:3px;
 -webkit-border-radius:3px;
 }
 
-#maincontent .sec_main, #colorbox .sec_main  {
+#maincontent .sec_main, #colorbox .sec_main {
 -moz-border-radius:3px;
 -webkit-border-radius:3px;
 }
@@ -95,7 +95,7 @@ ul.wdn_tabs span sup {
 .zentable.energetic tbody tr:nth-child(odd) td {background-color: #FFE9DF;}
 .zentable.neutral tbody tr:nth-child(odd) td {background-color: #EFEFEF;}
 .zentable.primary tbody tr:nth-child(odd) td {background-color: #FFEFEF;}
-  
+
 #maincontent div.zenboxsolid h3:first-of-type, #maincontent div.zenboxfixed h3:first-of-type, #maincontent div.zenboxfeature h3:first-of-type, #maincontent div.zenbox h3:first-of-type {
 -moz-border-radius:5px 5px 0px 0px;
 -webkit-border-top-left-radius:5px;
