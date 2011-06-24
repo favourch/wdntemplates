@@ -18,6 +18,7 @@
     #maincontent {margin-top:20px;}
 </style>
 <link rel="stylesheet" type="text/css" media="screen" href="test.css" />
+<script type="text/javascript" src="splash/releasetheballoons.js"></script>
 </head>
 <body class="fixed">
 <p class="skipnav"><a class="skipnav" href="#maincontent">Skip
