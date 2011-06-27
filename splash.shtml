@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <link rel="stylesheet" type="text/css" media="screen"   href="wdn/templates_3.0/css/all.css" />
 <link rel="stylesheet" type="text/css" media="print"    href="wdn/templates_3.0/css/print.css" />
@@ -9,7 +9,7 @@
 <!--#include virtual="sharedcode/localSiteLinks.html" -->
 <!--#include virtual="wdn/templates_3.0/includes/browserspecifics.html" -->
 <!--#include virtual="wdn/templates_3.0/includes/metanfavico.html" -->
-<title>UNL | WDN Template - Grid System</title>
+<title>University of Nebraska&ndash;Lincoln</title>
 <style type="text/css">
     /* Splash Overrides */
     #header h1, #breadcrumbs, #pagetitle {display:none;}
@@ -32,6 +32,7 @@ Navigation</a></p>
      </div>
     <div id="wdn_navigation_bar">
         <div id="breadcrumbs">
+            <h3 class="wdn_list_descriptor">Breadcrumbs</h3>
             <ul>
                 <!-- WDN: see glossary item 'breadcrumbs' -->
                 <li class="selected"><a href="http://www.unl.edu/" title="University of Nebraska&ndash;Lincoln">UNL</a></li>
@@ -40,6 +41,7 @@ Navigation</a></p>
         </div>
         <div id="wdn_navigation_wrapper">
             <div id="navigation">
+                <h3 class="wdn_list_descriptor">Navigation</h3>
                 <!--#include virtual="sharedcode/navigation.html" -->
                 <!-- End Navigation Markup -->
             </div>
@@ -108,7 +110,7 @@ Navigation</a></p>
                 <ul>
                     <li>
                         <div class="moreOptions">
-                            <img alt="College of Agricultural Sciences and Natural Resources recruitment photo" src="splash_images/collegeCASNR.jpg" />
+                            <img alt="College of Agricultural Sciences and Natural Resources recruitment photo" src="splash_images/collegeCASNR.jpg" height="58" width="88" />
                             <ul>
                                 <li><a href="http://bulletin.unl.edu/undergraduate/college/Agricultural+Sciences+%26+Natural+Resources/majors"><span>Agricultural Sciences &amp; Natural Resources</span> Undergrad Majors</a></li>
                                 <li><a href="http://www.unl.edu/gradstudies/prospective/majors.shtml">Grad Programs</a></li>
@@ -119,7 +121,7 @@ Navigation</a></p>
                     </li>
                     <li>
                         <div class="moreOptions">
-                            <img alt="College of Architecture recruitment photo" src="splash_images/collegeCASNR.jpg" />
+                            <img alt="College of Architecture recruitment photo" src="splash_images/collegeARCH.jpg" height="58" width="88" />
                             <ul>
                                 <li><a href="http://bulletin.unl.edu/undergraduate/college/Architecture/majors"><span>Architecture</span> Undergrad Majors</a></li>
                                 <li><a href="http://www.unl.edu/gradstudies/prospective/majors.shtml">Grad Programs</a></li>
@@ -130,7 +132,7 @@ Navigation</a></p>
                     </li>
                     <li>
                         <div class="moreOptions">
-                            <img alt="College of Arts &amp; Sciences recruitment photo" src="splash_images/collegeCASNR.jpg" />
+                            <img alt="College of Arts &amp; Sciences recruitment photo" src="splash_images/collegeAS.jpg" height="58" width="88" />
                             <ul>
                                 <li><a href="http://bulletin.unl.edu/undergraduate/college/Arts+%26+Sciences/majors"><span>Arts &amp; Sciences</span> Undergrad Majors</a></li>
                                 <li><a href="http://www.unl.edu/gradstudies/prospective/majors.shtml">Grad Programs</a></li>
@@ -141,7 +143,7 @@ Navigation</a></p>
                     </li>
                     <li>
                         <div class="moreOptions">
-                            <img alt="College of Business Administration recruitment photo" src="splash_images/collegeCASNR.jpg" />
+                            <img alt="College of Business Administration recruitment photo" src="splash_images/collegeCBA.jpg" height="58" width="88" />
                             <ul>
                                 <li><a href="http://bulletin.unl.edu/undergraduate/college/Business+Administration/majors"><span>Business Administration</span> Undergrad Majors</a></li>
                                 <li><a href="http://www.unl.edu/gradstudies/prospective/majors.shtml">Grad Programs</a></li>
@@ -152,7 +154,7 @@ Navigation</a></p>
                     </li>
                     <li>
                         <div class="moreOptions">
-                            <img alt="College of Education &amp; Human Sciences recruitment photo" src="splash_images/collegeCASNR.jpg" />
+                            <img alt="College of Education &amp; Human Sciences recruitment photo" src="splash_images/collegeEHS.jpg" height="58" width="88" />
                             <ul>
                                 <li><a href="http://bulletin.unl.edu/undergraduate/college/Education+%26+Human+Sciences/majors"><span>Education &amp; Human Sciences</span> Undergrad Majors</a></li>
                                 <li><a href="http://www.unl.edu/gradstudies/prospective/majors.shtml">Grad Programs</a></li>
@@ -163,7 +165,7 @@ Navigation</a></p>
                     </li>
                     <li>
                         <div class="moreOptions left">
-                            <img alt="College of Engineering recruitment photo" src="splash_images/collegeCASNR.jpg" />
+                            <img alt="College of Engineering recruitment photo" src="splash_images/collegeENG.jpg" height="58" width="88" />
                             <ul>
                                 <li><a href="http://bulletin.unl.edu/undergraduate/college/Engineering/majors"><span>Engineering</span> Undergrad Majors</a></li>
                                 <li><a href="http://www.unl.edu/gradstudies/prospective/majors.shtml">Grad Programs</a></li>
@@ -174,7 +176,7 @@ Navigation</a></p>
                     </li>
                     <li>
                         <div class="moreOptions">
-                            <img alt="College of Journalism &amp; Mass Communications recruitment photo" src="splash_images/collegeCASNR.jpg" />
+                            <img alt="College of Journalism &amp; Mass Communications recruitment photo" src="splash_images/collegeJMC.jpg" height="58" width="88" />
                             <ul>
                                 <li><a href="http://bulletin.unl.edu/undergraduate/college/Journalism/majors"><span>Journalism</span> Undergrad Majors</a></li>
                                 <li><a href="http://www.unl.edu/gradstudies/prospective/majors.shtml">Grad Programs</a></li>
@@ -185,7 +187,7 @@ Navigation</a></p>
                     </li>
                     <li class="outlier">
                         <div class="moreOptions">
-                            <img alt="College of Fine &amp; Performing Arts recruitment photo" src="splash_images/collegeCASNR.jpg" />
+                            <img alt="College of Fine &amp; Performing Arts recruitment photo" src="splash_images/collegeFPA.jpg" height="58" width="88" />
                             <ul>
                                 <li><a href="http://bulletin.unl.edu/undergraduate/college/Fine+%26+Performing+Arts/majors"><span>Fine &amp; Performing Arts</span> Undergrad Majors</a></li>
                                 <li><a href="http://www.unl.edu/gradstudies/prospective/majors.shtml">Grad Programs</a></li>
@@ -196,7 +198,7 @@ Navigation</a></p>
                     </li>
                     <li>
                         <div class="moreOptions">
-                            <img alt="College of Law recruitment photo" src="splash_images/collegeCASNR.jpg" />
+                            <img alt="College of Law recruitment photo" src="splash_images/collegeLAW.jpg" height="58" width="88" />
                             <ul>
                                 <li><a href="http://law.unl.edu/academics/degree_programs.shtml" title="View degree program information for the College of Law"><span>Law</span> Degree Programs</a></li>
                                 <li><a href="http://directory.unl.edu/departments/75" title="View contact information for the College of Law"><span>Law</span> Directory</a></li>
@@ -265,7 +267,7 @@ Navigation</a></p>
                 
                 <div class="grid3 announce_story">
                     <div class="article">
-                        <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2624" title="Read more about The Campaign for Nebraska. Unlimited Possibilities."><img src="http://newsroom.unl.edu/announce/file10294.jpg" alt="campaign.jpg" /></a>
+                        <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2624" title="Read more about The Campaign for Nebraska. Unlimited Possibilities."><img src="http://newsroom.unl.edu/announce/file10294.jpg" alt="campaign.jpg" width="222" height="166" /></a>
                         <h4><a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2624" title="Read more about The Campaign for Nebraska. Unlimited Possibilities.">The Campaign for Nebraska.</a></h4>
                         <p>The University of Nebraska Foundation is involved in a campaign to raise $1.2 billion to fund university priorities such as student scholarships, faculty recruitment, research and program support. </p>
                     </div>
@@ -273,7 +275,7 @@ Navigation</a></p>
                 
                 <div class="grid3 announce_story">
                     <div class="article">
-					    <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2624" title="Read more about The Campaign for Nebraska. Unlimited Possibilities."><img src="http://newsroom.unl.edu/announce/file10294.jpg" alt="campaign.jpg" /></a>
+					    <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2624" title="Read more about The Campaign for Nebraska. Unlimited Possibilities."><img src="http://newsroom.unl.edu/announce/file10294.jpg" alt="campaign.jpg" width="222" height="166" /></a>
 					    <h4><a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2624" title="Read more about The Campaign for Nebraska. Unlimited Possibilities.">The Campaign for Nebraska.</a></h4>
 					    <p>The University of Nebraska Foundation is involved in a campaign to raise $1.2 billion to fund university priorities such as student scholarships, faculty recruitment, research and program support. </p>
 					</div>
@@ -281,7 +283,7 @@ Navigation</a></p>
                 
                 <div class="grid3 announce_story">
                     <div class="article">
-					    <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2626" title="Read more about Stand Up For Nebraska"><img src="http://newsroom.unl.edu/announce/file10295.jpg" alt="announce_alumni.jpg" /></a>
+					    <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2626" title="Read more about Stand Up For Nebraska"><img src="http://newsroom.unl.edu/announce/file10295.jpg" alt="announce_alumni.jpg" width="222" height="166" /></a>
 					    <h4><a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2626" title="Read more about Stand Up For Nebraska">Stand Up For Nebraska</a></h4>
 					    <p>With a membership in or gift to the Nebraska Alumni Association, alumni, fans and friends have the opportunity to make a tremendous impact on the University of Nebraska.</p>
 					</div>
