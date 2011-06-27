@@ -69,14 +69,14 @@ ul#wdn_tool_links li {
     border-top:1px solid #870d0c;
 }
 
-#navigation > ul > li ul {
+#navigation > ul > li > ul {
     left:0;
 }
-#navigation > ul > li.start ul {
+#navigation > ul > li.start > ul {
     border-left-color:#c9c9c9;
     margin-left:0;
 }
-#navigation > ul > li.end ul {
+#navigation > ul > li.end > ul {
     border-right:1px solid #c9c9c9 !important;
     margin-right:0;
 }
