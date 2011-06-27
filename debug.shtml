@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <link rel="stylesheet" type="text/css" media="screen"   href="wdn/templates_3.0/css/debug.css" />
 <link rel="stylesheet" type="text/css" media="print"    href="wdn/templates_3.0/css/print.css" />
@@ -9,7 +9,7 @@
 <!--#include virtual="sharedcode/localSiteLinks.html" -->
 <!--#include virtual="wdn/templates_3.0/includes/browserspecifics.html" -->
 <!--#include virtual="wdn/templates_3.0/includes/metanfavico.html" -->
-<title>UNL | Template</title>
+<title>UNL | University of Nebraska&ndash;Lincoln</title>
 <style type="text/css">
     .grid6, .supporting h3 {
         text-align:center;
@@ -32,7 +32,7 @@
 	    margin-bottom: 15px;
 	    padding-top: 5px;
 	    padding-bottom: 5px;
-	    background: rgba(255,0,0,.2);
+	    background: rgba(255,0,0,0.2);
 	    border: solid 1px #999;
 	    border-width: 1px 0;
 	    text-align:center;
@@ -59,6 +59,7 @@ Navigation</a></p>
      </div>
     <div id="wdn_navigation_bar">
         <div id="breadcrumbs">
+            <h2 class="wdn_list_descriptor">Breadcrumbs</h2>
             <ul>
                 <!-- WDN: see glossary item 'breadcrumbs' -->
                 <li class="selected"><a href="http://www.unl.edu/" title="University of Nebraska&ndash;Lincoln">UNL</a></li>
@@ -67,6 +68,7 @@ Navigation</a></p>
         </div>
         <div id="wdn_navigation_wrapper">
             <div id="navigation">
+                <h2 class="wdn_list_descriptor">Navigation</h2>
                 <!--#include virtual="sharedcode/navigation.html" -->
                 <!-- End Navigation Markup -->
             </div>

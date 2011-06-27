@@ -4,6 +4,9 @@ html {
 .skipnav {
     display: none;
 }
+.wdn_list_descriptor {
+	display: none;
+}
 body {
     background: url('images/bg.jpg');
     font-size: 1em;
