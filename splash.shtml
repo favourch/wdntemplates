@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" media="screen"   href="wdn/templates_3.0/css/all.css" />
 <link rel="stylesheet" type="text/css" media="print"    href="wdn/templates_3.0/css/print.css" />
 <script type="text/javascript" src="wdn/templates_3.0/scripts/all.js"></script>
-<link rel="events" href="http://events.unl.edu/myred/" title="MyRED" />
+
 <link rel="home" href="http://www.unl.edu/" title="UNL" />
 <!--#include virtual="sharedcode/localSiteLinks.html" -->
 <!--#include virtual="wdn/templates_3.0/includes/browserspecifics.html" -->
@@ -18,11 +18,15 @@
     #maincontent {margin-top:20px;}
 </style>
 <link rel="stylesheet" type="text/css" media="screen" href="test.css" />
+<!--[if IE 7]><style type="text/css">
+#maincontent .assert > ul {width:820px; margin-left:0px; float:right;}
+#maincontent .currentScroller {position:relative;}
+#maincontent .remainder ul li {display:inline;}
+</style><![endif]-->
 <script type="text/javascript" src="splash/releasetheballoons.js"></script>
 </head>
 <body class="fixed">
-<p class="skipnav"><a class="skipnav" href="#maincontent">Skip
-Navigation</a></p>
+<p class="skipnav"><a class="skipnav" href="#maincontent">Skip Navigation</a></p>
 <div id="wdn_wrapper">
     <div id="header">
         <a href="http://www.unl.edu/" title="UNL website"><img src="wdn/templates_3.0/images/logo.png" alt="UNL graphic identifier" id="logo" /></a>
@@ -58,48 +62,48 @@ Navigation</a></p>
                     <a href="#">Left</a>
                 </div>
                 <div class="currentScroller">
-	                <ul>
-	                    <li>
-	                        <img src="splash_images/gbr_balloon_promo.jpg" alt="UNL joins the Big Ten, and we're celebrating!" height="310" width="960" />
-	                        <div class="promoText">
-	                            <h3>Going Big</h3>
-	                            <p>Today, UNL joins the Big Ten, and we're celebrating!</p>
-	                        </div>
-	                    </li>
-	                    <li>
-	                        Slide 2
-	                    </li>
-	                    <li>
-	                        Slide 1
-	                    </li>
-	                    <li>
-	                        Slide 2
-	                    </li>
-	                    <li>
-	                        Slide 1
-	                    </li>
-	                    <li>
-	                        Slide 2
-	                    </li>
-	                    <li>
-	                        Slide 1
-	                    </li>
-	                    <li>
-	                        Slide 2
-	                    </li>
-	                    <li>
-	                        Slide 1
-	                    </li>
-	                    <li>
-	                        Slide 2
-	                    </li>
-	                    <li>
-	                        Slide 1
-	                    </li>
-	                    <li>
-	                        Slide 2
-	                    </li>
-	                </ul>
+                  <ul>
+                      <li>
+                          <img src="splash_images/gbr_balloon_promo.jpg" alt="UNL joins the Big Ten, and we're celebrating!" height="310" width="960" />
+                          <div class="promoText">
+                              <h3>Going Big</h3>
+                              <p>Today, UNL joins the Big Ten, and we're celebrating!</p>
+                          </div>
+                      </li>
+                      <li>
+                          Slide 2
+                      </li>
+                      <li>
+                          Slide 1
+                      </li>
+                      <li>
+                          Slide 2
+                      </li>
+                      <li>
+                          Slide 1
+                      </li>
+                      <li>
+                          Slide 2
+                      </li>
+                      <li>
+                          Slide 1
+                      </li>
+                      <li>
+                          Slide 2
+                      </li>
+                      <li>
+                          Slide 1
+                      </li>
+                      <li>
+                          Slide 2
+                      </li>
+                      <li>
+                          Slide 1
+                      </li>
+                      <li>
+                          Slide 2
+                      </li>
+                  </ul>
                 </div>
                 <div class="sliderControl right">
                     <a href="#">Right</a>
@@ -161,7 +165,7 @@ Navigation</a></p>
                                 <li><a href="http://directory.unl.edu/departments/144" title="View contact information for the College of Education &amp; Human Sciences"><span>Education &amp; Human Sciences</span> Directory</a></li>
                             </ul>
                         </div>
-                        <a href="http://cehs.unl.edu/" title="College of Education &amp; Human Sciences">Education &amp; Human Sciences</a>
+                        <a href="http://cehs.unl.edu/" title="College of Education &amp; Human Sciences">Education&nbsp;&amp;&nbsp;Human&nbsp;Sciences</a>
                     </li>
                     <li>
                         <div class="moreOptions left">
@@ -275,37 +279,37 @@ Navigation</a></p>
                 
                 <div class="grid3 announce_story">
                     <div class="article">
-					    <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2624" title="Read more about The Campaign for Nebraska. Unlimited Possibilities."><img src="http://newsroom.unl.edu/announce/file10294.jpg" alt="campaign.jpg" width="222" height="166" /></a>
-					    <h4><a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2624" title="Read more about The Campaign for Nebraska. Unlimited Possibilities.">The Campaign for Nebraska.</a></h4>
-					    <p>The University of Nebraska Foundation is involved in a campaign to raise $1.2 billion to fund university priorities such as student scholarships, faculty recruitment, research and program support. </p>
-					</div>
+              <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2624" title="Read more about The Campaign for Nebraska. Unlimited Possibilities."><img src="http://newsroom.unl.edu/announce/file10294.jpg" alt="campaign.jpg" width="222" height="166" /></a>
+              <h4><a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2624" title="Read more about The Campaign for Nebraska. Unlimited Possibilities.">The Campaign for Nebraska.</a></h4>
+              <p>The University of Nebraska Foundation is involved in a campaign to raise $1.2 billion to fund university priorities such as student scholarships, faculty recruitment, research and program support. </p>
+          </div>
                 </div>
                 
                 <div class="grid3 announce_story">
                     <div class="article">
-					    <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2626" title="Read more about Stand Up For Nebraska"><img src="http://newsroom.unl.edu/announce/file10295.jpg" alt="announce_alumni.jpg" width="222" height="166" /></a>
-					    <h4><a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2626" title="Read more about Stand Up For Nebraska">Stand Up For Nebraska</a></h4>
-					    <p>With a membership in or gift to the Nebraska Alumni Association, alumni, fans and friends have the opportunity to make a tremendous impact on the University of Nebraska.</p>
-					</div>
+              <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2626" title="Read more about Stand Up For Nebraska"><img src="http://newsroom.unl.edu/announce/file10295.jpg" alt="announce_alumni.jpg" width="222" height="166" /></a>
+              <h4><a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2626" title="Read more about Stand Up For Nebraska">Stand Up For Nebraska</a></h4>
+              <p>With a membership in or gift to the Nebraska Alumni Association, alumni, fans and friends have the opportunity to make a tremendous impact on the University of Nebraska.</p>
+          </div>
                 </div>
             </div>
             <div class="grid8 first remainder">
                 <h5>Affiliates</h5>
                 <ul> 
-		            <li><a href="http://www.huskeralum.org/" title="Alumni">Alumni</a></li> 
-		            <li><a href="http://www.huskers.com/" title="Huskers">Husker Athletics</a></li> 
-		            <li><a href="http://www.liedcenter.org/" title="Lied Center">Lied Center</a></li> 
-		            <li><a href="http://www.netnebraska.org/television/" title="NET">NET</a></li> 
-		            <li><a href="http://www.quiltstudy.org/" title="International Quilt Study Center &amp; Museum">Quilt Study Center</a></li> 
-		            <li><a href="http://theross.org/" title="Ross Theatre">The Ross</a></li> 
-		            <li><a href="http://www.sheldonartgallery.org/" title="Sheldon Gallery">Sheldon Museum of Art</a></li> 
-		            <li><a href="http://www-museum.unl.edu/" title="State Museum">State Museum</a></li> 
-		            <li><a href="http://www.bkstr.com/Home/10001-10287-1?demoKey=d" title="University Bookstore">UNL Bookstore</a></li> 
-		            <li><a href="http://nebraskapress.unl.edu/" title="UofN Press">U of N Press</a></li> 
-		            <li><a href="http://www.nufoundation.org/" title="NU Foundation">NU Foundation</a></li> 
-		            <li><a href="http://www.nebraska.edu/" title="NU System">NU System</a></li> 
-		            <li><a href="http://parentsassoc.unl.edu/" title="UNL Parents Association">Parents Association</a></li> 
-		            <li><a href="http://emeriti.unl.edu/" title="UNL Emeriti Association">UNL Emeriti</a></li> 
+                <li><a href="http://www.huskeralum.org/" title="Alumni">Alumni</a></li> 
+                <li><a href="http://www.huskers.com/" title="Huskers">Husker Athletics</a></li> 
+                <li><a href="http://www.liedcenter.org/" title="Lied Center">Lied Center</a></li> 
+                <li><a href="http://www.netnebraska.org/television/" title="NET">NET</a></li> 
+                <li><a href="http://www.quiltstudy.org/" title="International Quilt Study Center &amp; Museum">Quilt Study Center</a></li> 
+                <li><a href="http://theross.org/" title="Ross Theatre">The Ross</a></li> 
+                <li><a href="http://www.sheldonartgallery.org/" title="Sheldon Gallery">Sheldon Museum of Art</a></li> 
+                <li><a href="http://www-museum.unl.edu/" title="State Museum">State Museum</a></li> 
+                <li><a href="http://www.bkstr.com/Home/10001-10287-1?demoKey=d" title="University Bookstore">UNL Bookstore</a></li> 
+                <li><a href="http://nebraskapress.unl.edu/" title="UofN Press">U of N Press</a></li> 
+                <li><a href="http://www.nufoundation.org/" title="NU Foundation">NU Foundation</a></li> 
+                <li><a href="http://www.nebraska.edu/" title="NU System">NU System</a></li> 
+                <li><a href="http://parentsassoc.unl.edu/" title="UNL Parents Association">Parents Association</a></li> 
+                <li><a href="http://emeriti.unl.edu/" title="UNL Emeriti Association">UNL Emeriti</a></li> 
                 </ul>
             </div>
             <div class="grid4" id="outposts">
@@ -355,16 +359,16 @@ Navigation</a></p>
 <script type="text/javascript" src="/wdn/templates_3.0/scripts/plugins/scrollTo/jquery.scrollTo-1.4.2-min.js"></script>       
 <script type="text/javascript">
 WDN.jQuery('document').ready(function(){
-	WDN.jQuery('.wdn_carousel').serialScroll({
-		target : '.currentScroller',
+  WDN.jQuery('.wdn_carousel').serialScroll({
+    target : '.currentScroller',
         items : 'li',
-		duration : 700,
+    duration : 700,
         prev:'.sliderControl.left a',
         next:'.sliderControl.right a',
-		interval : 10000,
-		force : true,
-		stop : true
-	});
+    interval : 10000,
+    force : true,
+    stop : true
+  });
 });
 </script>
 </body>
