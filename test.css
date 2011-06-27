@@ -128,7 +128,7 @@
     background:#fafafa;
     display:none;
     right:-0.1em;
-    z-index:10;
+    z-index:12;
 }
 #maincontent .assert ul li div img {float:left;}
 #maincontent .assert ul li div span {display:none;}
