@@ -193,7 +193,7 @@
 }
 
 /* Secondaries */
-#navigation > ul > li ul {
+#navigation > ul > li > ul {
     position: relative;
     top: 0;
     width: 148px;
@@ -235,7 +235,7 @@
 
 /* Add strong border around last-in-row secondaries */
 /* (duplicated in ie.css with .end class) */
-#navigation > ul > li:nth-child(6n+6) ul {
+#navigation > ul > li:nth-child(6n+6) > ul {
     border-right: 1px solid #c9c9c9 !important;
     margin-right: 0;
 }
@@ -246,7 +246,7 @@
     -webkit-border-radius: 0 0 0 5px;
     -moz-border-radius: 0 0 0 5px;   
 }
-#navigation > ul > li:last-child ul {
+#navigation > ul > li:last-child > ul {
     border-radius: 0 0 5px 0;
     -webkit-border-radius: 0 0 5px 0;
     -moz-border-radius: 0 0 5px 0;
