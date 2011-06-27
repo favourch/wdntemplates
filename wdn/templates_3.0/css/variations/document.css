@@ -5,7 +5,7 @@ body.document #wdn_tool_links {
 }
 
 body.document #pagetitle {
-    margin: 0;
+    margin: 15px 0;
 }
 
 body.document #breadcrumbs ul li.selected {
@@ -13,14 +13,12 @@ body.document #breadcrumbs ul li.selected {
 }
 body.document #breadcrumbs ul li a,
 body.document #breadcrumbs ul li a:link,
-body.document #breadcrumbs ul li a:visited 
-{
+body.document #breadcrumbs ul li a:visited {
     margin: 0;
 }
 body.document #breadcrumbs ul li.selected a,
 body.document #breadcrumbs ul li.selected a:link,
-body.document #breadcrumbs ul li.selected a:visited 
-{
+body.document #breadcrumbs ul li.selected a:visited {
     background: none;
 }
 body.document #breadcrumbs ul li.selected a:after {
