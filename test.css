@@ -170,6 +170,9 @@
     margin-bottom:-3px;
     margin-top:1px;
 }
+#maincontent .assert > ul > li.outlier:hover > a span {
+	display:none;
+}
 #maincontent .assert > ul > li a {
     color:#000;
     display:inline-block;
