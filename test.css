@@ -208,7 +208,7 @@
     padding:10px;
     background:#fafafa;
     display:none;
-    right:-0.1em;
+    right:0;
     z-index:12;
 }
 #maincontent .assert ul li div img {float:left;}
