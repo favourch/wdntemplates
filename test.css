@@ -1,6 +1,16 @@
+/*
+*
+* Styles for the Splash Carousel
+*
+*/
 #maincontent .wdn_carousel {
     height:340px;
     background:url('splash_images/sliderBG.png') no-repeat bottom center;
+    -webkit-transition: all linear 0.1s;
+    -moz-transition: all linear 0.1s;
+    -o-transition: all linear 0.1s;
+    -ms-transition: all linear 0.1s;
+    transition: all linear 0.1s;
 }
 #maincontent .wdn_carousel .sliderControl { display:none;}
 #maincontent .currentScroller {
@@ -27,20 +37,80 @@
     bottom:5%;
     left:50px;
     width:260px;
-}
-#maincontent .currentScroller .promoText h3 {
-    font-size:3em;
-    font-weight:bold;
-    text-transform:uppercase;
     color:#fff;
     text-shadow: -1px -1px 1px #787878;
     filter: dropshadow(color=#787878, offx=-1, offy=-1);
 }
-#maincontent .currentScroller .promoText p {
+#maincontent .currentScroller .promoText h3 {
+    font-size:3em;
     color:#fff;
-    text-shadow:1px 1px 1px #787878;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+#maincontent .currentScroller .promoText p {
     font-size:1.3em;
 }
+
+/* Big Ten Video Slide */
+
+#maincontent .currentScroller ul li.video {
+	background: rgb(246,246,246); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(246,246,246,1) 1%, rgba(225,225,225,1) 29%, rgba(241,241,241,1) 30%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(246,246,246,1)), color-stop(29%,rgba(225,225,225,1)), color-stop(30%,rgba(241,241,241,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(246,246,246,1) 1%,rgba(225,225,225,1) 29%,rgba(241,241,241,1) 30%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(246,246,246,1) 1%,rgba(225,225,225,1) 29%,rgba(241,241,241,1) 30%,rgba(255,255,255,1) 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, rgba(246,246,246,1) 1%,rgba(225,225,225,1) 29%,rgba(241,241,241,1) 30%,rgba(255,255,255,1) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, rgba(246,246,246,1) 1%,rgba(225,225,225,1) 29%,rgba(241,241,241,1) 30%,rgba(255,255,255,1) 100%); /* W3C */
+}
+#bigTenVideo {
+    background:url('splash_images/tv20110701.png') no-repeat 0 0;
+    height:310px;	
+}
+#bigTenVideo .mejs-container {
+    position:absolute;
+    width:364px;
+    height:199px;
+    top:9px;
+    left:82px;
+    cursor:pointer;
+    opacity:0;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+    -ms-transition: all linear 0.s;
+    transition: all linear 0.2s;
+}
+/* Move to full height presentation */
+#maincontent .wdn_carousel.full .currentScroller {
+    height:540px;   
+}
+#maincontent .wdn_carousel.full {
+    height:570px;	
+}
+#maincontent .wdn_carousel.full .currentScroller ul li.video {
+	height:540px;
+}
+#maincontent .wdn_carousel.full .currentScroller ul li.video #bigTenVideo {
+    height:540px;
+}
+#maincontent .wdn_carousel.full .currentScroller ul li.video #bigTenVideo .mejs-container {
+    top:0;
+    left:0;
+    width:960px;
+    height:540px;
+    opacity:1;
+}
+#maincontent .currentScroller ul li.video .promoText {
+    right:50px;
+    left:auto;
+    bottom:30%;
+    color:#555;
+    text-shadow: -1px 0 -1px #EEE;	
+    filter: dropshadow(color=#EEEEEE, offx=-1, offy=-1);
+}
+#maincontent .currentScroller ul li.video .promoText h3 {color:#555;}
+
 /*
 *
 * Styles for the Academic Colleges Bar

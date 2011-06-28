@@ -18,11 +18,13 @@
     #maincontent {margin-top:20px;}
 </style>
 <link rel="stylesheet" type="text/css" media="screen" href="test.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/wdn/templates_3.0/css/content/mediaelement.css" />
 <!--[if IE 7]><style type="text/css">
 #maincontent .assert > ul {width:820px; margin-left:0px; float:right;}
 #maincontent .currentScroller {position:relative;}
 #maincontent .remainder ul li {display:inline;}
 </style><![endif]-->
+<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <script type="text/javascript" src="splash/releasetheballoons.js"></script>
 </head>
 <body class="fixed">
@@ -70,16 +72,14 @@
                               <p>Today, UNL joins the Big Ten, and we're celebrating!</p>
                           </div>
                       </li>
-                      <li>
-                            <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-							<video height="310" width="551" src="http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4" controls poster="http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4"></video>
-							<script type="text/javascript">
-								if (typeof(WDN) === "undefined") {
-								    if (typeof(jQuery) === "undefined"){var j=document.createElement("script"); j.setAttribute("type","text/javascript"); j.setAttribute("src", "https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"); document.getElementsByTagName("head")[0].appendChild(j);}
-								} else {jQuery = WDN.jQuery;}
-								var c=document.createElement("link"); c.setAttribute("type", "text/css"); c.setAttribute("rel", "stylesheet"); c.setAttribute("href", "http://www.unl.edu/wdn/templates_3.0/css/content/mediaelement.css"); document.getElementsByTagName("head")[0].appendChild(c);
-								window.onload=function(){jQuery.getScript('http://www.unl.edu/wdn/templates_3.0/scripts/mediaelement.js', function(){jQuery('video,audio').mediaelementplayer();});};
-							</script>
+                      <li class="video">
+                            <div id="bigTenVideo">
+                                <div class="promoText">
+                                     <h3>Need a title</h3>
+                                     <p>Someone more clever than myself should come up with the text that should come here. Fo Shizzle.</p>
+                                 </div>                               
+								<video height="540" width="960" src="http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4" controls poster="http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4"></video>								 
+							</div>
                       </li>
                   </ul>
                 </div>
@@ -337,17 +337,24 @@
 <script type="text/javascript" src="/wdn/templates_3.0/scripts/plugins/scrollTo/jquery.scrollTo-1.4.2-min.js"></script>       
 <script type="text/javascript">
 WDN.jQuery('document').ready(function(){
+	jQuery = WDN.jQuery;
+	WDN.jQuery.getScript('http://www.unl.edu/wdn/templates_3.0/scripts/mediaelement.js', 
+    function(){
+        WDN.jQuery('#bigTenVideo video').mediaelementplayer();
+    });
   WDN.jQuery('.wdn_carousel').serialScroll({
     target : '.currentScroller',
     items : 'li',
     duration : 700,
     prev:'.sliderControl.left a',
     next:'.sliderControl.right a',
-    interval : 10000,
+    interval : 2000,
     force : true,
     stop : true
   }).click(function(){console.log('clicked');WDN.jQuery('.currentScroller').trigger('stop');});
-  
+  WDN.jQuery('#bigTenVideo video').click(function(){
+	 WDN.jQuery('.wdn_carousel').addClass('full');
+  });
 });
 </script>
 </body>
