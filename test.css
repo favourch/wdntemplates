@@ -65,7 +65,16 @@
 }
 #bigTenVideo {
     background:url('splash_images/tv20110701.png') no-repeat 0 0;
-    height:310px;	
+    height:310px;
+    width:480px;
+    cursor:pointer;
+    z-index:11;
+    position:absolute;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+    -ms-transition: all linear 0.s;
+    transition: all linear 0.2s;
 }
 #bigTenVideo #theVideo {
     position:absolute;
@@ -80,6 +89,7 @@
     -o-transition: all linear 0.2s;
     -ms-transition: all linear 0.s;
     transition: all linear 0.2s;
+    display:none;
 }
 /* Move to full height presentation */
 #maincontent .wdn_carousel.full .currentScroller {
@@ -108,6 +118,7 @@
     color:#555;
     text-shadow: -1px 0 -1px #EEE;	
     filter: dropshadow(color=#EEEEEE, offx=-1, offy=-1);
+    z-index:10;
 }
 #maincontent .currentScroller ul li.video .promoText h3 {color:#555;}
 

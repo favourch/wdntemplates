@@ -65,23 +65,23 @@
                 </div>
                 <div class="currentScroller">
                   <ul>
+                      <li class="video">
+                            <div id="bigTenVideo">
+                                 <div id="theVideo">
+                                    <video height="199" width="364" src="http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4" controls poster="http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4"></video>       
+                                 </div>                 
+                            </div>
+                            <div class="promoText">
+                                 <h3>Need a title</h3>
+                                 <p>Someone more clever than myself should come up with the text that should come here. Fo Shizzle.</p>
+                             </div>
+                      </li>
                       <li>
                           <img src="splash_images/gbr_balloon_promo.jpg" alt="UNL joins the Big Ten, and we're celebrating!" height="310" width="960" />
                           <div class="promoText">
                               <h3>Going Big</h3>
                               <p>Today, UNL joins the Big Ten, and we're celebrating!</p>
                           </div>
-                      </li>
-                      <li class="video">
-                            <div id="bigTenVideo">
-                                <div class="promoText">
-                                     <h3>Need a title</h3>
-                                     <p>Someone more clever than myself should come up with the text that should come here. Fo Shizzle.</p>
-                                 </div>
-                                 <div id="theVideo">
-                                    <video height="540" width="960" src="http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4" controls poster="http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4"></video>		
-                                 </div> 						 
-							</div>
                       </li>
                   </ul>
                 </div>
@@ -344,12 +344,16 @@ WDN.jQuery('document').ready(function(){
     function(){
         WDN.jQuery('#bigTenVideo video').mediaelementplayer({
         	success: function(mediaElement, domObject) {
-        		WDN.jQuery('#bigTenVideo .mejs-container').unbind('click').click(function(){
+        		WDN.jQuery('#bigTenVideo').unbind('click').click(function(){
         		     WDN.jQuery('.wdn_carousel').addClass('full');
+        		     WDN.jQuery('#bigTenVideo #theVideo').show();
+        		     WDN.jQuery('.mejs-layer, .mejs-container, .mejs-poster img').css({'width' : '960px', 'height' : '540px'})
+        		     WDN.jQuery(domObject).attr({'width' : '960', 'height' : '540'});
+        		     mediaElement.play();
         		  });
         		mediaElement.addEventListener('ended', function(){
         			WDN.jQuery('.wdn_carousel').removeClass('full');
-        			WDN.jQuery('.currentScroller').trigger('start');
+        			var slideTimeout = window.setTimeout(function(){WDN.jQuery('.currentScroller').trigger('start')}, 5000);
         		});
         	}
         });
@@ -360,7 +364,7 @@ WDN.jQuery('document').ready(function(){
     duration : 700,
     prev:'.sliderControl.left a',
     next:'.sliderControl.right a',
-    interval : 2000,
+    interval : 10000,
     force : true,
     stop : true
   }).click(function(){console.log('clicked');WDN.jQuery('.currentScroller').trigger('stop');});
