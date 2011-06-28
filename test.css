@@ -67,7 +67,7 @@
     background:url('splash_images/tv20110701.png') no-repeat 0 0;
     height:310px;	
 }
-#bigTenVideo .mejs-container {
+#bigTenVideo #theVideo {
     position:absolute;
     width:364px;
     height:199px;
@@ -94,7 +94,7 @@
 #maincontent .wdn_carousel.full .currentScroller ul li.video #bigTenVideo {
     height:540px;
 }
-#maincontent .wdn_carousel.full .currentScroller ul li.video #bigTenVideo .mejs-container {
+#maincontent .wdn_carousel.full .currentScroller ul li.video #bigTenVideo #theVideo {
     top:0;
     left:0;
     width:960px;
