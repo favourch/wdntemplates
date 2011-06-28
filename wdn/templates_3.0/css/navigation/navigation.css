@@ -343,6 +343,11 @@
 #navigation > ul > li ul li:last-child > a {
     border-bottom: none;
 }
+#navigation > ul > li ul li > ul {
+	border-bottom: 1px dotted #bababa;
+}
+
 #navigation > ul > li ul li:last-child > ul {
-	border-top: 1px dotted #bababa;
+    border-top: 1px dotted #bababa;
+    border-bottom:none;
 }
