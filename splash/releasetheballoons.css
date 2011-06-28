@@ -35,4 +35,8 @@
 .balloon {
   z-index: 104;
   position: absolute;
+  height: 180px;
+  width: 150px;
+  background: url(balloon.png);
+  text-indent: -9999px;
 }
