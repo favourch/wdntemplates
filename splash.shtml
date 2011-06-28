@@ -65,23 +65,23 @@
                 </div>
                 <div class="currentScroller">
                   <ul>
-                      <li class="video">
-                            <div id="bigTenVideo">
-                                 <div id="theVideo">
-                                    <video height="199" width="364" src="http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4" controls poster="http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4"></video>       
-                                 </div>                 
-                            </div>
-                            <div class="promoText">
-                                 <h3>Need a title</h3>
-                                 <p>Someone more clever than myself should come up with the text that should come here. Fo Shizzle.</p>
-                             </div>
-                      </li>
                       <li>
                           <img src="splash_images/gbr_balloon_promo.jpg" alt="UNL joins the Big Ten, and we're celebrating!" height="310" width="960" />
                           <div class="promoText">
                               <h3>Going Big</h3>
                               <p>Today, UNL joins the Big Ten, and we're celebrating!</p>
                           </div>
+                      </li>
+                      <li class="video">
+                           <div id="bigTenVideo">
+                                <div id="theVideo">
+                                   <video height="199" width="364" src="http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4" controls poster="http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4"></video>       
+                                </div>                 
+                           </div>
+                           <div class="promoText">
+                                <h3>Need a title</h3>
+                                <p>Someone more clever than myself should come up with the text that should come here. Fo Shizzle.</p>
+                           </div>
                       </li>
                   </ul>
                 </div>
@@ -343,6 +343,7 @@ WDN.jQuery('document').ready(function(){
 	WDN.jQuery.getScript('http://www.unl.edu/wdn/templates_3.0/scripts/mediaelement.js', 
     function(){
         WDN.jQuery('#bigTenVideo video').mediaelementplayer({
+        	features: ['playpause','progress','current','duration','tracks','volume'],
         	success: function(mediaElement, domObject) {
         		WDN.jQuery('#bigTenVideo').unbind('click').click(function(){
         		     WDN.jQuery('.wdn_carousel').addClass('full');
