@@ -340,6 +340,9 @@
 
 /* Format the last secondary link */
 /* (duplicated in ie.css with .last class) */
-#navigation > ul > li ul li:last-child a {
+#navigation > ul > li ul li:last-child > a {
     border-bottom: none;
+}
+#navigation > ul > li ul li:last-child > ul {
+	border-top: 1px dotted #bababa;
 }
