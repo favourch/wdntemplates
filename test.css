@@ -266,6 +266,9 @@
 #maincontent .assert ul > li.outlier > a {
     margin-top:0em;
 }
+#maincontent .assert > ul > li.outlier:hover a {
+	margin-top:0.2em;
+}
 /* End Styles for the Academic Colleges Bar */
 
 .band {
