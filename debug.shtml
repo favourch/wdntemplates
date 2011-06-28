@@ -59,7 +59,7 @@ Navigation</a></p>
      </div>
     <div id="wdn_navigation_bar">
         <div id="breadcrumbs">
-            <h2 class="wdn_list_descriptor">Breadcrumbs</h2>
+            <h2 class="wdn_list_descriptor hidden">Breadcrumbs</h2>
             <ul>
                 <!-- WDN: see glossary item 'breadcrumbs' -->
                 <li class="selected"><a href="http://www.unl.edu/" title="University of Nebraska&ndash;Lincoln">UNL</a></li>
