@@ -2,13 +2,15 @@ var UNL_Balloons = (function() {
 	var $; // Will set to our jQuery variable once it's available on the callback so we can use $
 
 	var balloonBatch = 8; // Number of balloons to release each time
-	var maxBalloons = 55; // Max number of balloons before balloon overdose
+	var maxBalloons = 45; // Max number of balloons before balloon overdose
 	var clickActive = true; // Set to false when maxBalloons has been reached
 	var balloonRegistry = new Array(); // Keep track of what balloons are currently on screen
 
 	var interval = new Object(); // setInterval variable for interval.move and interval.hadEnough
 	var moveTimeSpan = 25; // Time span for move interval
 	var moveDistance = 1; // Pixel distance to move
+
+	var balloonCounter;
 
 	return {
 		init : function() {
@@ -19,7 +21,10 @@ var UNL_Balloons = (function() {
 				maxBalloons = 20;
 			}
 
-			$('#footer').prepend('<div id="releasetheballoons"><img id="releasetheballoons-img" src="splash/releasetheballoons.png" alt="Click to Release the Balloons" /></div>');
+			$('#footer').prepend('<div id="releasetheballoons"><img id="releasetheballoons-img" src="splash/releasetheballoons.png" alt="Click to Release the Balloons" /><br /><div id="balloon-counter" class="flip-counter" style="display:none;"></div><div id="balloons-released"></div></div>');
+
+			// Initialize the counter
+			balloonCounter = new flipCounter("balloon-counter", {pace: 750, fW: 30, tFH: 22, bFH: 36, bOffset: 221});
 
 			$('#releasetheballoons-img').click(function() {
 				if (!clickActive) {
@@ -48,6 +53,17 @@ var UNL_Balloons = (function() {
 		},
 
 		addBalloons : function() {
+			// Timestamp to append to the ajax request so it's not cached
+			var ts = Math.round((new Date()).getTime() / 1000);
+			$.get('/ucomm/splash/ballooncount.html?time='+ts, function(data) {
+				// Only set the value with ajax data on page load, not on additional clicks
+				if ($('#balloon-counter').css('display') == 'none') {
+					balloonCounter.setValue(data*balloonBatch);
+					$('#balloon-counter').show();
+				}
+			});
+			balloonCounter.add(balloonBatch);
+
 			var lastIndex = (balloonRegistry.length ? balloonRegistry.length-1 : 0);
 			var lastBalloon = (balloonRegistry[lastIndex] ? balloonRegistry[lastIndex] : 0);
 
@@ -118,7 +134,7 @@ var UNL_Balloons = (function() {
 				clearInterval(interval.hadEnough);
 				clickActive = true;
 				$('#ithinkyouvehadenough').remove();
-				$('<div class="balloon-message" id="okclicksomemore">Ok, we inflated some more balloons, you can click again!</div>').insertAfter('#footer_floater');
+				$('<div class="balloon-message" id="okclicksomemore">O.K. we inflated some more balloons, you can click again!</div>').insertAfter('#footer_floater');
 				WDN.log('User no longer in danger of balloon overdose.');
 			}
 		}
@@ -126,4 +142,5 @@ var UNL_Balloons = (function() {
 })();
 
 WDN.loadCSS('splash/releasetheballoons.css');
+WDN.loadCSS('splash/counter/css/counter.css');
 WDN.loadJQuery(UNL_Balloons.init);
