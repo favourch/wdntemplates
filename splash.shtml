@@ -57,7 +57,7 @@
         <div id="titlegraphic">
             <h1>University of Nebraska&ndash;Lincoln</h1>
         </div>
-        <div id="pagetitle"><h2>Demo: Grid System</h2></div>
+        <div id="pagetitle"><h2>Welcome to the University of Nebraska&ndash;Lincoln</h2></div>
         <div id="maincontent">
             <div class="wdn_carousel">
                 <div class="sliderControl left">
@@ -331,8 +331,6 @@ WDN.jQuery('document').ready(function(){
         		console.log('mediaElement success!');
         		WDN.jQuery('#bigTenVideo').unbind('click').click(function(){
         		     WDN.jQuery('.wdn_carousel').addClass('full');
-        		     WDN.jQuery('.mejs-layer, .mejs-container, .mejs-poster img').css({'width' : '960px', 'height' : '540px'})
-        		     WDN.jQuery(domObject).attr({'width' : '960', 'height' : '540'});
         		     mediaElement.play();
         		  });
         		mediaElement.addEventListener('ended', function(){
