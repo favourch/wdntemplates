@@ -320,15 +320,12 @@ WDN.jQuery('document').ready(function(){
 	WDN.loadJS('/wdn/templates_3.0/scripts/mediaelement.js', 
     function(){
         WDN.jQuery('#bigTenVideo video').mediaelementplayer({
-        	features: ['playpause','progress','current','duration','tracks','volume'],
         	success: function(mediaElement, domObject) {
         		console.log('mediaElement success!');
         		WDN.jQuery('#bigTenVideo').unbind('click').click(function(){
-        			console.log('bigTenVideo clicked');
         		     WDN.jQuery('.wdn_carousel').addClass('full');
-        		     WDN.jQuery('#bigTenVideo #theVideo').css({'visibility': 'visible'});
-        		     //WDN.jQuery('.mejs-layer, .mejs-container, .mejs-poster img').css({'width' : '960px', 'height' : '540px'})
-        		     //WDN.jQuery(domObject).attr({'width' : '960', 'height' : '540'});
+        		     WDN.jQuery('.mejs-layer, .mejs-container, .mejs-poster img').css({'width' : '960px', 'height' : '540px'})
+        		     WDN.jQuery(domObject).attr({'width' : '960', 'height' : '540'});
         		     mediaElement.play();
         		  });
         		mediaElement.addEventListener('ended', function(){

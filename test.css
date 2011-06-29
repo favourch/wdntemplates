@@ -83,7 +83,6 @@
     top:9px;
     left:82px;
     cursor:pointer;
-    opacity:0;
     -webkit-transition: all linear 0.2s;
     -moz-transition: all linear 0.2s;
     -o-transition: all linear 0.2s;
@@ -109,7 +108,7 @@
     left:0;
     width:960px;
     height:540px;
-    opacity:1;
+    visibility:visible;
 }
 #maincontent .currentScroller ul li.video .promoText {
     right:50px;
