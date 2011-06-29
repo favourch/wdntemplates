@@ -21,7 +21,7 @@ var UNL_Balloons = (function() {
 				maxBalloons = 20;
 			}
 
-			$('#footer').prepend('<div id="releasetheballoons"><img id="releasetheballoons-img" src="splash/releasetheballoons.png" alt="Click to Release the Balloons" /><br /><div id="balloon-counter" class="flip-counter" style="display:none;"></div></div>');
+			$('#footer').prepend('<div id="releasetheballoons"><img id="releasetheballoons-img" src="releasetheballoons.png" alt="Click to Release the Balloons" /><br /><div id="balloon-counter" class="flip-counter" style="display:none;"></div></div>');
 
 			// Initialize the counter
 			balloonCounter = new flipCounter("balloon-counter", {pace: 750, fW: 30, tFH: 22, bFH: 36, bOffset: 221});
@@ -55,7 +55,7 @@ var UNL_Balloons = (function() {
 		addBalloons : function() {
 			// Timestamp to append to the ajax request so it's not cached
 			var ts = Math.round((new Date()).getTime() / 1000);
-			$.get('/ucomm/splash/ballooncount.html?time='+ts, function(data) {
+			$.get('ballooncount.html?time='+ts, function(data) {
 				// Only set the value with ajax data on page load, not on additional clicks
 				if ($('#balloon-counter').css('display') == 'none') {
 					balloonCounter.setValue(data*balloonBatch);
@@ -142,6 +142,6 @@ var UNL_Balloons = (function() {
 	};
 })();
 
-WDN.loadCSS('splash/releasetheballoons.css');
-WDN.loadCSS('splash/counter/css/counter.css');
+WDN.loadCSS('releasetheballoons.css');
+WDN.loadCSS('counter/css/counter.css');
 WDN.loadJQuery(UNL_Balloons.init);
