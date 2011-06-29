@@ -52,7 +52,7 @@ if ($headings[5]->length > 0) {
     }
 }
 
-$data = '<h3>'.$lead.'</h3>'.PHP_EOL;
+$data = '<h3><a href="http://www.unl.edu/ucomm/unltoday/" title="Read more on UNL Today">'.$lead.'</a></h3>'.PHP_EOL;
 if (count($unltoday_headings)) {
     $unltoday_headings = array_slice($unltoday_headings, 0, $subhead_limit);
     $data .= '
