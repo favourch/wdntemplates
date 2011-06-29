@@ -130,13 +130,20 @@ WDN.jQuery(function(){
                       <li class="video">
                            <div id="bigTenVideo">
                                 <div id="theVideo">
-                                   <video height="540" width="960" src="http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4" controls poster="http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4"></video>       
+                                   <video height="540" width="960" src="http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4" poster="http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4"></video>       
                                 </div>                 
                            </div>
                            <div class="promoText">
                                 <h3>Need a title</h3>
                                 <p>Someone more clever than myself should come up with the text that should come here. Fo Shizzle.</p>
                            </div>
+                      </li>
+                      <li>
+                          <img src="images/innovation_campus.jpg" alt="Nebraska Innovation Campus" height="310" width="960" />
+                          <div class="promoText">
+                              <h3 style="color:#555; text-shadow: -1px 0 -1px #EEE; filter: dropshadow(color=#EEEEEE, offx=-1, offy=-1); position:absolute; left:600px; top:-200px">Big Innovation</h3>
+                              <p style="color:#555; text-shadow: -1px 0 -1px #EEE; filter: dropshadow(color=#EEEEEE, offx=-1, offy=-1); position:absolute; left:600px; top:-100px; width:300px;"><a href="http://innovate.unl.edu/" class="tooltip" title="go to the Nebraska Innovation Campus website">Explore the site</a> for a more detailed overview and vision of Nebraska Innovation Campus.</p>
+                          </div>
                       </li>
                   </ul>
                 </div>
