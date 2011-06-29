@@ -21,7 +21,7 @@ var UNL_Balloons = (function() {
 				maxBalloons = 20;
 			}
 
-			$('#footer').prepend('<div id="releasetheballoons"><img id="releasetheballoons-img" src="splash/releasetheballoons.png" alt="Click to Release the Balloons" /><br /><div id="balloon-counter" class="flip-counter" style="display:none;"></div><div id="balloons-released"></div></div>');
+			$('#footer').prepend('<div id="releasetheballoons"><img id="releasetheballoons-img" src="splash/releasetheballoons.png" alt="Click to Release the Balloons" /><br /><div id="balloon-counter" class="flip-counter" style="display:none;"></div></div>');
 
 			// Initialize the counter
 			balloonCounter = new flipCounter("balloon-counter", {pace: 750, fW: 30, tFH: 22, bFH: 36, bOffset: 221});
@@ -60,6 +60,7 @@ var UNL_Balloons = (function() {
 				if ($('#balloon-counter').css('display') == 'none') {
 					balloonCounter.setValue(data*balloonBatch);
 					$('#balloon-counter').show();
+					$('<div id="balloons-released"></div>').insertAfter('#balloon-counter');
 				}
 			});
 			balloonCounter.add(balloonBatch);
