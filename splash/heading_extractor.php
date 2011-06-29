@@ -27,6 +27,9 @@ function extractHeadings($html)
 }
 
 $headings = extractHeadings($html);
+
+$filename = __DIR__ . '/../promo_unltoday.html';
+
 // Default title
 $lead = 'What\'s Happening On Campus Today';
 
@@ -65,4 +68,4 @@ if (count($unltoday_headings)) {
 }
 echo $data;
 
-//file_put_contents($filename, $data);
+file_put_contents($filename, $data);
