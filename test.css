@@ -89,7 +89,7 @@
     -o-transition: all linear 0.2s;
     -ms-transition: all linear 0.s;
     transition: all linear 0.2s;
-    display:none;
+    visibility:hidden;
 }
 /* Move to full height presentation */
 #maincontent .wdn_carousel.full .currentScroller {

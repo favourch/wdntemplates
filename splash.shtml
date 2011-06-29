@@ -75,7 +75,7 @@
                       <li class="video">
                            <div id="bigTenVideo">
                                 <div id="theVideo">
-                                   <video height="199" width="364" src="http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4" controls poster="http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4"></video>       
+                                   <video height="540" width="960" src="http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4" poster="http://itunes.unl.edu/thumbnails.php?url=http://www.unl.edu/ucomm/ucomm/av/video/20110701_NebraskaJoinsTheBigTen.mp4"></video>       
                                 </div>                 
                            </div>
                            <div class="promoText">
@@ -317,23 +317,26 @@
 <script type="text/javascript">
 WDN.jQuery('document').ready(function(){
 	jQuery = WDN.jQuery;
-	WDN.jQuery.getScript('http://www.unl.edu/wdn/templates_3.0/scripts/mediaelement.js', 
+	WDN.loadJS('/wdn/templates_3.0/scripts/mediaelement.js', 
     function(){
         WDN.jQuery('#bigTenVideo video').mediaelementplayer({
         	features: ['playpause','progress','current','duration','tracks','volume'],
         	success: function(mediaElement, domObject) {
+        		console.log('mediaElement success!');
         		WDN.jQuery('#bigTenVideo').unbind('click').click(function(){
+        			console.log('bigTenVideo clicked');
         		     WDN.jQuery('.wdn_carousel').addClass('full');
-        		     WDN.jQuery('#bigTenVideo #theVideo').show();
-        		     WDN.jQuery('.mejs-layer, .mejs-container, .mejs-poster img').css({'width' : '960px', 'height' : '540px'})
-        		     WDN.jQuery(domObject).attr({'width' : '960', 'height' : '540'});
+        		     WDN.jQuery('#bigTenVideo #theVideo').css({'visibility': 'visible'});
+        		     //WDN.jQuery('.mejs-layer, .mejs-container, .mejs-poster img').css({'width' : '960px', 'height' : '540px'})
+        		     //WDN.jQuery(domObject).attr({'width' : '960', 'height' : '540'});
         		     mediaElement.play();
         		  });
         		mediaElement.addEventListener('ended', function(){
         			WDN.jQuery('.wdn_carousel').removeClass('full');
         			var slideTimeout = window.setTimeout(function(){WDN.jQuery('.currentScroller').trigger('start')}, 5000);
         		});
-        	}
+        	},
+        	error: function(){console.log('There was an error');}
         });
     });
   WDN.jQuery('.wdn_carousel').serialScroll({
