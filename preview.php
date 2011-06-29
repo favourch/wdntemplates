@@ -17,7 +17,8 @@ if (!preg_match('/\.unl\.edu/', $_GET['u'])
 	&& !preg_match('/quiltstudy\.org/', $_GET['u'])
 	&& !preg_match('/digital-community\.com/', $_GET['u'])
     && !preg_match('/huskeralum\.org/', $_GET['u'])
-    && !preg_match('/huskeralum\.com/', $_GET['u'])) {
+    && !preg_match('/huskeralum\.com/', $_GET['u'])
+    && !preg_match('/throughtheeyes.org/', $_GET['u'])) {
     throwError('Requested host is not allowed');
 }
 
