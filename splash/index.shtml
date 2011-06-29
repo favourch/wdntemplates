@@ -26,7 +26,7 @@
 <!-- Place optional header elements here -->
 <!--#include virtual="../sharedcode/localSiteLinks.html" -->
 <link rel="home" href="http://www.unl.edu/" />
-<script type="text/javascript" src="releasetheballoons.js"></script>
+<script type="text/javascript" src="balloons/releasetheballoons.js"></script>
 <script type="text/javascript" src="counter/js/flipcounter.js"></script>
 <script type="text/javascript" src="/wdn/templates_3.0/scripts/plugins/serialScroll/jquery.serialScroll-1.2.2-min.js"></script> 
 <script type="text/javascript" src="/wdn/templates_3.0/scripts/plugins/scrollTo/jquery.scrollTo-1.4.2-min.js"></script>       
