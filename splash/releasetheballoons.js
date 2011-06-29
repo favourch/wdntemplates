@@ -61,6 +61,7 @@ var UNL_Balloons = (function() {
 					balloonCounter.setValue(data*balloonBatch);
 					$('#balloon-counter').show();
 					$('<div id="balloons-released"></div>').insertAfter('#balloon-counter');
+					$('#balloons-released').html(balloonCounter.getValue() + ' balloons have been "released" on UNL.edu');
 				}
 			});
 			balloonCounter.add(balloonBatch);
