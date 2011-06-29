@@ -5,7 +5,7 @@
 */
 #maincontent .wdn_carousel {
     height:340px;
-    background:url('splash_images/sliderBG.png') no-repeat bottom center;
+    background:url('images/sliderBG.png') no-repeat bottom center;
 }
 #maincontent .wdn_carousel .sliderControl { display:none;}
 #maincontent .currentScroller {
@@ -58,7 +58,7 @@
 	background: linear-gradient(top, rgba(246,246,246,1) 1%,rgba(225,225,225,1) 29%,rgba(241,241,241,1) 30%,rgba(255,255,255,1) 100%);
 }
 #bigTenVideo {
-    background:url('splash_images/tv20110701.png') no-repeat 0 0;
+    background:url('images/tv20110701.png') no-repeat 0 0;
     height:310px;
     width:480px;
     cursor:pointer;
@@ -159,7 +159,7 @@
     position:absolute;
     left:100%;
     top:0;
-    background:url('splash_images/assertRight.png') top left no-repeat;
+    background:url('images/assertRight.png') top left no-repeat;
     z-index:11;
 }
 #maincontent .assert > ul {
@@ -449,7 +449,7 @@
     text-indent:-99999px;
     width:38px;
     height:38px;
-    background:url('splash_images/outpostSprite.gif') no-repeat;
+    background:url('images/outpostSprite.gif') no-repeat;
     background-position:0 -41px;
     -webkit-transition:opacity ease 0.2s;
     -moz-transition:opacity ease 0.2s;
