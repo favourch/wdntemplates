@@ -38,16 +38,20 @@ WDN.jQuery(function(){
         WDN.jQuery('#bigTenVideo video').mediaelementplayer({
             features: ['playpause','progress','current','duration','tracks','volume'],
             success: function(mediaElement, domObject) {
-                WDN.jQuery('#bigTenVideo').unbind('click').click(function(){
-                     WDN.jQuery('.wdn_carousel').addClass('full');
-                     WDN.jQuery('#bigTenVideo #theVideo').show();
-                     WDN.jQuery('.mejs-layer, .mejs-container, .mejs-poster img').css({'width' : '960px', 'height' : '540px'})
-                     WDN.jQuery(domObject).attr({'width' : '960', 'height' : '540'});
-                     mediaElement.play();
-                  });
+            	var slideTimeout;
+            	var videoUIToggle = function() {
+            		if (slideTimeout) {
+            			window.clearTimeout(slideTimeout);
+            		}
+                    WDN.jQuery('.wdn_carousel').addClass('full');
+                    mediaElement.play();
+                    WDN.jQuery(this).unbind('click');
+            	};
+                WDN.jQuery('#bigTenVideo').unbind('click').click(videoUIToggle);
                 mediaElement.addEventListener('ended', function(){
                     WDN.jQuery('.wdn_carousel').removeClass('full');
-                    var slideTimeout = window.setTimeout(function(){WDN.jQuery('.currentScroller').trigger('start')}, 5000);
+                	WDN.jQuery('#bigTenVideo').unbind('click').click(videoUIToggle);
+                    slideTimeout = window.setTimeout(function(){WDN.jQuery('.currentScroller').trigger('start')}, 5000);
                 });
             }
         });
@@ -61,7 +65,7 @@ WDN.jQuery(function(){
     interval : 10000,
     force : true,
     stop : true
-  }).click(function(){console.log('clicked');WDN.jQuery('.currentScroller').trigger('stop');});
+  }).click(function(){WDN.jQuery('.currentScroller').trigger('stop');});
   
 });
 </script>
