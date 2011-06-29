@@ -277,7 +277,7 @@
     border-width:1px 0;
     border-color:#d9d4b8;
     border-style:solid;
-    padding:5px 0;
+    padding:10px 0 15px 0;
     margin-bottom:20px;
 }
 .band > div {
@@ -292,11 +292,11 @@
     border-radius:3px;
     -webkit-border-radius:3px;
     -moz-border-radius:3px;
-    margin:5px 0 5px 10px;
+    margin-left:10px;
     width:204px;
     background:#eae7d5;
     position:relative;
-    height:277px;
+    height:300px;
 }
 #maincontent .callout h3 {
     position:absolute;
@@ -374,41 +374,45 @@
 * Styles for the Stories
 *
 */
-.announce_story {
-    background:#d2ceb4;
-    border-radius:3px;
-    -webkit-border-radius:3px;
-    -moz-border-radius:3px;
+
+.stories {
+	width:738px;
+	float:left;
+	display:inline;
 }
-.announce_story .article {
-    margin:5px;
+
+.stories .article {
+	width:200px;
+    float: left;
+    margin-left: 18px;
+    display:inline;
     background:#fff;
-    border:1px solid #b5b5b5;
+    border:4px solid #d2ceb4;
     border-radius:3px;
     -webkit-border-radius:3px;
     -moz-border-radius:3px;    
-    padding:5px;
-    height:273px;
+    padding:10px;
+    height:280px;
     overflow:hidden;
 }
-.announce_story .article img {
+.stories .article img {
     max-width:200px;
     width:200px;
 }
-#maincontent .announce_story .article h4 {
+#maincontent .stories .article h4 {
     font-size:1.1em;
     font-weight:bold;
     line-height:1.3em;
     margin-top:5px;
 }
-#maincontent .announce_story .article p {
+#maincontent .stories .article p {
     font-size:0.9em;
     line-height:1.4em;
 }
-#maincontent .announce_story .article h4 a {
+#maincontent .stories .article h4 a {
     color:#12516e;
 }
-#maincontent .announce_story .article h4 a:hover {
+#maincontent .stories .article h4 a:hover {
     text-decoration:underline;
 }
 /* End styles for the Stories
