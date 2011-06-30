@@ -70,6 +70,26 @@
     font-size:1.3em;
 }
 
+#maincontent .currentScroller .unltoday {
+    position:absolute;
+    top:5%;
+    left:600px;
+    width:340px;
+    color:#555;
+    text-shadow: -1px -1px 1px #787878;
+    filter: dropshadow(color=#787878, offx=-1, offy=-1);
+}
+#maincontent .currentScroller .unltoday h3 {
+    font-size:1.4em;
+    color:#555;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+#maincontent .currentScroller .unltoday ul li {
+    font-size:1em;
+    line-height:1em;
+}
+
 /* Big Ten Video Slide */
 
 #maincontent .currentScroller ul li.video {
