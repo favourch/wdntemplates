@@ -119,9 +119,6 @@ WDN.jQuery(function(){
             <!--THIS IS THE MAIN CONTENT AREA; WDN: see glossary item 'main content area' -->
             <!-- TemplateBeginEditable name="maincontentarea" -->
             <div class="wdn_carousel">
-                <div class="sliderControl left">
-                    <a href="#">Left</a>
-                </div>
                 <div class="currentScroller">
                   <ul>
                       <li>
@@ -150,6 +147,9 @@ WDN.jQuery(function(){
                           </div>
                       </li>
                   </ul>
+                </div>
+                <div class="sliderControl left">
+                    <a href="#">Left</a>
                 </div>
                 <div class="sliderControl right">
                     <a href="#">Right</a>
