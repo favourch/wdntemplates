@@ -305,7 +305,7 @@
     border-width:1px 0;
     border-color:#d9d4b8;
     border-style:solid;
-    padding:10px 0 15px 0;
+    padding:10px 0;
     margin-bottom:20px;
 }
 .band > div {
@@ -412,7 +412,7 @@
 .stories .article {
 	width:200px;
     float: left;
-    margin-left: 18px;
+    margin-left: 15px;
     display:inline;
     background:#fff;
     border:4px solid #d2ceb4;
