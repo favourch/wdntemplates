@@ -132,7 +132,7 @@ WDN.jQuery(function(){
                           <img src="images/gbr_balloon_promo.jpg" alt="UNL joins the Big Ten, and we're celebrating!" height="310" width="960" />
                           <div class="promoText">
                               <h3>Going Big</h3>
-                              <p>Today, UNL joins the Big Ten, and we're celebrating!</p>
+                              <p>Today, UNL joins the Big Ten, and we're celebrating. Read the <a href="http://www.unl.edu/ucomm/unltoday/" title="go to UNL Today">welcome messages</a>, and get in on the fun right here by launching your own GO B1G RED balloons. </p>
                           </div>
                       </li>
                       <li class="video">
@@ -143,20 +143,21 @@ WDN.jQuery(function(){
                            </div>
                            <div class="promoText">
                                 <h3>Big Red in the Big Ten</h3>
-                                <p>UNL's entry to the Big Ten means exciting new opportunities for students and research - and it's just the beginning.</p>
+                                <p>UNL's entry to the <a href="http://www.unl.edu/ucomm/aboutunl/big10.shtml" title="read more about the Big Ten Conference and CIC">Big Ten and the CIC</a> means exciting new opportunities for students and research ... and it's just the beginning.</p>
                            </div>
                       </li>
                       <li>
                       	<img src="images/promo_unltoday.jpg" alt="UNL Today lead story image" height="310" width="960" />
                            <div class="unltoday">
                                 <!--#include file="promo_unltoday.html" -->
+                                <p style="margin-left:24px;"><em>These stories and more on <a href="/ucomm/unltoday/" title="go to UNL Today">UNL Today.</a></em></p>
                            </div>
                       </li>
                       <li class="innovation">
                           <img src="images/innovation_campus.jpg" alt="Nebraska Innovation Campus" height="310" width="960" />
                           <div class="promoText">
                               <h3>Big Innovation</h3>
-                              <p><a href="http://innovate.unl.edu/" class="tooltip" title="go to the Nebraska Innovation Campus website">Explore the site</a> for a more detailed overview and vision of Nebraska Innovation Campus.</p>
+                              <p>Tomorrow begins today. Explore the <a href="http://innovate.unl.edu/" class="tooltip" title="go to the Nebraska Innovation Campus website">Nebraska Innovation Campus</a> site for a more detailed overview and vision of this research and development center for Nebraska and the world.</p>
                           </div>
                       </li>
                   </ul>
