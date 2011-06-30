@@ -39,11 +39,19 @@ WDN.jQuery(function(){
 		sliderStart = uri[1] - 1;
 	}
     jQuery = WDN.jQuery;
+    var forcePlay = false;
+    WDN.jQuery('#bigTenVideo').click(function() {
+    	WDN.jQuery('.wdn_carousel').addClass('full');
+    	forcePlay = true;
+    });
     WDN.jQuery.getScript('http://www.unl.edu/wdn/templates_3.0/scripts/mediaelement.js', 
     function(){
         WDN.jQuery('#bigTenVideo video').mediaelementplayer({
             features: ['playpause','progress','current','duration','tracks','volume'],
             success: function(mediaElement, domObject) {
+            	if (forcePlay) {
+            		mediaElement.play();
+            	}
             	var slideTimeout;
             	var videoUIToggle = function() {
             		if (slideTimeout) {
