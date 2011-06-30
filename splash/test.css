@@ -63,12 +63,14 @@
 }
 #maincontent .currentScroller .promoText h3 {
     font-size:3em;
+    line-height:1.1em;
     color:#fff;
     font-weight:bold;
     text-transform:uppercase;
 }
 #maincontent .currentScroller .promoText p {
     font-size:1.3em;
+    line-height: 1.2em;
 }
 
 #maincontent .currentScroller .unltoday {
@@ -122,6 +124,7 @@
 #maincontent .currentScroller ul li.video .promoText {
     right:50px;
     left:auto;
+    width:360px;
     bottom:30%;
     color:#555;
     text-shadow: -1px 0 -1px #EEE;  
