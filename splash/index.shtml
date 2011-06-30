@@ -38,7 +38,6 @@ WDN.jQuery(function(){
 	if (!isNaN(parseInt(uri[1] *1))) {
 		sliderStart = uri[1] - 1;
 	}
-	console.log(sliderStart);
     jQuery = WDN.jQuery;
     WDN.jQuery.getScript('http://www.unl.edu/wdn/templates_3.0/scripts/mediaelement.js', 
     function(){
