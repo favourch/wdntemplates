@@ -90,8 +90,8 @@ var UNL_Balloons = (function() {
 
 			var i;
 			for (i=lastBalloon+1;i<=lastBalloon+balloonBatch;i++) {
-				$('body').append('<div class="balloon" id="balloon'+i+'">BALLOON FLOATING ACROSS THE SCREEN!</div>');
-				$('#balloon'+i).css({'left' : centerPosition+'px', 'top' : footerPosition+'px'});
+				$('#wdn_content_wrapper').append('<div class="balloon" id="balloon'+i+'">BALLOON FLOATING ACROSS THE SCREEN!</div>');
+				$('#balloon'+i).offset({'left' : centerPosition, 'top' : footerPosition});
 				WDN.log('Added balloon'+i);
 				balloonRegistry.push(i);
 			}
@@ -130,7 +130,7 @@ var UNL_Balloons = (function() {
 				}
 
 				// Actually move the balloon
-				currentBalloon.css({'left' : offset.left+moveHorizontal+'px', 'top' : offset.top-moveVertical+'px'});
+				currentBalloon.offset({'left' : offset.left+moveHorizontal, 'top' : offset.top-moveVertical});
 
 				// If the balloon has exited the top of the view port, remove from the DOM and the registry
 				if (offset.top < -80) {
