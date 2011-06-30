@@ -338,15 +338,16 @@
 }
 #maincontent .callout h3 {
     position:absolute;
-    background:#ac0302;
+    background:#ac0302 url('images/gobig.png') no-repeat 24px 6px;
     color:#fff;
     text-transform:uppercase;
     font-size:18px;
     text-shadow:1px 1px 1px #424242;
+    text-indent:-9999em;
     left:-14px;
     right:-14px;
     line-height:18px;
-    padding:6px 0 6px 19px;
+    padding:12px 0 12px 19px;
     top:10px;
     font-weight: bold;
     letter-spacing: 0.1em;
@@ -364,12 +365,12 @@
 #maincontent .callout h3:after {
     content:' ';
     display:block;
-    border-top: 14px solid transparent;
-    border-bottom: 14px solid transparent;
-    border-right: 7px solid #edebe1;
+    background:url('images/calloutRibbonEnding.png') no-repeat 0 0;
     right:0;
     position:absolute;
     top:0;
+    height:42px;
+    width:17px;
 }
 #maincontent .callout ul {
     list-style:none;
@@ -378,7 +379,7 @@
     font-size:1.3em;   
     font-weight:bold;
     padding:0;
-    margin:50px 10px 0 10px;
+    margin:62px 10px 0 10px;
 }
 #maincontent .callout > ul > li {
     border-bottom:2px dotted #b1c5ce;
