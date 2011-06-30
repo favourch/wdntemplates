@@ -89,6 +89,9 @@
 #maincontent .currentScroller .innovation .promoText h3 {
 	color: #555;
 }
+#maincontent .currentScroller .innovation .promoText a {
+    color:#ba0000;
+}
 
 #maincontent .currentScroller .unltoday {
     position:absolute;
@@ -150,6 +153,9 @@
     z-index:10;
 }
 #maincontent .currentScroller ul li.video .promoText h3 {color:#555;}
+#maincontent .currentScroller .video .promoText a {
+    color:#ba0000;
+}
 
 /* Move to full height presentation */
 #maincontent div.wdn_carousel.full {
