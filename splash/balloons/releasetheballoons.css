@@ -11,7 +11,11 @@
   width: 100%;
   text-align: center;
 }
-#releasetheballoons img:hover {
+#releasetheballoons-img {
+  position: relative;
+  z-index: 104;
+}
+#releasetheballoons-img:hover {
   cursor: pointer;
 }
 .balloon-message { 
@@ -30,7 +34,7 @@
 }
 
 .balloon {
-  z-index: 104;
+  z-index: 103;
   position: absolute;
   height: 180px;
   width: 150px;
@@ -43,8 +47,11 @@
   position: relative;
   bottom: 68px;
   right: 10px;
+  z-index: 102;
 }
-
+#balloon-counter * {
+  z-index: 102;
+}
 #balloons-released {
   background-image: url(balloonsreleased.png);
   height: 150px;

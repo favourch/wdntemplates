@@ -28,7 +28,7 @@ var UNL_Balloons = (function() {
 			}
 
 			$('#footer').prepend('<div id="releasetheballoons"><img id="releasetheballoons-img" src="balloons/releasetheballoons.png" alt="Click to Release the Balloons" /><br /><div id="balloon-counter" class="flip-counter" style="display:none;"></div></div>');
-			
+
 			// force IE7 to repaint
 			if ($.browser.msie && $.browser.version < 8.0 ) {
 				$('#releasetheballoons').css('zoom', 1);
@@ -147,7 +147,7 @@ var UNL_Balloons = (function() {
 				clearInterval(interval.hadEnough);
 				clickActive = true;
 				$('#ithinkyouvehadenough').remove();
-				$('<div class="balloon-message" id="okclicksomemore">O.K. we inflated some more balloons, you can click again!</div>').insertAfter('#footer_floater');
+				$('<div class="balloon-message" id="okclicksomemore">OK, we inflated some more balloons. You can click again!</div>').insertAfter('#footer_floater');
 				WDN.log('User no longer in danger of balloon overdose.');
 			}
 		}
