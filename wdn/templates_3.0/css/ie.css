@@ -55,7 +55,7 @@ ul#wdn_tool_links li {
 }
 
 /** CSS3 Workarounds for #navigation **/
-#wdn_navigation_wrapper {zoom:1;}
+body.fixed #wdn_navigation_wrapper {*width:960px;}
 #navigation > ul > li.start  {
     clear:left;
 }
