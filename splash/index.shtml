@@ -156,9 +156,12 @@ WDN.jQuery(function(){
                       </li>
                       <li>
                       	<img src="images/promo_unltoday.jpg" alt="UNL Today lead story image" height="310" width="960" />
-                           <div class="unltoday">
+                           <div class="unltoday sidebar">
+                            <div class="inner">
+                                <p class="subhead">UNL <span>Today</span></p>
                                 <!--#include file="promo_unltoday.html" -->
                                 <p style="margin-left:24px;"><em>These stories and more on <a href="/ucomm/unltoday/" title="go to UNL Today">UNL Today.</a></em></p>
+                           </div>
                            </div>
                       </li>
                       <li class="innovation">
