@@ -50,10 +50,16 @@ WDN.navigation = (function() {
          */
         initialize : function() {
             if (WDN.jQuery('body').hasClass('popup')
-                || WDN.jQuery('body').hasClass('document')
                 || WDN.jQuery('#breadcrumbs ul li').size() == 0) {
                 // This page has no navigation
                 return;
+            }
+            
+            // find the last-link in breadcrumbs
+            WDN.jQuery('#breadcrumbs > ul > li > a').last().parent().addClass('last-link');
+            
+            if (WDN.jQuery('body').hasClass('document')) {
+            	return;
             }
 
             WDN.log('let us fix the presentation');
@@ -66,9 +72,6 @@ WDN.navigation = (function() {
             if (WDN.getCookie('n') == 1) {
                 WDN.navigation.preferredState = 1;
             }
-
-            // find the last-link in breadcrumbs
-            WDN.jQuery('#breadcrumbs > ul > li > a').last().parent().addClass('last-link');
 
             // add an expand toggler UI element
             var $toggler = WDN.jQuery('<div class="expand_toggle"><a href="#" title="Click to expand/collapse navigation" /></div>').prependTo('#wdn_navigation_wrapper');
