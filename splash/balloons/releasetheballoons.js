@@ -1,8 +1,8 @@
 var UNL_Balloons = (function() {
 	var $; // Will set to our jQuery variable once it's available on the callback so we can use $
 
-	var balloonBatch = 8; // Number of balloons to release each time
-	var maxBalloons = 45; // Max number of balloons before balloon overdose
+	var balloonBatch = 10; // Number of balloons to release each time
+	var maxBalloons = 29; // Max number of balloons before balloon overdose
 	var clickActive = true; // Set to false when maxBalloons has been reached
 	var balloonRegistry = new Array(); // Keep track of what balloons are currently on screen
 
@@ -18,7 +18,13 @@ var UNL_Balloons = (function() {
 
 			// Throttle it for IE 8
 			if ($.browser.msie && $.browser.version < 9.0 ) {
-				maxBalloons = 20;
+				maxBalloons = 19;
+			}
+			// Let Chrome go bananas
+			var userAgent = navigator.userAgent.toLowerCase();
+			$.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase());
+			if ($.browser.chrome) {
+				maxBalloons = 79;
 			}
 
 			$('#footer').prepend('<div id="releasetheballoons"><img id="releasetheballoons-img" src="balloons/releasetheballoons.png" alt="Click to Release the Balloons" /><br /><div id="balloon-counter" class="flip-counter" style="display:none;"></div></div>');
@@ -34,7 +40,7 @@ var UNL_Balloons = (function() {
 				if (balloonRegistry.length > maxBalloons) {
 					clickActive = false;
 					$('#okclicksomemore').remove();
-					$('<div class="balloon-message" id="ithinkyouvehadenough">I think you\'ve clicked it enough, we\'re running out of balloons! Give us a second to get some more...</div>').insertAfter('#footer_floater');
+					$('<div class="balloon-message" id="ithinkyouvehadenough">We\'re running out of balloons! Give us a second to get some more...</div>').insertAfter('#footer_floater');
 					interval.hadEnough = setInterval('UNL_Balloons.checkMaxBalloons();', 1000);
 				} else {
 					UNL_Balloons.addBalloons();
