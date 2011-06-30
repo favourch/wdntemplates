@@ -97,6 +97,8 @@ UNL Today Slide
     position:absolute;
     background:#12516E;
     border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
     padding:5px;
     top:10px;
     left:582px;
@@ -110,6 +112,8 @@ UNL Today Slide
     border:1px solid #fff;
     display:inline-block;
     border-radius:3px;	
+    -moz-border-radius:3px;	
+    -webkit-border-radius:3px;	    
     padding:5px;
 }
 #maincontent .currentScroller .unltoday p {
