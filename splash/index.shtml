@@ -31,7 +31,14 @@
 <script type="text/javascript" src="/wdn/templates_3.0/scripts/plugins/serialScroll/jquery.serialScroll-1.2.2-min.js"></script> 
 <script type="text/javascript" src="/wdn/templates_3.0/scripts/plugins/scrollTo/jquery.scrollTo-1.4.2-min.js"></script>       
 <script type="text/javascript">
+
 WDN.jQuery(function(){
+	var uri = window.location.href.split('#');
+	if (!uri[1] && (!isNaN(parseInt(uri[1] * 1)))) {
+	    sliderStart = 0;
+	} else {
+	    sliderStart = uri[1] - 1;
+	}
     jQuery = WDN.jQuery;
     WDN.jQuery.getScript('http://www.unl.edu/wdn/templates_3.0/scripts/mediaelement.js', 
     function(){
@@ -62,11 +69,11 @@ WDN.jQuery(function(){
     duration : 700,
     prev:'.sliderControl.left a',
     next:'.sliderControl.right a',
+    start: sliderStart,
     interval : 10000,
     force : true,
     stop : true
-  }).click(function(){WDN.jQuery('.currentScroller').trigger('stop');});
-  
+  }).click(function(){WDN.jQuery('.currentScroller').trigger('stop');}); 
 });
 </script>
 <style type="text/css">
