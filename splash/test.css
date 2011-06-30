@@ -59,7 +59,6 @@
     width:260px;
     color:#fff;
     text-shadow: -1px -1px 1px #787878;
-    filter: dropshadow(color=#787878, offx=-1, offy=-1);
 }
 #maincontent .currentScroller .promoText h3 {
     font-size:3em;
@@ -72,6 +71,16 @@
     font-size:1.3em;
     line-height: 1.2em;
 }
+#maincontent .currentScroller .innovation .promoText {
+	right: 30px;
+	left: auto;
+	width: 300px;
+	color: #555;
+	text-shadow: -1px 0 -1px #EEE;
+}
+#maincontent .currentScroller .innovation .promoText h3 {
+	color: #555;
+}
 
 #maincontent .currentScroller .unltoday {
     position:absolute;
@@ -80,7 +89,6 @@
     width:340px;
     color:#555;
     text-shadow: -1px -1px 1px #787878;
-    filter: dropshadow(color=#787878, offx=-1, offy=-1);
 }
 #maincontent .currentScroller .unltoday h3 {
     font-size:1.4em;
@@ -128,7 +136,6 @@
     bottom:30%;
     color:#555;
     text-shadow: -1px 0 -1px #EEE;  
-    filter: dropshadow(color=#EEEEEE, offx=-1, offy=-1);
     z-index:10;
 }
 #maincontent .currentScroller ul li.video .promoText h3 {color:#555;}

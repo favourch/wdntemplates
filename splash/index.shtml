@@ -152,11 +152,11 @@ WDN.jQuery(function(){
                                 <!--#include file="promo_unltoday.html" -->
                            </div>
                       </li>
-                      <li>
+                      <li class="innovation">
                           <img src="images/innovation_campus.jpg" alt="Nebraska Innovation Campus" height="310" width="960" />
                           <div class="promoText">
-                              <h3 style="color:#555; text-shadow: -1px 0 -1px #EEE;	filter: dropshadow(color=#EEEEEE, offx=-1, offy=-1); position:absolute; left:600px; top:-200px">Big Innovation</h3>
-                              <p style="color:#555; text-shadow: -1px 0 -1px #EEE;	filter: dropshadow(color=#EEEEEE, offx=-1, offy=-1); position:absolute; left:600px; top:-100px; width:300px;"><a href="http://innovate.unl.edu/" class="tooltip" title="go to the Nebraska Innovation Campus website">Explore the site</a> for a more detailed overview and vision of Nebraska Innovation Campus.</p>
+                              <h3>Big Innovation</h3>
+                              <p><a href="http://innovate.unl.edu/" class="tooltip" title="go to the Nebraska Innovation Campus website">Explore the site</a> for a more detailed overview and vision of Nebraska Innovation Campus.</p>
                           </div>
                       </li>
                   </ul>
