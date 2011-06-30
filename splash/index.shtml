@@ -137,7 +137,7 @@ WDN.jQuery(function(){
                 <div class="currentScroller">
                   <ul class="scrollerItems">
                       <li>
-                          <img src="images/gbr_balloon_promo.jpg" alt="UNL joins the Big Ten, and we're celebrating!" height="310" width="960" />
+                          <a href="http://www.unl.edu/ucomm/unltoday/" title="Read more about the celebration on campus"><img src="images/gbr_balloon_promo.jpg" alt="UNL joins the Big Ten, and we're celebrating!" height="310" width="960" /></a>
                           <div class="promoText">
                               <h3>Going Big</h3>
                               <p>Today, UNL joins the Big Ten, and we're celebrating. Read the <a href="http://www.unl.edu/ucomm/unltoday/" title="go to UNL Today">welcome messages</a>, and get in on the fun right here by launching your own GO B1G RED balloons. </p>
@@ -165,7 +165,7 @@ WDN.jQuery(function(){
                            </div>
                       </li>
                       <li class="innovation">
-                          <img src="images/innovation_campus.jpg" alt="Nebraska Innovation Campus" height="310" width="960" />
+                          <a href="http://innovate.unl.edu/" title="Go to the Innovation Campus site"><img src="images/innovation_campus.jpg" alt="Nebraska Innovation Campus" height="310" width="960" /></a>
                           <div class="promoText">
                               <h3>Big Innovation</h3>
                               <p>Tomorrow begins today. Explore the <a href="http://innovate.unl.edu/" class="tooltip" title="go to the Nebraska Innovation Campus website">Nebraska Innovation Campus</a> site for a more detailed overview and vision of this research and development center for Nebraska and the world.</p>
