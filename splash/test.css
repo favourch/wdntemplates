@@ -295,6 +295,9 @@ Big Ten Video Slide
     list-style:none;
     float:left;
     padding:3px 0;
+    /* IE7 hack to fix z-index layers */
+    *position:relative;
+    *z-index:12;
 }
 #maincontent .assert > ul > li {
     display:table-cell;
