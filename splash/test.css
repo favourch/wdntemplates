@@ -22,6 +22,7 @@
     height:93px;
     width:45px;
     display:block;
+    z-index:12;
 }
 #maincontent .wdn_carousel .sliderControl.left {
     left:5px;
