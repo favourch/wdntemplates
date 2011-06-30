@@ -28,6 +28,11 @@ var UNL_Balloons = (function() {
 			}
 
 			$('#footer').prepend('<div id="releasetheballoons"><img id="releasetheballoons-img" src="balloons/releasetheballoons.png" alt="Click to Release the Balloons" /><br /><div id="balloon-counter" class="flip-counter" style="display:none;"></div></div>');
+			
+			// force IE7 to repaint
+			if ($.browser.msie && $.browser.version < 8.0 ) {
+				$('#releasetheballoons').css('zoom', 1);
+			}
 
 			// Initialize the counter
 			balloonCounter = new flipCounter("balloon-counter", {pace: 750, fW: 30, tFH: 22, bFH: 36, bOffset: 221});
