@@ -37,13 +37,13 @@
     height:310px;
     overflow:hidden;
 }
-#maincontent .currentScroller ul {
+#maincontent .currentScroller > ul {
     margin:0;
     padding:0;
     width: 4800px; /* for 5 stories */
     list-style:none;
 }
-#maincontent .currentScroller ul li {
+#maincontent .currentScroller > ul > li {
     position:relative;
     display:inline;
     float:left;
