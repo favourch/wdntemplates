@@ -56,10 +56,16 @@
     position:absolute;
     bottom:5%;
     left:50px;
-    width:260px;
+    width:270px;
     color:#fff;
     text-shadow: -1px -1px 1px #787878;
+    li
 }
+
+#maincontent .currentScroller .promoText a {
+	color:#ffc;
+}
+
 #maincontent .currentScroller .promoText h3 {
     font-size:3em;
     line-height:1.1em;
@@ -95,10 +101,13 @@
     color:#555;
     font-weight:bold;
     text-transform:uppercase;
+    margin-bottom:30px;
 }
 #maincontent .currentScroller .unltoday ul li {
     font-size:1em;
     line-height:1em;
+    list-style:none;
+    margin-bottom:14px;
 }
 
 /* Big Ten Video Slide */
