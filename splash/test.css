@@ -256,7 +256,7 @@ Big Ten Video Slide
     position:absolute;
     top:100%;
     border-top:1px solid #d9d4b8;
-    background: rgb(243,244,244); /* Old browsers */
+    /*background: rgb(243,244,244); /* Old browsers */
     background: -moz-linear-gradient(top, rgba(243,244,244,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(243,244,244,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, rgba(243,244,244,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
@@ -313,7 +313,7 @@ Big Ten Video Slide
     -moz-border-radius:3px 3px 0 3px;
     border-radius:3px 3px 0 3px;
     min-width:255px;
-    width:100%;
+    width:auto;
     font-size:0.8em;
     line-height:1em;
     padding:10px;
