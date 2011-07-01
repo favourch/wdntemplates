@@ -91,7 +91,7 @@ WDN.jQuery(function(){
     #maincontent {margin-top:20px;}
     .nav_pinned #navigation > ul {margin-top:10px;}
 </style>
-<link rel="stylesheet" type="text/css" media="screen" href="test.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="external_content.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/wdn/templates_3.0/css/content/mediaelement.css" />
 <!--[if IE 7]><style type="text/css">
 #maincontent .assert > ul {width:820px; margin-left:0px; float:right;}
