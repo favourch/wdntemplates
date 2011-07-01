@@ -367,7 +367,24 @@ WDN.jQuery(function(){
                     <li class="flickr"><a href="http://www.flickr.com/photos/universityofnebraska/">Flickr</a></li>
                 </ul>
             </div>
-            <div style="clear:both;position:absolute;bottom:-151px;float:left;padding-left:10px;padding-top:6px;margin-bottom:-4px;width:290px;height:129px;background-color:#EDEBE1;z-index:106;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;box-shadow:0px 0px 2px #555;-moz-box-shadow:0px 0px 2px #555;-webkit-box-shadow:0px 0px 2px #555;"><p style="font-size:11px;color:#333;margin-bottom:8px;width:280px;"><em>Read welcome messages from the CIC's <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2675" title="read a welcome from the Committee on Institutional Cooperation from Barbara McFadden Allen" style="color:#a80201">Barbara McFadden Allen</a>, the Big Ten's <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2676" title="read a welcome from the Big Ten's James E. Delany" style="color:#a80201">James E. Delany</a>, and the Big Ten Network's <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2677" title="read the Big Ten Network welcome from President Mark Silverman" style="color:#a80201">Mark Silverman</a></em></p><a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2675" title="read a welcome from the Committee on Institutional Cooperation from Barbara McFadden Allen"><img src="images/welcome_mcfaddenallen.png" alt="Barbara McFadden Allen" style="margin-bottom:-1px;padding-right:24px;" /></a><a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2676" title="read a welcome from the Big Ten's James E. Delany"><img src="images/welcome_delany.png" alt="James E. Delany" style="margin-bottom:-1px;padding-right:24px;" /></a><a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2677" title="read the Big Ten Network welcome from President Mark Silverman"><img src="images/welcome_silverman.png" alt="Mark Silverman" style="margin-bottom:-1px;" /></a></div>
+            <div id="welcomes">
+                <p>
+                    <em>Welcomed by the CIC's 
+                        <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2675" title="Read a welcome from the Committee on Institutional Cooperation from Barbara McFadden Allen" style="color:#a80201">Barbara McFadden Allen</a>, the Big Ten's 
+                        <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2676" title="Read a welcome from the Big Ten's James E. Delany" style="color:#a80201">James E. Delany</a>, and the Big Ten Network's 
+                        <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2677" title="Read the Big Ten Network welcome from President Mark Silverman" style="color:#a80201">Mark Silverman</a>.
+                    </em>
+                </p>
+                <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2675" title="read a welcome from the Committee on Institutional Cooperation from Barbara McFadden Allen">
+                    <img src="images/welcome_mcfaddenallen.png" alt="Barbara McFadden Allen" />
+                </a>
+                <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2676" title="read a welcome from the Big Ten's James E. Delany">
+                    <img src="images/welcome_delany.png" alt="James E. Delany" />
+                </a>
+                <a href="http://newsroom.unl.edu/announce/?view=story&amp;id=2677" title="read the Big Ten Network welcome from President Mark Silverman">
+                    <img src="images/welcome_silverman.png" alt="Mark Silverman" />
+                </a>
+            </div>
         
             <!-- TemplateEndEditable -->
             <div class="clear"></div>

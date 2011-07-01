@@ -644,3 +644,20 @@ Big Ten Video Slide
 #maincontent #outposts li.foursquare a:hover {
     background-position: -265px -41px;
 }
+#welcomes {
+    clear:both;
+    position:absolute;
+    bottom:-141px;
+    float:left;
+    width:290px;
+    height:129px;
+    z-index:106;	
+}
+#welcomes p {
+    font-size:11px;
+    color:#333;
+    margin-bottom:8px;
+    width:280px;
+    line-height:1.2em;
+}
+#welcomes img {margin-right:-3px;}
