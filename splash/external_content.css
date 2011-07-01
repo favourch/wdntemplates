@@ -204,7 +204,7 @@ Big Ten Video Slide
     width:360px;
     bottom:30%;
     color:#555;
-    text-shadow: -1px 0 -1px #EEE;  
+    text-shadow: -1px 0px -1px #cccccc;
     z-index:10;
 }
 #maincontent .currentScroller ul li.video .promoText h3 {color:#555;}
