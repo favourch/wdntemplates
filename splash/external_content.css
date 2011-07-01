@@ -61,11 +61,14 @@
     width:270px;
     color:#fff;
     text-shadow: -1px -1px 1px #787878;
-    li
 }
 
 #maincontent .currentScroller .promoText a {
-	color:#ffc;
+	text-decoration:underline;
+	color:#fff;
+}
+#maincontent .currentScroller .promoText a:focus {
+    color:#fff !important;
 }
 
 #maincontent .currentScroller .promoText h3 {
