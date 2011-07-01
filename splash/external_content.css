@@ -360,6 +360,9 @@ Big Ten Video Slide
 #maincontent .assert > ul > li:hover > a {
     color:#fafafa;
 }
+#maincontent .assert > ul > li > a:focus {
+    color:#fafafa !important;	
+}
 #maincontent .assert > ul > li:hover > a span{
     color:#aac2e3;    
 }
@@ -493,6 +496,9 @@ Big Ten Video Slide
     color: #fff;
     background:#12516e;
     border-radius:1em;
+}
+#maincontent .callout ul a:focus {
+    color: #fff !important;
 }
 /* End styles for the Become a Husker Section */
 
