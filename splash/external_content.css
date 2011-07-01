@@ -67,8 +67,11 @@
 	text-decoration:underline;
 	color:#fff;
 }
-#maincontent .currentScroller .promoText a:focus {
+#maincontent .currentScroller .promoText a:focus, #maincontent .currentScroller .unlToday a:focus {
     color:#fff !important;
+}
+#maincontent .currentScroller .video .promoText a:focus, #maincontent .currentScroller .innovation .promoText a:focus {
+    color:#CC0000 !important;
 }
 
 #maincontent .currentScroller .promoText h3 {
