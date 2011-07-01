@@ -204,15 +204,15 @@ Big Ten Video Slide
     width:360px;
     bottom:30%;
     color:#555;
-    text-shadow: -1px 0px -1px #cccccc;
+    text-shadow: -1px -1px #ffffff;
     z-index:10;
 }
 #maincontent .currentScroller ul li.video .promoText h3 {color:#555;}
-#maincontent .currentScroller .video .promoText a {
+#maincontent .currentScroller .video .promoText a, #maincontent .currentScroller .innovation .promoText a  {
     color:#ba0000;
 }
-#maincontent .currentScroller .innovation .promoText a {
-    color:#ba0000;
+#maincontent .currentScroller .innovation .promoText {
+    text-shadow: -1px -1px #ffffff;
 }
 /* Move to full height presentation */
 #maincontent div.wdn_carousel.full {
