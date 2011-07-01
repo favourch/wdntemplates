@@ -7956,10 +7956,16 @@ WDN.navigation = (function() {
          */
         initialize : function() {
             if (WDN.jQuery('body').hasClass('popup')
-                || WDN.jQuery('body').hasClass('document')
                 || WDN.jQuery('#breadcrumbs ul li').size() == 0) {
                 // This page has no navigation
                 return;
+            }
+            
+            // find the last-link in breadcrumbs
+            WDN.jQuery('#breadcrumbs > ul > li > a').last().parent().addClass('last-link');
+            
+            if (WDN.jQuery('body').hasClass('document')) {
+            	return;
             }
 
             //debug statement removed
@@ -7972,9 +7978,6 @@ WDN.navigation = (function() {
             if (WDN.getCookie('n') == 1) {
                 WDN.navigation.preferredState = 1;
             }
-
-            // find the last-link in breadcrumbs
-            WDN.jQuery('#breadcrumbs > ul > li > a').last().parent().addClass('last-link');
 
             // add an expand toggler UI element
             var $toggler = WDN.jQuery('<div class="expand_toggle"><a href="#" title="Click to expand/collapse navigation" /></div>').prependTo('#wdn_navigation_wrapper');
@@ -8136,8 +8139,12 @@ WDN.navigation = (function() {
 
             if (WDN.navigation.siteHomepage === false) {
                 //debug statement removed
-                // Right now, stupidly select the second element.
-                WDN.navigation.setHomepageLI(WDN.jQuery('#breadcrumbs > ul >  li:nth-child(2)'));
+                if (WDN.jQuery('#breadcrumbs > ul > li').size() == 1) {
+                	WDN.navigation.setHomepageLI(WDN.jQuery('#breadcrumbs > ul > li:nth-child(1)'));
+                } else {
+                	// Right now, stupidly select the second element.
+                	WDN.navigation.setHomepageLI(WDN.jQuery('#breadcrumbs > ul > li:nth-child(2)'));
+                }
             } else {
                 //debug statement removed
                 // Make all the hrefs absolute.
