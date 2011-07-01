@@ -233,8 +233,12 @@ WDN.navigation = (function() {
 
             if (WDN.navigation.siteHomepage === false) {
                 WDN.log('No homepage set!');
-                // Right now, stupidly select the second element.
-                WDN.navigation.setHomepageLI(WDN.jQuery('#breadcrumbs > ul >  li:nth-child(2)'));
+                if (WDN.jQuery('#breadcrumbs > ul > li').size() == 1) {
+                	WDN.navigation.setHomepageLI(WDN.jQuery('#breadcrumbs > ul > li:nth-child(1)'));
+                } else {
+                	// Right now, stupidly select the second element.
+                	WDN.navigation.setHomepageLI(WDN.jQuery('#breadcrumbs > ul > li:nth-child(2)'));
+                }
             } else {
                 WDN.log('Homepage has been set.');
                 // Make all the hrefs absolute.
