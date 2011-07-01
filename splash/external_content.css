@@ -465,6 +465,9 @@ Big Ten Video Slide
     border-bottom:2px dotted #b1c5ce;
     padding:5px 0;
 }
+#maincontent .callout > ul > li:last-child {
+    border-bottom:none;	
+}
 #maincontent .callout ul a {
     color: #12516e;
 }
